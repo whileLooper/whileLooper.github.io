@@ -92,8 +92,9 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    border-color: #ccc;
+    opacity: 0.3;
+    transition: .3s all ease-in-out;
 }
 
 .footer-heading {
@@ -107,33 +108,24 @@
     margin-left: 0;
 }
 
-.footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
+.footer-info {
+    float: none;
+    font-size: 8px;
+    font-size: 1rem;
+    margin: 1em auto 1.5em;
+    max-width: 100%;
+    text-align: center;
 }
 
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+//footer github div 
+.footer-github{
 }
 
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+//footer copyright div
+.footer-copyright{
+    margin-top: 0px;
 }
 
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
-}
 
 @include media-query($on-laptop) {
     .footer-col-1,
@@ -234,3 +226,33 @@
         }
     }
 }
+
+
+/* Links */
+
+// .site-footer {
+//     //position: relative;
+//     //display: inline-block;
+// }
+
+// .site-footer a:after {
+//     position: absolute;
+//         top: 90%;
+//         left: 0;
+//     width: 100%;
+//     height: 2px;
+//     background: #cc523e;
+//     content: '';
+//     opacity: 0;
+//     -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+//             transition: opacity 0.3s, transform 0.3s;
+//     -webkit-transform: translateY(5px);
+//             transform: translateY(5px);
+// }
+
+// .footer a:hover:after,
+// .footer a:focus:after {
+//     opacity: 1;
+//     -webkit-transform: translateY(0);
+//             transform: translateY(0);
+//}

@@ -1,13 +1,14 @@
 # Site settings
 title: Bo's Blog
-email: bochentheone@gmail.com 
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+name: Bo's Blog
+description: "梦想是不会逃跑的，会逃跑的永远都是自己 —— 宫崎骏"
+email: bochentheone@gmail.com  
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 github_username:  whileLooper
+author: "Bo Chen"
+
 
 # Build settings
 markdown: kramdown
+timezone: America/New_York
