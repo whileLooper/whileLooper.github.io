@@ -92,8 +92,13 @@
  * Site footer
  */
 .site-footer {
-    border-color: #ccc;
-    opacity: 0.3;
+    position: relative;
+    margin: 1rem 0 0 0;
+    padding: 0.5rem 15px;
+    border-top: 2px solid #e2e7e8;
+    font-size: 1rem;
+    line-height: 1rem;
+    opacity: 0.5;
     transition: .3s all ease-in-out;
 }
 
@@ -126,27 +131,6 @@
     margin-top: 0px;
 }
 
-
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
-    }
-
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-@include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
 
 
 
