@@ -1,15 +1,21 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+{% assign mintues = content | number_of_words | divided_by: 180 %}
+{% if mintues == 0 %}
+{% assign mintues =1 %}
+{% endif %}
 
-  <article class="post-content">
-    {{ content }}
-  </article>
-
+<div class="post-header mb2">
+  <h1>{{ page.title }}</h1>
+  <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span><br>
+  {% if page.update_date %}
+    <span class="post-meta">Updated: {{ page.update_date | date: "%b %-d, %Y" }}</span><br>
+  {% endif %}
+  <span class="post-meta small">{{ minutes }} minute read</span>
 </div>
+
+<article class="post-content">
+  {{ content }}
+</article>

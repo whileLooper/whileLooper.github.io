@@ -2,8 +2,15 @@
 
   <div class="wrapper">
 
-    <h1><a class="site-title" href="{{ site.baseurl }}/">Bo's Blog</a></h1>
-
+    <div class = "measure">
+    	<div class="site-branding">
+			<!-- <a href="{{sit.url}}"><img src="http://gravatar.com/avatar/2fe186fdbd3e4f7f777a9d820adf91e4/?s=120&amp;d=mm" class="avatar site-logo" originals="120" scale="1"></a>			 -->
+			<h1 class="site-title"><a href="{{site.url}}" rel="home">{{site.title}}</a></h1>
+		</div>
+    	<nav class="site-nav right">
+    		{% include navigation.html%}
+    	</nav>
+    </div>
 
   </div>
 

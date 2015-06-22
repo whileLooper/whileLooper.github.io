@@ -1,3 +1,11 @@
+---
+layout: default
+tiltle: Do you know string is immutable in java?
+date: 2015-06-19
+---
+
+
+
 String is immutable in Java because String objects are cached in String pool, and this cached string pool is shared between multiple client there is always a risk, where one client action would affect all other client. String pool is created in Java Heap, if there are too many String, there is a good change of OutOfMemoryErro because garbage collection doesn't happen in Java Heap area. Security and String pool being primary reason of making String immutable.<!--more-->
 <blockquote>1) Imagine String pool facility without making string immutable , it's not possible at all because in case of string pool one string object/literal e.g. "Test" has referenced by many <a href="http://javarevisited.blogspot.sg/2012/02/difference-between-instance-class-and.html">reference variables</a> , so if any one of them change the value others will be automatically gets affected i.e. lets say
 

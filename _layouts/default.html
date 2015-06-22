@@ -3,15 +3,15 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="{% if site.animated %}animated fade-in-down{% endif %}">
 
-    {% include header.html %}
+    <div class="site-wrap">
+        {% include header.html %}
+    </div>
 
-    <div class="page-content">
+    <div class="post p2 p-responsive wrap" role="main">
 
-      {% include nav.html %}
-
-      <div class="wrapper">
+      <div class="measure">
         {{ content }}
       </div>
     </div>
