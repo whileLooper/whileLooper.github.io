@@ -4,10 +4,12 @@
   {% include head.html %}
 
   <body class="{% if site.animated %}animated fade-in-down{% endif %}">
+    <button class="menu-toggle x" aria-expanded="false">
+      <span class="lines"></span>
+      <span class="screen-reader-text">Primary Menu</span>
+    </button>
 
-    <div class="site-wrap">
-        {% include header.html %}
-    </div>
+    {% include header.html %}
 
     <div class="post p2 p-responsive wrap" role="main">
 
@@ -16,8 +18,8 @@
       </div>
     </div>
 
-    {% include footer.html %}
-
   </body>
+
+  {% include footer.html %}
 
 </html>
