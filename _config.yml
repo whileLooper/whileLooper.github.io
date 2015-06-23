@@ -1,7 +1,7 @@
 # Site settings
 title:	Bo's Blog
 name:	Bo's Blog
-description:	"梦想是不会逃跑的，会逃跑的永远都是自己 —— 宫崎骏"
+description: "梦想是不会逃跑的，会逃跑的永远都是自己 —— 宫崎骏"
 email:	bochentheone@gmail.com  
 baseurl:	"" # the subpath of your site, e.g. /blog/
 url:	"http://yourdomain.com" # the base hostname & protocol for your site

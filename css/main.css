@@ -680,13 +680,15 @@ a:after {
     width: 100%;
 }
 
-.site-header {
+.site-header,
+.menu-toggle {
     border-color: #c8cbcc;
     opacity: 0.3;
     transition: .3s all ease-in-out;
 }
 
-.site-header:hover {
+.site-header:hover,
+.menu-toggle {
     opacity: 1;
     transition: .3s all ease-in-out;
 }
@@ -719,6 +721,39 @@ a:after {
 
 /* Slide Menu Button*/
 
+.lines {
+    border-radius: 6px;
+    position: relative;
+        top: -7px;
+    display: inline-block;
+    width: 24px;
+    height: 4px;
+    -webkit-transition: .3s;
+            transition: .3s;
+    background: #606666;
+}
+.lines:before,
+.lines:after {
+    border-radius: 6px;
+    position: absolute;
+        left: 0;
+    display: inline-block;
+    width: 24px;
+    height: 4px;
+    content: '';
+    -webkit-transition: .3s;
+            transition: .3s;
+    -webkit-transform-origin: 1.71429px center;
+            transform-origin: 1.71429px center;
+    background: #606666;
+}
+.lines:before {
+    top: 8px;
+}
+.lines:after {
+    top: -8px;
+}
+
 .menu-toggle {
     display: block;
     opacity: 0.3;
@@ -733,7 +768,6 @@ a:after {
     user-select: none;
     transition: .3s all ease-in-out;
     border: 0;
-    border-radius: 0;
     background: transparent;
     box-shadow: none;
     text-shadow: none;
@@ -754,6 +788,9 @@ a:after {
 
 
 /* footer */
+.site-footer {
+    border-top: 2px solid #e2e7e8;
+}
 
 .site-footer {
     border-color: #c8cbcc;
@@ -767,11 +804,12 @@ a:after {
 }
 
 .site-info {
+    float: none;
     font-size: 8px;
     font-size: 1.4rem;
-    margin: 1em auto 1.5em;
+    margin: 0.2em auto 1.5em;
     width: 100%;
-    border-top: 2px solid #e2e7e8;
+    text-align: center;
 }
 
 .github-info {
@@ -786,7 +824,84 @@ a:after {
     float:right;
 }
 
-/* main */
+/* Home Page Content*/
+
+.post {
+    margin-bottom: 2.666em;
+    padding-bottom: 1.333em;
+  }
+
+.posts .post a:hover .post-meta,
+.posts .post a:hover .post-title,
+.posts .post a:hover .post-summary {
+  opacity: 0.88;
+}
+
+.p2 {
+  padding: 2rem;
+}
+
+.p-responsive {
+  padding: 1.5rem;
+}
+
+.px-responsive {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.py-responsive {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 48em) and (max-width: 64em) {
+  .p-responsive {
+    padding: 3rem;
+  }
+
+  .px-responsive {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+  .py-responsive {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 64em) {
+  .p-responsive {
+    padding: 4rem;
+  }
+
+  .px-responsive {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  .py-responsive {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.warp{
+    margin: 0 auto;
+}
+
+.measure {
+    margin: 0 auto;
+    max-width: 48rem;
+}
+
+.measure-narrow {
+    max-width: 32rem;
+}
+
+.measure-wide {
+    max-width: 60rem;
+}
 
 
 
