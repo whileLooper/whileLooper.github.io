@@ -241,7 +241,7 @@ body {
     color: #606666;
     font-family: Merriweather, Georgia, serif;
     font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 2.0rem;
     font-weight: 400;
     line-height: 1.7;
 }    
@@ -261,20 +261,20 @@ h6 {
 }
 h1 {
     font-size: 32px;
-    font-size: 3.2rem;
+    font-size: 4.2rem;
     margin: 0;
 }
 h2 {
-    color: #8f9699;
+    color: #606666;
     font-size: 24px;
-    font-size: 2.4rem;
+    font-size: 3.4rem;
     margin: 0;
 }
 h3,
 #respond h3 {
-    color: #8f9699;
+    color: #606666;
     font-size: 20px;
-    font-size: 2.0rem;
+    font-size: 3.0rem;
     font-style: italic;
     font-weight: normal;
     margin: .75em 0;
@@ -852,64 +852,21 @@ a:after {
   font-weight: 600;
 }
 
-.p2 {
-  padding: 2rem;
+.post {
+    border-bottom: 1px solid #c8cbcc;
 }
 
-.p-responsive {
-  padding: 1.5rem;
-}
-
-.px-responsive {
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-}
-
-.py-responsive {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-@media screen and (min-width: 48em) and (max-width: 64em) {
-  .p-responsive {
-    padding: 3rem;
-  }
-
-  .px-responsive {
-    padding-right: 3rem;
-    padding-left: 3rem;
-  }
-
-  .py-responsive {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-}
-@media screen and (min-width: 64em) {
-  .p-responsive {
-    padding: 4rem;
-  }
-
-  .px-responsive {
-    padding-right: 4rem;
-    padding-left: 4rem;
-  }
-
-  .py-responsive {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-}
 
 .warp{
     margin: 0 auto;
 }
 
+/*main page post width*/
 .measure {
     margin: 0 auto;
-    max-width: 75rem;
+    max-width: 80rem;
 }
 
-
+/*Pagination*/
 
 
