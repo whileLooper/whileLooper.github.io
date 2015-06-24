@@ -825,8 +825,12 @@ a:after {
 }
 
 /* Home Page Content*/
+.home {
+    margin: 0 auto;
+}
 
-.post {
+.post .posts {
+    margin: 0;
     margin-bottom: 2.666em;
     padding-bottom: 1.333em;
   }
@@ -835,6 +839,17 @@ a:after {
 .posts .post a:hover .post-title,
 .posts .post a:hover .post-summary {
   opacity: 0.88;
+}
+
+.posts .post:last-child {
+  border-bottom: none;
+  margin-bottom: .375em;
+  padding-bottom: 0;
+}
+
+.post-link .post-title {
+  margin-top: 0;
+  font-weight: 600;
 }
 
 .p2 {
@@ -892,15 +907,7 @@ a:after {
 
 .measure {
     margin: 0 auto;
-    max-width: 48rem;
-}
-
-.measure-narrow {
-    max-width: 32rem;
-}
-
-.measure-wide {
-    max-width: 60rem;
+    max-width: 75rem;
 }
 
 
