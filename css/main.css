@@ -19,7 +19,7 @@
 html {
     height: 100%;
     font-family: Josefin Slab, sans-serif;
-    font-size: 60%;
+    font-size: 65%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:     100%;
 }
@@ -673,7 +673,6 @@ a:after {
     margin-bottom: 0;
     opacity: 1;
     padding: .5em 1.5em;
-    position: relative;
     width: 100%;
 }
 
@@ -826,22 +825,14 @@ a:after {
     margin: 0 auto;
 }
 
-.post .posts {
-    margin: 0;
-    margin-bottom: 2.666em;
-    padding-bottom: 1.333em;
-  }
-
 .posts .post a:hover .post-meta,
 .posts .post a:hover .post-title,
 .posts .post a:hover .post-summary {
   opacity: 0.88;
 }
 
-.posts .post:last-child {
-  border-bottom: none;
+.posts {
   margin-bottom: .375em;
-  padding-bottom: 0;
 }
 
 .post-link .post-title {
@@ -850,9 +841,12 @@ a:after {
 }
 
 .post {
-    border-bottom: 1px solid #c8cbcc;
+    border-bottom: 2px solid #c8cbcc;
 }
 
+.post:last-child {
+    border-bottom: 1px solid #fffdfd;
+}
 
 .warp{
     margin: 0 auto;
@@ -860,7 +854,7 @@ a:after {
 
 .site-wrap {
     min-height: 100%;
-    margin-bottom: -30px;
+    margin-bottom: 50px;
 }
 
 /*main page post width*/
@@ -870,7 +864,19 @@ a:after {
 }
 
 /*Pagination*/
+.pagination {
+    margin-top: 6rem;
+    margin-bottom: 1rem ;
+}
+.left {
+    margin-left: 8rem;
+    float: left;
+}
 
+.right {
+    margin-right: 8rem;
+    float: right;
+}
 
 
 
