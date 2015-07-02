@@ -860,7 +860,7 @@ a:after {
 
 .site-wrap {
     min-height: 100%;
-    margin-bottom: 0;
+    margin-bottom: -30px;
 }
 
 /*main page post width*/
