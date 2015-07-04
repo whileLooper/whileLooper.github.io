@@ -237,10 +237,10 @@ th {
 body {
     background-color: #fffdfd;
     color: #606666;
-    font-size: 16px;
-    font-size: 2.0rem;
+    font-size: 22px;
+    font-size: 2.2rem;
     font-weight: 400;
-    line-height: 1.7;
+    line-height: 1.5;
 }    
 
 /* Headings */
@@ -414,8 +414,7 @@ kbd,
 tt,
 var {
     background-color: #e2e7e8;
-    font: 14px Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
-    font-size: 1em;
+    font-size: 0.8em;
     line-height: 2.09231em;
 }
 
@@ -864,17 +863,36 @@ a:after {
 }
 
 /*Pagination*/
-.pagination {
-    margin-top: 6rem;
-    margin-bottom: 1rem ;
+
+.pagination a, .pagination .disabled {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.5rem;
+  background: #fafafa;
+  border-radius: 0.1875em;
+  border: 1px solid #f3f3f3;
+  color: #333333;
+  padding: 0.3em 1em;
+}
+
+.pagination .disabled {
+  opacity: 0.5;
+}
+
+.pagination a:hover, .pagination a:focus {
+  background: white;
+  color: #477dca;
+}
+
+.pagination a:active {
+  background: #f7f7f7;
 }
 .left {
-    margin-left: 8rem;
     float: left;
 }
 
 .right {
-    margin-right: 8rem;
     float: right;
 }
 

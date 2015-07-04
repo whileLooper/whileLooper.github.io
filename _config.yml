@@ -12,3 +12,6 @@ author:	"Bo Chen"
 # Build settings
 markdown: kramdown
 timezone: America/New_York
+permalink: pretty
+paginate: 5
+
