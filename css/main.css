@@ -670,9 +670,7 @@ a:after {
 .site-header {
     border-bottom: 2px solid #e2e7e8;
     margin-bottom: 0;
-    opacity: 1;
     padding: .5em 1.5em;
-    width: 100%;
 }
 
 .site-header,
@@ -712,6 +710,10 @@ a:after {
     height: auto;
     border-radius: 50%;
     max-width: 30px;
+}
+
+.mb2 {
+    padding: 5% 0;
 }
 
 /* Slide Menu Button*/

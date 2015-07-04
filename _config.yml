@@ -13,5 +13,5 @@ author:	"Bo Chen"
 markdown: kramdown
 timezone: America/New_York
 permalink: pretty
-paginate: 5
+paginate: 10
 
