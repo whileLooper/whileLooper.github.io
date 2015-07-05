@@ -7,7 +7,6 @@ categories: daily
 tag: []
 ---
 
-
 >In a strongly typed In a strongly typed language compiler ensure type correctness,
 >or example you can not store number in String or vice-versa. Java is a strongly typed 
 >language, that's why you have different data types e.g. int, float, String, char, 
@@ -16,4 +15,6 @@ tag: []
 >values based upon context. Python and Perl are two popular example of weakly typed 
 >programming language, where you can store a numeric string in number type.
 
-![](http://bochentheone.com/images/2015/javavspython.png?raw=true)
+###Definitions of "strong" or "weak"
+
+![](/images/2015/javavspython.png?raw=true)
