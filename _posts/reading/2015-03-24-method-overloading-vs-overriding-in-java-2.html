@@ -1,0 +1,71 @@
+---
+layout: post
+title: Method Overloading vs Overriding in Java?
+date: 2015-03-24 21:09:25.000000000 -04:00
+categories: reading
+summary: Method overloading is resolved during compile time, while method overriding is resolved at runtime
+tags:
+- java
+- method
+- overload
+- override
+---
+
+<p>Main difference comes form the fact that method overloading is resolved during compile time, while method overriding is resolved at runtime. Also rules of overriding or overloading a method is different in Java. For example, private, static and final method cannot be overriding in Java but you can still overload them. For overriding both name and signature of method must remain same, but in for overloading method signature must be different. Last but not the least difference between them is that call to overloaded methods are resolved using static binding while call to overridden method is resolved using dynamic binding in Java.</p>
+<p>1) First and most important difference between method overloading and overriding is that, In case of method overloading in Java, signature of method changes while in case of method overriding it remain same.</p>
+<p>2) Second major difference between method overloading vs overriding in Java is that You can overload method in one class but overriding can only be done on subclass.</p>
+<p>3) You can not override static, final and private method in Java but you can overload static, final or private method in Java.</p>
+<p>4) Overloaded method in Java is bonded by static binding and overridden methods are subject to dynamic binding.</p>
+<p>5) Private and final method can also be not overridden in Java.</p>
+<h3><strong>Method Overloading and Overriding Example in Java</strong></h3>
+<p>Here is an example of both method overloading and method overriding in Java. In order to explain the concept we have create two classes Loan and PersonalLoan. createLoan() method is overloaded as it has different version with different signature, while toString() method which is original declared in Object class is overridden in both Loan and PersonalLoan class.</p>
+
+
+<pre>public class OverloadingOverridingTest {
+
+    public static void main(String[] args) {
+
+        // Example of method overloading in Java
+        Loan cheapLoan = Loan.createLoan("HSBC");
+        Loan veryCheapLoan = Loan.createLoan("Citibank", 8.5);
+
+        // Example of method overriding in Java
+        Loan personalLoan = new PersonalLoan();
+        personalLoan.toString();
+    }
+
+}
+
+public class Loan {
+    private double interestRate;
+    private String customer;
+    private String lender;
+
+    public static Loan createLoan(String lender) {
+        Loan loan = new Loan();
+        loan.lender = lender;
+        return loan;
+    }
+
+    public static Loan createLoan(String lender, double interestRate) {
+        Loan loan = new Loan();
+        loan.lender = lender;
+        loan.interestRate = interestRate;
+        return loan;
+    }
+
+    @Override
+    public String toString() {
+        return "This is Loan by Citibank";
+    }
+
+}
+
+public class PersonalLoan extends Loan {
+
+    @Override
+    public String toString() {
+        return "This is Personal Loan by Citibank";
+    }
+}</pre>
+<p>via <a href="http://javarevisited.blogspot.sg/2011/12/method-overloading-vs-method-overriding.html">Difference between Method Overloading and Overriding in Java?</a>.</p>

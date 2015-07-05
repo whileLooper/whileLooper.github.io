@@ -1,0 +1,23 @@
+---
+layout: post
+title: ArrayList vs Vector in Java
+date: 2015-06-24 16:20:00.000000000 -04:00
+summary:	Using ArrayList if you are using it in single threaded environment and use Vector if you need a thread-safe collection. ArrayList is anytime faster than Vector in case thread-safe is not a concern.
+categories:	reading
+tags:
+- ArrayList
+- Vector
+---
+<p>ArrayList and Vector is two most widely use Collection class, used to store object in ordered fashion. It is good to know about what the difference and when to use it.<!--more--></p>
+<blockquote>
+<h5>Common:</h5>
+<p>1. Both Vector and ArrayList are derived from AbstractList and implement List interface, it means both of them are <strong>ordered</strong> and allows <strong>duplicate</strong>.</p>
+<p>2. Both are index based, you can use <em>get(index) </em>method to retrieve objects.</p>
+<h5>Difference:</h5>
+<p>1. Vector is <strong>synchronized</strong> and <strong>thread-safe</strong>, while ArrayList is neither synchronized nor thread-safe. It means if multiple threads try to access Vector same time, they can do that without compromising Vector's internal state.</p>
+<p>2. Speed is different, because ArrayList is not synchronized, then it is faster than Vector.</p>
+<p>3. Vector is not original from Java Collection Framework, it is a legacy class.</p>
+<h5>CONCLUSION:</h5>
+<p>Using ArrayList if you are using it in <strong>single </strong>threaded environment and use Vector if you need a thread-safe collection. ArrayList is anytime faster than Vector in case thread-safe is not a concern.</p></blockquote>
+
+<p>Source: <a href="http://java67.blogspot.sg/2012/09/arraylist-vs-vector-in-java-interview.html">Java67</a></p>

@@ -18,7 +18,7 @@
 --------------------------------------------------------------*/
 html {
     height: 100%;
-    font-family: Josefin Slab, sans-serif;
+    font-family: Josefin Slab, sans-serif, STXihei, "华文细黑";
     font-size: 65%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:     100%;
@@ -264,14 +264,14 @@ h1 {
 h2 {
     color: #606666;
     font-size: 24px;
-    font-size: 3.4rem;
+    font-size: 3.0rem;
     margin: 0;
 }
 h3,
 #respond h3 {
     color: #606666;
     font-size: 20px;
-    font-size: 3.0rem;
+    font-size: 2.0rem;
     font-style: italic;
     font-weight: normal;
     margin: .75em 0;
@@ -847,6 +847,20 @@ a:after {
 
 .post:last-child {
     border-bottom: 1px solid #fffdfd;
+}
+
+.post-meta {
+    margin-top: 2.5em;
+    margin-bottom: 0.5em;
+    font-size: 15px;
+    font-size: 1.5rem;
+    color: #cc523e;
+}
+
+.post-summary {
+    font-size: 22px;
+    font-size: 2rem;
+    margin: 2em 1em;
 }
 
 .warp{

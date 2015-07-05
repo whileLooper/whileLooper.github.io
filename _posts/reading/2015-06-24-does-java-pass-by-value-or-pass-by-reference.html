@@ -1,0 +1,17 @@
+---
+layout: post
+title: Does Java pass by value or pass by reference?
+date: 2015-06-24 15:44:15.000000000 -04:00
+summary: Depending on whenever the method parameter expect a object or reference of that object is passed.
+categories:	reading
+tags:
+- java
+---
+<p>Depending on whenever the method parameter expect a object or reference of that object is passed.</p>
+<p><!--more--></p>
+<blockquote>
+<pre></pre>
+<p>Primitives are passed as pass by value to method parameters, had Java pass by reference both <a href="http://javarevisited.blogspot.sg/2011/12/main-public-static-java-void-method-why.html">main method</a> and printNext() would have printed same value.</p>
+<p>If you see <b>change made in method parameter is reflected globally, </b>that means one object is used in the both method. It's passed by object.</p>
+<p>In reality if you pass object as method parameter in Java it pass "value of reference" or simple term object reference. In Java object can only be accessed by its reference as you can not get memory address where object is stored or more precisely there is no method to get value of object by passing memory address.</p>
+<p>&nbsp;</p></blockquote>

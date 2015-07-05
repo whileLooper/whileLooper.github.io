@@ -1,0 +1,67 @@
+---
+layout: post
+title: What is polymorphism in Java?
+date: 2015-06-16 05:35:11.000000000 -04:00
+summary:	On theory Polymorphism is a simple concept where one variable can denote multiple object but in real life it just a gem and a code written using polymorphism concept is much flexible to change and quite easy to maintain than the one which is written without polymorphism.
+categories:	reading
+tags:
+- java
+- polymorphism
+---
+<p>Polymorphism word comes from ancient Greek where poly means many so polymorphic are something can take many form. On theory Polymorphism is a simple concept where one variable can denote multiple object but in real life it just a gem and a code written using polymorphism concept is much flexible to change and quite easy to maintain than the one which is written without polymorphism.</p>
+<br>
+<blockquote>
+<h3><u>What is polymorphism in Java</u></h3>
+<div><b>Polymorphism is an Oops concept</b> which advice use of <b>common interface</b><i>instead of concrete implementation</i> while <a href="http://javarevisited.blogspot.sg/2011/09/code-review-checklist-best-practice.html">writing code</a>. When we program for interface our code is capable of handling any new requirement or enhancement arise in near future due to new implementation of our common interface. If we don't use common interface and rely on concrete implementation, we always need to change and duplicate most of our code to support new implementation. Its not only Java but other object oriented language like C++ also supports polymorphism and it comes as fundamental along with other OOPS concepts like <a href="http://javarevisited.blogspot.sg/2012/03/what-is-encapsulation-in-java-and-oops.html">Encapsulation </a>, Abstraction and Inheritance.</div>
+<div>
+<h3><u>How Polymorphism supported in Java</u></h3>
+</div>
+</blockquote>
+<div>
+<blockquote><p>Java has excellent support of polymorphism in terms of Inheritance, <a href="http://javarevisited.blogspot.sg/2011/12/method-overloading-vs-method-overriding.html">method overloading</a> and <a href="http://javarevisited.blogspot.sg/2011/12/method-overloading-vs-method-overriding.html">method overriding</a>. Method overriding allows Java to <a href="http://javarevisited.blogspot.sg/2012/04/how-to-invoke-method-by-name-in-java.html">invoke method </a>based on a particular object at run-time instead of declared type while coding. To get hold of concept let's see an <strong>example of polymorphism in Java:</strong><br />
+<strong>public class</strong> TradingSystem{</p></blockquote>
+</div>
+<blockquote>
+<div>
+<p><strong>   public</strong> String getDescription(){</p>
+<p><strong>      return</strong> "electronic trading system";</p>
+<p>}</p>
+<p>}</p>
+<p><strong>public class</strong> DirectMarketAccessSystem <strong>extends</strong> TradingSystem{</p>
+<p><strong>   public</strong> String getDescription(){</p>
+<p><strong>     return</strong> "direct market access system";</p>
+<p>}</p>
+<p>}</p>
+<p><strong>public class</strong> CommodityTradingSystem <strong>extends</strong> TradingSystem{</p>
+<p><strong>   public</strong> String getDescription(){</p>
+<p><strong>     return</strong> "Futures trading system";</p>
+<p>}</p>
+</div>
+</blockquote>
+<div>
+<blockquote><p>}</p></blockquote>
+</div>
+<blockquote>
+<div>
+<p>Here we have a super class called TradingSystem and there two implementation DirectMarketAccessSystem and CommodityTradingSystem and here we will write code which is flexible enough to work with any future implementation of TradingSystem we can achieve this by using Polymorphism in Java which we will see in further example.</p>
+<h3><u>Where to use Polymorphism in code</u></h3>
+<p>Probably this is the most important part of this Java Polymorphism tutorial and It’s good to know <em>where you can use Polymorphism in Java </em>while <a href="http://javarevisited.blogspot.sg/2011/08/code-comments-java-best-practices.html">writing code</a>. Its common practice to always replace concrete implementation with interface it’s not that easy and  comes with practice but here are some common places where I check for polymorphism:</p>
+<p><strong>1) Method argument:</strong></p>
+<p>Always use super type in method argument that will give you leverage to pass any implementation while invoking method. For example:<br />
+<strong>public</strong><strong>void</strong> showDescription(TradingSystem tradingSystem){</p>
+<p>tradingSystem.description();</p>
+<p>}</p>
+<p>If you have used concrete implementation e.g. CommodityTradingSystem or DMATradingSystem then that code will require frequent changes whenever you add new Trading system.</p>
+<p><strong>2) Variable names:</strong></p>
+<p>Always use Super type while you are storing reference returned from any <a href="http://javarevisited.blogspot.sg/2011/12/factory-design-pattern-java-example.html">Factory method in Java</a>, This gives you flexibility to accommodate any new implementation from Factory. Here is an example of polymorphism while writing Java code which you can use retrieving reference from Factory:<br />
+String systemName = Configuration.getSystemName();</p>
+<p>TradingSystem system = TradingSystemFactory.getSystem(systemName);</p>
+<p><strong>3) Return type of method</strong></p>
+<p>Return type of any method is another place where you should be using interface to take advantage of Polymorphism in Java. In fact this is a requirement of <a href="http://javarevisited.blogspot.sg/2011/12/factory-design-pattern-java-example.html">Factory design pattern in Java</a> to use interface as return type for factory method.<br />
+<strong>public</strong> TradingSystem getSystem(String name){</p>
+<p>//code to return appropriate implementation</p>
+<p>}</p>
+</div>
+<div>Posted by <span class="fn">Javin Paul</span></div>
+</blockquote>
+<p>Source: <a href="http://javarevisited.blogspot.com/2011/08/what-is-polymorphism-in-java-example.html#ixzz3dCSjryes">Javarevisted</a></p>
