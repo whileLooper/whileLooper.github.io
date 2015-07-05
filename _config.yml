@@ -16,4 +16,6 @@ markdown: kramdown
 timezone: America/New_York
 permalink: pretty
 paginate: 10
+highlighter: pygments
+
 
