@@ -271,8 +271,8 @@ h3,
 #respond h3 {
     color: #606666;
     font-size: 20px;
-    font-size: 2.0rem;
-    font-style: italic;
+    font-size: 2.8rem;
+    font-style: normal;
     font-weight: normal;
     margin: .75em 0;
 }
