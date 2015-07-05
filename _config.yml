@@ -7,7 +7,7 @@ baseurl:	"" # the subpath of your site, e.g. /blog/
 url:	"http://www.bochentheone.com" # the base hostname & protocol for your site
 github_username:	whileLooper
 author:	"Bo Chen"
-domain_name: "http://www.bochentheone.com"
+domain_name: "http://bochentheone.com"
 disqus_shortname: bochentheone
 
 

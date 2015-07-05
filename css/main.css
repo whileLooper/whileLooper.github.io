@@ -126,12 +126,20 @@ pre {
     overflow: auto;
 }
 
-code,
-kbd,
-pre,
-samp {
-    font-family: monospace, monospace;
-    font-size: 1em;
+pre, code {
+  font-family: Menlo, Monaco, "Courier New", monospace
+}
+
+code {
+  color: #7a7a7a;
+}
+
+pre {
+  padding: 1.125em;
+  font-size: 1.5rem;
+  line-height: 1.11;
+  overflow-x: scroll;
+  margin-bottom: 0.88em;
 }
 
 button,
@@ -409,7 +417,6 @@ pre {
     padding: 0;
 }
 
-code,
 kbd,
 tt,
 var {
