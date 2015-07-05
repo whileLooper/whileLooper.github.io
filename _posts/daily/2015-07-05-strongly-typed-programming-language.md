@@ -16,4 +16,4 @@ tag: []
 >programming language, where you can store a numeric string in number type.
 
 
-![]({{% site.url %}}/images/2015/javavspython.png)
+![javavspython](/images/2015/javavspython.png)
