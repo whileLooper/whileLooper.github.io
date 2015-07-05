@@ -16,4 +16,4 @@ tag: []
 >values based upon context. Python and Perl are two popular example of weakly typed 
 >programming language, where you can store a numeric string in number type.
 
-![](http://bochentheone.com/images/JavaVsPython.png?raw=true)
+![](http://bochentheone.com/images/2015/javavspython.png?raw=true)
