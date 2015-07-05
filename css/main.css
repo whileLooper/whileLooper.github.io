@@ -628,7 +628,7 @@ legend {
 /* Links */
 a,
 a:visited {
-    color: black;
+    color: #606666;
     -webkit-transition: .2s all ease-in-out, -webkit-transform .2s ease-in-out;
             transition: .2s all ease-in-out;
     text-decoration: none;
@@ -885,6 +885,7 @@ a:after {
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   font-size: 1.5rem;
+  font-weight: bold;
   background: #fafafa;
   border-radius: 0.1875em;
   border: 1px solid #f3f3f3;
@@ -898,7 +899,7 @@ a:after {
 
 .pagination a:hover, .pagination a:focus {
   background: white;
-  color: #477dca;
+  color: #cc523e;
 }
 
 .pagination a:active {
@@ -916,24 +917,27 @@ a:after {
   float: left;
   height: 38px;
   padding: 0 15px 0 10px;
+  margin-bottom: 3rem;
   border: transparent 1px solid;
-  color: #9EABB3;
+  color: #606666;
+  font-family: Lora, Georgia, serif;
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 40px;
-  border-radius: 30px;
+  border-radius: 5px;
   background: rgba(0,0,0,0.1);
 }
 
 .page-categories {
-    color: #606666;
+    color: #fffdfd;
+    font-family: Lora, Georgia, serif;
     font-size: 15px;
-    padding: 8px;
+    padding: 5px;
     border: transparent 1px solid;
-    background: rgba(0,0,0,0.1);
-    border-radius: 50px;
-    text-transform: uppercase;
+    background: #606666;
+    border-radius: 5px;
+    text-transform: capitalize;
 }
 
 
