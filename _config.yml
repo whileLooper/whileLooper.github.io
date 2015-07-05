@@ -4,10 +4,10 @@ name:	Bo's Blog
 description: "梦想是不会逃跑的，会逃跑的永远都是自己 —— 宫崎骏"
 email:	bochentheone@gmail.com  
 baseurl:	"" # the subpath of your site, e.g. /blog/
-url:	"www.bochentheone.com" # the base hostname & protocol for your site
+url:	"http://www.bochentheone.com" # the base hostname & protocol for your site
 github_username:	whileLooper
 author:	"Bo Chen"
-domain_name: "bochentheone.com"
+domain_name: "http://www.bochentheone.com"
 disqus_shortname: bochentheone
 
 
