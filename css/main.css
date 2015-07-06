@@ -922,7 +922,7 @@ a:after {
     display: block;
     opacity: 0.3;
     position: fixed;
-    top: 18px;
+    margin-top: 2.5em;
     right: 1.5em;
     z-index: 20;
     width: 24px;
@@ -947,7 +947,6 @@ a:after {
     background: transparent;
     box-shadow: none;
     opacity: 1;
-    top: 18px;
 }
 
 .active {
