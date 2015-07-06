@@ -967,8 +967,16 @@ a:after {
     padding: 0;
 }
 
+/*category list item*/
+.category-list ul{
+    display: block;
+    list-style-type: none;
+    padding: auto;
+}
 
-
+.category-list li {
+    padding: 10px;
+}
 
 
 
