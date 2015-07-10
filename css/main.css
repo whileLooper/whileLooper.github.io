@@ -18,7 +18,7 @@
 --------------------------------------------------------------*/
 html {
     height: 100%;
-    font-family: Josefin Slab, sans-serif, STXihei, "华文细黑";
+    font-family: Josefin Slab, Lora, Helvetica, Arial, sans-serif;
     font-size: 65%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:     100%;
@@ -233,6 +233,7 @@ th {
     padding: 0;
 }
 
+
 /*--------------------------------------------------------------
 2.0 Global
 --------------------------------------------------------------*/
@@ -260,7 +261,8 @@ h5,
 h6 {
     clear: both;
     color: #606666;
-    font-family: Lora, Georgia, serif;
+    font-family: Lora,'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
     font-weight: 700;
     margin: .25em 0 1.25em;
 }
@@ -375,7 +377,6 @@ blockquote p {
     margin-top: 0;
 }
 blockquote:before {
-    font-family: "Times New Roman", Times, sans-serif;
     font-size: 92px;
     font-size: 9.2rem;
     font-weight: bold;
@@ -410,7 +411,6 @@ address {
 pre {
     background: transparent;
     color: #606666;
-    font-family: Merriweather, Georgia, serif;
     max-width: 100%;
     margin-bottom: 1.5em;
     overflow: auto;
@@ -587,7 +587,6 @@ input[type="submit"],
     box-shadow: 0 4px #bc3b2d;
     border-radius: 4px;
     color: #f5f7f7;
-    font-family: Lora, Georgia, serif;
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 0;
@@ -668,6 +667,11 @@ a:after {
             transition: opacity 0.3s, transform 0.3s;
     -webkit-transform: translateY(5px);
             transform: translateY(5px);
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
 }
 
 
@@ -895,7 +899,6 @@ a:after {
   margin-bottom: 3rem;
   border: transparent 1px solid;
   color: #606666;
-  font-family: Lora, Georgia, serif;
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
@@ -906,7 +909,6 @@ a:after {
 
 .page-categories {
     color: #fffdfd;
-    font-family: Lora, Georgia, serif;
     font-size: 15px;
     padding: 5px;
     border: transparent 1px solid;

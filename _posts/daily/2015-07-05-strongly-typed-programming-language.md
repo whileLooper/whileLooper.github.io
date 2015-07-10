@@ -16,4 +16,4 @@ tag: []
 >programming language, where you can store a numeric string in number type.
 
 
-![javavspython](/images/2015/JavaVsPython.png)
+![javavspython](/images/2015/july/JavaVsPython.png)

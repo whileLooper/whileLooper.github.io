@@ -6,6 +6,8 @@ summary: Having a idea to make a web crawler to crawling Japanese manga weekly, 
 categories: daily
 ---
 
+
+Having a idea to make a web crawler to crawling Japanese manga weekly, so that I don't need to wait for manga website update.
 Here is some information about web crawler tools to help archive my project, I will keep updating the progress of this web crawler. :)
 
 - **WebCollector** is an open source web crawler framework based on Java.It provides some simple interfaces for crawling the Web,you can setup a multi-threaded web crawler in less than 5 minutes.
