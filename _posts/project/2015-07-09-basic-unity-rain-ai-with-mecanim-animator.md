@@ -9,7 +9,7 @@ tag: Unity, Rain AI
 
 
 
-It is a part of our game design team work, my work is creating a proper enemy object in our game, the enemy should have basic animations and the basic patrol AI in the game. This tutorial is showing how to implement [Rain AI](http://rivaltheory.com/rain/) (a free unity pulgin) to my enemy character, then the enemy will be able to show walking animation along the waypoint route.
+It is a part of our game design team work, my work is creating a proper enemy object in our game, the enemy should have basic animations and the basic patrol AI in the game. This tutorial is showing how to implement [@Rain AI](http://rivaltheory.com/rain/) (a free unity pulgin) to my enemy character, then the enemy will be able to show walking animation along the waypoint route.
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/2ZbQ9CPP5X8" frameborder="0" allowfullscreen></iframe>
 
