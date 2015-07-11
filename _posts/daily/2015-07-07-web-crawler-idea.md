@@ -2,6 +2,7 @@
 layout: post
 title: Web Crawler idea
 date: 2015-07-07 0:54
+update: 2015-07-09 23:59
 summary: Having a idea to make a web crawler to crawling Japanese manga weekly, so that I don't need to wait for manga website update.
 categories: daily
 ---
@@ -21,4 +22,11 @@ Here is some information about web crawler tools to help archive my project, I w
 
 - **Meet Scrapy** An open source and collaborative framework for extracting the data you need from websites. In a fast, simple, yet extensible way.
 
+1. #### The goal
+
+2. #### Set up MySQL database
+
+3. #### Create a database and a table
+
+4. #### Start crawling using Java
 

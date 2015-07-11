@@ -18,7 +18,7 @@
 --------------------------------------------------------------*/
 html {
     height: 100%;
-    font-family: Josefin Slab, Lora, Helvetica, Arial, sans-serif;
+    font-family: Josefin Slab, sans-serif, STXihei, "华文细黑";
     font-size: 65%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:     100%;
@@ -261,7 +261,7 @@ h5,
 h6 {
     clear: both;
     color: #606666;
-    font-family: Lora,'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: Lora, Georgia, serif;
 
     font-weight: 700;
     margin: .25em 0 1.25em;
