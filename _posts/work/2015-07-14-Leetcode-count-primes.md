@@ -2,7 +2,7 @@
 layout: post
 title: Leetcode - Count Primes
 date: 2015-07-14 23:57
-summary: Count the number of prime numbers less than a non-negative number, n
+summary: Count the number of prime numbers less than a non-negative number n
 categories: work
 ---
 Given an integer n, counting the numbers of primes less than n
