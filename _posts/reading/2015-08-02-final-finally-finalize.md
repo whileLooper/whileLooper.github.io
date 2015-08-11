@@ -2,7 +2,7 @@
 layout: post
 title: final, finally, finalize
 date: 2015-08-2 19:45
-summary: Despite their similar sounding names, final, finally and finalize hasve very different purposes and meaning.
+summary: Despite their similar sounding names, final, finally and finalize have very different purposes and meaning.
 categories: reading
 ---
 
