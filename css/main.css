@@ -18,10 +18,9 @@
 --------------------------------------------------------------*/
 html {
     height: 100%;
-    font-family: freight-text-pro, Georgia, Cambria, 'Times New Roman', Times, serif;
+    font-family: 'Open sans', sans-serif;
     font-size: 65%;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust:     100%;
+    font-weight: 300;
 }
 
 body {
@@ -245,7 +244,7 @@ body {
     font-size: 22px;
     font-size: 2rem;
     font-weight: normal;
-    line-height: 1.4;
+    line-height: 1.75;
 }    
 
 /* Headings */
