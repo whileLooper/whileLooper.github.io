@@ -6,13 +6,6 @@ summary: A DataTable plugin using experience for my currently working project
 categories: work
 ---
 
-# My current tech stack:
-- xampp
-- node.js
-- bootstrap
-- MVC framework
-- different plugins for JavaScript and jQuery
-
  
 # DataTable   
 DataTable is a plugin my team have been using for the Project Dashboard.
