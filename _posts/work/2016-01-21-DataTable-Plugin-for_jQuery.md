@@ -50,12 +50,14 @@ $(document).ready(function() {
 ```
 
 Disable *show entries* option:
+
 ```javascript
 $(document).ready(function() {
     var t = $('#example').DataTable();
     $('#legacy-table_length').empty();
 });
 ```
+
 Add different buttons instead of *show entries*:
 
 ```javascript
