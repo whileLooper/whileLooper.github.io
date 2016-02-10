@@ -12,7 +12,7 @@ disqus_shortname: bochentheone
 
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 timezone: America/New_York
 permalink: pretty
 paginate: 10
