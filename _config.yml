@@ -25,7 +25,8 @@ rss_badge: "Subscribe feed!"
 
 # build settings
 markdown: kramdown
-
+highlighter: rouge
+  
 # exclude files
 exclude:
   - LICENSE
