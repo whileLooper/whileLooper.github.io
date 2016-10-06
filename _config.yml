@@ -1,21 +1,32 @@
-# Site settings
-title:	Bo's Blog
-name:	Bo's Blog
-description: "梦想是不会逃跑的，会逃跑的永远都是自己 —— 宫崎骏"
-email:	bochentheone@gmail.com  
-baseurl:	"" # the subpath of your site, e.g. /blog/
-url:	"http://www.bochentheone.com" # the base hostname & protocol for your site
-github_username:	whileLooper
-author:	"Bo Chen"
-domain_name: "http://www.bochentheone.com"
-disqus_shortname: bochentheone
+title: "Bo Chen"
+description: "Good Luck, Have Fun"
+about: "So if you want to go fast, if you want to get done quickly, if you want your code to be easy to write, make it easy to read."
+quoteAuthor: "― Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship"
+location: "Atlanta, Georgia"
+email: bochentheone@gmail.com
+baseurl: ""
+url: "http://bochentheone.com" # replace by your site's url
+twitter_username: bochen_bo
+github_username:  whilelooper
+telegram: bochentheone
 
+# google analytics tracking code, please change the value
+g_analytics: "UA-64802678-1"
 
-# Build settings
+# language settings
+isolang: en
+close_btn: "Close"
+home_btn: "Home"
+projects_btn: "Projects"
+posts_btn: "Posts"
+imprint_btn: "Imprint"
+name_badge: "an article by"
+rss_badge: "Subscribe feed!"
+
+# build settings
 markdown: kramdown
-timezone: America/New_York
-permalink: pretty
-paginate: 10
-highlighter: pygments
 
-
+# exclude files
+exclude:
+  - LICENSE
+  - README.md
