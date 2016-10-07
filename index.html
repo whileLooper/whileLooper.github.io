@@ -41,7 +41,13 @@ layout: default
       <p class="my-item"><a href="{{ project.link }}" class="my-link">{{ project.name }}</a><br>
         <span class="my-item-sub">
         {{ project.description }}
-      </span>
+        </span><br>
+        <span class="my-item-sub">
+          {{ project.features }}
+        </span><br>
+        <span class="my-item-sub teal-text text-lighten-3">
+          {{ project.techstack }}
+        </span>
       </p>
     </li>
     {% endfor %}

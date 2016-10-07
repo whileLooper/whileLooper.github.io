@@ -1,11 +1,5 @@
-- name: project 1
-  link: "#"
-  description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
-
-- name: project 2
-  link: "#"
-  description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
-
-- name: project 3
-  link: "#"
-  description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+- name: Local Band for Me
+  link: "www.bandfor.me"
+  description: "Project goal is providing a online communicty for users find local band players base on favorite songs."
+  features: "searching by location, realtime chatting, information posting"
+  techstack: "Angular2, Firebase, Bootstrap4, Rxjs"
