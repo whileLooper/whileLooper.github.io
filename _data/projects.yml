@@ -1,5 +1,5 @@
 - name: Local Band for Me
-  link: "www.bandfor.me"
+  link: "https://github.com/whileLooper/LocalBand"
   description: "Project goal is providing a online communicty for users find local band players base on favorite songs."
   features: "searching by location, realtime chatting, information posting"
   techstack: "Angular2, Firebase, Bootstrap4, Rxjs"
