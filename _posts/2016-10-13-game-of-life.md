@@ -8,7 +8,7 @@ author: "Bo Chen"
 [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
 ##### Foreword
-Back to college time, I had assignment about using `C++` game base on 'Game of Life', but I had completed forgot how I did it, although I did pass that course any way. While I did the practices on Leetcode, this question popped up. I didn't come up the good solution to pass all the test. I tried to get from discussion section, there is a top answer which provided by [@yavinci](https://discuss.leetcode.com/topic/29054/easiest-java-solution-with-explanation). I think his solution is brilliant with great explanation. 
+Back to college time, I had assignment about using `C++` to write a game base on 'Game of Life', although I did pass that course any way, I had completed forgot how I did it. This question popped up while I did the practices on Leetcode,  I didn't come up the good solution to pass all the test. I tried to get helps from discussion section, there is a top answer which provided by [@yavinci](https://discuss.leetcode.com/topic/29054/easiest-java-solution-with-explanation). I think his solution is brilliant with great explanation. 
 
 ##### Logic behind the code
 Using 2 bit to store 'current' state and 'next' state
