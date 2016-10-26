@@ -34,13 +34,12 @@ For each cell's `1st` bit, check the 8 cells around itself, and set the cell's `
 2. Transition `00 -> 10`: when `board[i][j] == 0` and lives == 3.
 
 To get the current state, simply do
-~~~js
-board[i][j] & 1
-~~~
+
+`board[i][j] & 1`
+
 To get the next state, simply do
-~~~js
-board[i][j] >> 1
-~~~
+
+`board[i][j] >> 1`
 
 ##### Code break down
 There are *three* main section in the code
