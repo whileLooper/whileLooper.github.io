@@ -1,7 +1,7 @@
 ---
 title: Component vs Directive in Angular 2
 layout: post
-date:   2016-10-25 16:00:00 
+date:   2016-11-08 16:00:00 
 tags: ['component', 'directive', 'angular 2']
 author: "Bo Chen"
 ---
