@@ -1,7 +1,7 @@
 ---
 title: Component vs Directive in Angular 2
 layout: post
-date:   2016-11-08 16:00:00 
+date:   2016-11-09 16:00:00 
 tags: ['component', 'directive', 'angular 2']
 author: "Bo Chen"
 ---
@@ -10,7 +10,7 @@ author: "Bo Chen"
 Let's look at the documentations from Angular.io, there are total three kinds of directives in Angular 2:
 
 * **Component** - directives with a template
-* **Structural directives** - change the DOM layout by adding and removing DOM elements, such as *ngIf, *ngFor
+* **Structural directives** - change the DOM layout by adding and removing DOM elements, such as `*ngIf`, `*ngFor`
 * **Attribute directives** - change the appearance or behavior of an element
 
 Component actually is one kind of directives in Angular 2, it is a directive with template. This post is going to focus on **Component** and **Attribute Directives**. Let me dive into each kind of directives, and find out what are their characteristics.
