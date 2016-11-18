@@ -12,16 +12,18 @@ Writing a Angular 2 attribute directive for one of popular charting libraries.
 For example, **Flot directive** usage:
 
 `*.component.html`
-~~~html
+
+```html
 
 <div flot-chart
     [data]="data"
     [options]="options" style="width: 100%; height: 260px;"></div>
 
-~~~
+```
 
 `*.component.ts`
-~~~ts
+
+```ts
 
 import { Component } from '@angular/core';
 @Component({
@@ -38,10 +40,11 @@ export class SomethingComponent {
     }
 }
 
-~~~
+```
 
 `*.module.ts`
-~~~ts
+
+```ts
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -61,7 +64,7 @@ import { FlotModule } from './path/to/FlotModule/index';
     ]
 })
 
-~~~
+```
 
 ---
 
@@ -80,7 +83,8 @@ For my current working situation, I need to use several different charting libra
 
 #### Project Directory
 Create a folder to holds all directive for global usage:
-~~~sh
+
+```sh
 
 _ src
   |_ app
@@ -95,7 +99,7 @@ _ src
         |_ ...
       ...
 
-~~~
+```
 
 ---
 
@@ -104,7 +108,8 @@ _ src
 ##### Create directive.ts for Flot Directive
 
 `flot.directive.ts`
-~~~ts
+
+```ts
 
 import { Directive, ElementRef, Input } from '@angular/core';
 declare var jQuery: any;
@@ -161,7 +166,7 @@ export class FlotChart {
     }
 }
 
-~~~
+```
 
 `declare var jQuery: any` is declaring the jQuery variable so that jQuery function can be used in this directive file, in order to `declare var` please set up inside the `webpack`.
 
@@ -172,7 +177,8 @@ export class FlotChart {
 ##### Create module.ts for Flot Directive
 
 `flot.module.ts`
-~~~ts
+
+```ts
 
 import { NgModule }      from '@angular/core';
 
@@ -193,6 +199,6 @@ import { FlotChart } from './flot.directive';
 export class FlotChartModule {
 }
 
-~~~
+```
 
 Import all the Flot dependencies inside the module file, so that Flot can be properly use without errors.
