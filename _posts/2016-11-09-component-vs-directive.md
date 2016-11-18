@@ -65,6 +65,7 @@ export class HighlightDirective {
     }
 }
 ~~~
+
 The import statement specifies symbols from the Angular core:
 
 1. **Directive** provides the functionality of the @Directive decorator.
@@ -73,6 +74,7 @@ The import statement specifies symbols from the Angular core:
 4. **Renderer** allows the code to change the DOM element's style. [api](https://angular.io/docs/ts/latest/api/core/index/Renderer-class.html)
 
 `selector: '[myHighlight]'` is a CSS selector to identify the HTML in the template associate with directives, usage:
+
 ~~~html
 <p myHighlight>Highlight me!</p>
 ~~~

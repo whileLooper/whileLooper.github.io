@@ -12,7 +12,8 @@ Back to college time, I had assignment about using `C++` to write a game base on
 
 ##### Logic behind the code
 Using 2 bit to store 'current' state and 'next' state
-~~~
+
+~~~sh
         [2nd bit  ,  1st bit] 
       [next state ,  current state]
 - 00  dead (next) <- dead (current)
@@ -44,7 +45,8 @@ To get the next state, simply do
 ##### Code break down
 There are *three* main section in the code
 
-###### update every cell base on neighbors conditions
+##### update every cell base on neighbors conditions
+
 ~~~js
 var m = board.length;
 var n = board[0].length;
@@ -63,7 +65,8 @@ for (i = 0; i < m; i++) {
 }
 ~~~
 
-###### transit all cell into next state (only keep `2nd` bit)
+##### transit all cell into next state (only keep `2nd` bit)
+
 ~~~js
 for (i = 0; i < m; i++) {
     for (j = 0; j < n; j++) {
@@ -72,7 +75,8 @@ for (i = 0; i < m; i++) {
 }
 ~~~
 
-###### check neighbors function
+##### check neighbors function
+
 ~~~js
 function livesNeighbors(board, i, j, m, n) {
     var lives = 0;
