@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="game of life,leetcode,algorithm," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="Conway’s Game of Life ForewordBack to college time, I had assignment about using C++ to write a game base on ‘Game of Life’, although I did pass that course any way, I had completed forgot how I did i">
+<meta name="keywords" content="game of life,leetcode,algorithm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Game of Life Revisit">
+<meta property="og:url" content="http:bochentheone.com/2016/10/13/2016-10-13-game-of-life/index.html">
+<meta property="og:site_name" content="Tome of Knowledge">
+<meta property="og:description" content="Conway’s Game of Life ForewordBack to college time, I had assignment about using C++ to write a game base on ‘Game of Life’, although I did pass that course any way, I had completed forgot how I did i">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-08-10T15:48:53.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Game of Life Revisit">
+<meta name="twitter:description" content="Conway’s Game of Life ForewordBack to college time, I had assignment about using C++ to write a game base on ‘Game of Life’, although I did pass that course any way, I had completed forgot how I did i">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http:bochentheone.com/2016/10/13/2016-10-13-game-of-life/"/>
+
+
+
+
+
+  <title>Game of Life Revisit | Tome of Knowledge</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Tome of Knowledge</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2016/10/13/2016-10-13-game-of-life/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nehcob">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tome of Knowledge">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Game of Life Revisit</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-13T22:00:00-04:00">
+                2016-10-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank" rel="external">Conway’s Game of Life</a></p>
+<h5 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h5><p>Back to college time, I had assignment about using <code>C++</code> to write a game base on ‘Game of Life’, although I did pass that course any way, I had completed forgot how I did it. This question popped up while I did the practices on Leetcode,  I didn’t come up the good solution to pass all the test. I tried to get helps from discussion section, there is a top answer which provided by <a href="https://discuss.leetcode.com/topic/29054/easiest-java-solution-with-explanation" target="_blank" rel="external">@yavinci</a>. I think his solution is brilliant with great explanation. </p>
+<h5 id="Logic-behind-the-code"><a href="#Logic-behind-the-code" class="headerlink" title="Logic behind the code"></a>Logic behind the code</h5><p>Using 2 bit to store ‘current’ state and ‘next’ state</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">        [2nd bit  ,  1st bit] </div><div class="line">      [next state ,  current state]</div><div class="line">- 00  dead (next) &lt;- dead (current)</div><div class="line">- 01  dead (next) &lt;- live (current)  </div><div class="line">- 10  live (next) &lt;- dead (current)  </div><div class="line">- 11  live (next) &lt;- live (current)</div></pre></td></tr></table></figure>
+<ol>
+<li>Every cell is 0 or 1, in 2 bit it is either <code>00</code> or <code>01</code></li>
+<li>Notice that <code>1st</code> state is independent of <code>2nd</code> state.</li>
+<li>All cells update at same time</li>
+<li>count # neighbors from <code>1st</code> state and send <code>2nd</code> state bit</li>
+<li>Since <code>2nd</code> state default to dead, no consideration for situation <code>01-&gt;00</code></li>
+<li>After update all cells, delete cell’s <code>1st</code> state by <code>&gt;&gt;1</code></li>
+</ol>
+<p>For each cell’s <code>1st</code> bit, check the 8 cells around itself, and set the cell’s <code>2nd</code> bit.</p>
+<ol>
+<li>Transition <code>01 -&gt; 11</code>: when <code>board[i][j] == 1</code> and lives &gt;= 2 &amp;&amp; lives &lt;= 3.</li>
+<li>Transition <code>00 -&gt; 10</code>: when <code>board[i][j] == 0</code> and lives == 3.</li>
+</ol>
+<p>To get the current state, simply do</p>
+<p><code>board[i][j] &amp; 1</code></p>
+<p>To get the next state, simply do</p>
+<p><code>board[i][j] &gt;&gt; 1</code></p>
+<h5 id="Code-break-down"><a href="#Code-break-down" class="headerlink" title="Code break down"></a>Code break down</h5><p>There are <em>three</em> main section in the code</p>
+<h5 id="update-every-cell-base-on-neighbors-conditions"><a href="#update-every-cell-base-on-neighbors-conditions" class="headerlink" title="update every cell base on neighbors conditions"></a>update every cell base on neighbors conditions</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> m = board.length;</div><div class="line"><span class="keyword">var</span> n = board[<span class="number">0</span>].length;</div><div class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; m; i++) &#123;</div><div class="line">    <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++) &#123;</div><div class="line">        <span class="keyword">var</span> lives = livesNeighbors(board, i, j, m, n);</div><div class="line">        <span class="comment">// in the beginning every 2nd bit should be 0</span></div><div class="line">        <span class="comment">// only check 2nd bit becomes 1</span></div><div class="line">        <span class="keyword">if</span> (board[i][j] === <span class="number">1</span> &amp;&amp; lives &gt;=<span class="number">2</span> &amp;&amp; lives &lt;= <span class="number">3</span>) &#123;</div><div class="line">            board[i][j] = <span class="number">3</span>;    <span class="comment">// Make the 2nd bit 1: 01 ---&gt; 11</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (board[i][j] === <span class="number">0</span> &amp;&amp; lives &lt; <span class="number">2</span>) &#123;</div><div class="line">            board[i][j] = <span class="number">2</span>;    <span class="comment">// Make the 2nd bit 1: 00 ---&gt; 10</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="transit-all-cell-into-next-state-only-keep-2nd-bit"><a href="#transit-all-cell-into-next-state-only-keep-2nd-bit" class="headerlink" title="transit all cell into next state (only keep 2nd bit)"></a>transit all cell into next state (only keep <code>2nd</code> bit)</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; m; i++) &#123;</div><div class="line">    <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++) &#123;</div><div class="line">        board[i][j] &gt;&gt;= <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="check-neighbors-function"><a href="#check-neighbors-function" class="headerlink" title="check neighbors function"></a>check neighbors function</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">livesNeighbors</span>(<span class="params">board, i, j, m, n</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> lives = <span class="number">0</span>;</div><div class="line">    <span class="comment">// when i, j is edge row or column, using Math.max and Math.min</span></div><div class="line">    <span class="keyword">for</span> (x = <span class="built_in">Math</span>.max(i - <span class="number">1</span>, <span class="number">0</span>); x &lt;= <span class="built_in">Math</span>.min(i + <span class="number">1</span>, <span class="number">0</span>); x++) &#123;</div><div class="line">        <span class="keyword">for</span> (y = <span class="built_in">Math</span>.max(j - <span class="number">1</span>, <span class="number">0</span>); y &lt;= <span class="built_in">Math</span>.min(j + <span class="number">1</span>, <span class="number">0</span>); y++) &#123;</div><div class="line">            lives += board[x][y] &amp; <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// delete current cell</span></div><div class="line">    lives -= board[i][j] &amp; <span class="number">1</span>;</div><div class="line">    <span class="keyword">return</span> lives;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/game-of-life/" rel="tag"># game of life</a>
+          
+            <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          
+            <a href="/tags/algorithm/" rel="tag"># algorithm</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/06/2016-10-06-javascript-unit-test/" rel="next" title="Jasmine JavaScript Testing">
+                <i class="fa fa-chevron-left"></i> Jasmine JavaScript Testing
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/25/2016-10-25-sublimelinter-trick/" rel="prev" title="SublimeLinter path configure">
+                SublimeLinter path configure <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="nehcob" />
+          <p class="site-author-name" itemprop="name">nehcob</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Foreword"><span class="nav-number">1.</span> <span class="nav-text">Foreword</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Logic-behind-the-code"><span class="nav-number">2.</span> <span class="nav-text">Logic behind the code</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Code-break-down"><span class="nav-number">3.</span> <span class="nav-text">Code break down</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#update-every-cell-base-on-neighbors-conditions"><span class="nav-number">4.</span> <span class="nav-text">update every cell base on neighbors conditions</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#transit-all-cell-into-next-state-only-keep-2nd-bit"><span class="nav-number">5.</span> <span class="nav-text">transit all cell into next state (only keep 2nd bit)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#check-neighbors-function"><span class="nav-number">6.</span> <span class="nav-text">check neighbors function</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">nehcob</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
