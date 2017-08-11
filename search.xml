@@ -1,377 +1,11 @@
-<!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
   
     
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta name="description" content="A Ember Spirit Player">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sleight of Fist">
-<meta property="og:url" content="http:bochentheone.com/index.html">
-<meta property="og:site_name" content="Sleight of Fist">
-<meta property="og:description" content="A Ember Spirit Player">
-<meta property="og:locale" content="en">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sleight of Fist">
-<meta name="twitter:description" content="A Ember Spirit Player">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http:bochentheone.com/"/>
-
-
-
-
-
-  <title>Sleight of Fist</title>
-  
-
-
-
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-64802678-1', 'auto');
-  ga('send', 'pageview');
-</script>
-
-
-
-
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-   page-home 
- ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Sleight of Fist</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle"></p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            Search
-          </a>
-        </li>
-      
-    </ul>
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="Searching..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2017/08/10/2017-08-10-stop_and_continue/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nehcob">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sleight of Fist">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/10/2017-08-10-stop_and_continue/" itemprop="url">关于断和续</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-10T16:00:00-04:00">
-                08-10-2017
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>空了半年的博客</p>
+    <entry>
+      <title><![CDATA[关于断和续]]></title>
+      <url>/2017/08/10/2017-08-10-stop_and_continue/</url>
+      <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>空了半年的博客</p>
 <p>上个月过完了自己的28岁生日，终于用上了“年近30”</p>
 <p>开始随着时间的累积，值得记录的事物越来越多</p>
 <p>越发的觉得记录的重要性</p>
@@ -398,126 +32,21 @@
 <p>为了有动力更新， 换个新的主题先</p>
 <p>Hexo， NexT</p>
 <p>走起</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2017/02/20/2017-02-20-custom-filter-pipe/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nehcob">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sleight of Fist">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/02/20/2017-02-20-custom-filter-pipe/" itemprop="url">Write a Custom Filtering Pipe</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-20T18:00:00-05:00">
-                02-20-2017
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
+]]></content>
       
         
-          
-            <h4 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h4><p>Write your own custom filtering pipe</p>
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Write a Custom Filtering Pipe]]></title>
+      <url>/2017/02/20/2017-02-20-custom-filter-pipe/</url>
+      <content type="html"><![CDATA[<h4 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h4><p>Write your own custom filtering pipe</p>
 <p>This pipe is be able: </p>
 <ul>
 <li>filtering data by a single input string </li>
@@ -550,126 +79,27 @@
 <li>To tell Angular that this is a pipe, you apply the @Pipe decorator, which you import from the core Angular library. The @Pipe decorator allows you to define the pipe name that you’ll use within template expressions.<br>It must be a valid JavaScript identifier.</li>
 </ul>
 <h4 id="Import-Pipes-module-in-app"><a href="#Import-Pipes-module-in-app" class="headerlink" title="Import Pipes module in app"></a>Import Pipes module in app</h4><p>At last, don’t forget to <strong>import</strong> it in the module in order to use it.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2017/01/20/2017-01-20-ci-deploy/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nehcob">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sleight of Fist">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/01/20/2017-01-20-ci-deploy/" itemprop="url">Continuous Integration</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-20T21:37:00-05:00">
-                01-20-2017
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
+]]></content>
       
         
-          
-            <h3 id="What-is-CI-continuous-integration"><a href="#What-is-CI-continuous-integration" class="headerlink" title="What is CI (continuous integration)"></a>What is CI (continuous integration)</h3><p>Continuous integration refers to the build and unit testing stages of the software release process.<br>Every revision that is committed triggers an automated build and test.</p>
+        <tags>
+            
+            <tag> Angular 2 </tag>
+            
+            <tag> how to </tag>
+            
+            <tag> filtering </tag>
+            
+            <tag> pipe </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Continuous Integration]]></title>
+      <url>/2017/01/20/2017-01-20-ci-deploy/</url>
+      <content type="html"><![CDATA[<h3 id="What-is-CI-continuous-integration"><a href="#What-is-CI-continuous-integration" class="headerlink" title="What is CI (continuous integration)"></a>What is CI (continuous integration)</h3><p>Continuous integration refers to the build and unit testing stages of the software release process.<br>Every revision that is committed triggers an automated build and test.</p>
 <h2 id=""><a href="#" class="headerlink" title=""></a><img src="/images/posts/2017/continuous_integration.png" alt="CI"></h2><h3 id="Travis-CI-Github-Firebase-Angular-2"><a href="#Travis-CI-Github-Firebase-Angular-2" class="headerlink" title="Travis CI + Github + Firebase + Angular 2"></a>Travis CI + Github + Firebase + Angular 2</h3><ol>
 <li>Firebase init in project</li>
 <li>Writing code in local repo</li>
@@ -703,126 +133,29 @@
 <h4 id="Push-change-to-Github-build-prod-on-Travis-CI-Deploy-to-Firebase"><a href="#Push-change-to-Github-build-prod-on-Travis-CI-Deploy-to-Firebase" class="headerlink" title="Push change to Github, build prod on Travis CI, Deploy to Firebase"></a>Push change to Github, build prod on Travis CI, Deploy to Firebase</h4><p>Done!</p>
 <p>Everything is automated!</p>
 <p>Awesome! 😎</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2016/11/16/2016-11-16-directive-for-charting-library/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nehcob">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sleight of Fist">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/11/16/2016-11-16-directive-for-charting-library/" itemprop="url">Write a directive for charting library in Angular 2</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-16T10:00:00-05:00">
-                11-16-2016
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
+]]></content>
       
         
-          
-            <h4 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h4><p>Writing a Angular 2 attribute directive for one of popular charting libraries.</p>
+        <tags>
+            
+            <tag> Angular 2 </tag>
+            
+            <tag> Firebase </tag>
+            
+            <tag> Travis CI </tag>
+            
+            <tag> Deployment </tag>
+            
+            <tag> Github </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Write a directive for charting library in Angular 2]]></title>
+      <url>/2016/11/16/2016-11-16-directive-for-charting-library/</url>
+      <content type="html"><![CDATA[<h4 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h4><p>Writing a Angular 2 attribute directive for one of popular charting libraries.</p>
 <p>For example, <strong>Flot directive</strong> usage:</p>
 <p><code>*.component.html</code></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">flot-chart</span></span></div><div class="line"><span class="tag">    [<span class="attr">data</span>]=<span class="string">"data"</span></span></div><div class="line"><span class="tag">    [<span class="attr">options</span>]=<span class="string">"options"</span> <span class="attr">style</span>=<span class="string">"width: 100%; height: 260px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -852,246 +185,46 @@
 <h5 id="Create-module-ts-for-Flot-Directive"><a href="#Create-module-ts-for-Flot-Directive" class="headerlink" title="Create module.ts for Flot Directive"></a>Create module.ts for Flot Directive</h5><p><code>flot.module.ts</code></p>
 <figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; NgModule &#125;      <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</div><div class="line"></div><div class="line"><span class="keyword">import</span> <span class="string">'jquery-flot'</span>;</div><div class="line"><span class="keyword">import</span> <span class="string">'jquery.flot.animator/jquery.flot.animator'</span>;</div><div class="line"><span class="keyword">import</span> <span class="string">'jquery-flot/jquery.flot.time.js'</span>;</div><div class="line"></div><div class="line"><span class="keyword">import</span> &#123; FlotChart &#125; <span class="keyword">from</span> <span class="string">'./flot.directive'</span>;</div><div class="line"></div><div class="line"><span class="meta">@NgModule</span>(&#123;</div><div class="line">  declarations: [</div><div class="line">    FlotChart</div><div class="line">  ],</div><div class="line">  exports: [</div><div class="line">    FlotChart</div><div class="line">  ]</div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> FlotChartModule &#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>Import all the Flot dependencies inside the module file, so that Flot can be properly use without errors.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2016/11/10/2016-11-10-charting-library/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nehcob">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sleight of Fist">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/11/10/2016-11-10-charting-library/" itemprop="url">Open Source Charting Libraries Comparison</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-10T10:00:00-05:00">
-                11-10-2016
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
+]]></content>
       
         
-          
-            <p>For current working project, our team is looking for a global charting library in our dashboard project.</p>
-<h5 id="coming-soon…"><a href="#coming-soon…" class="headerlink" title="coming soon…"></a>coming soon…</h5>
-          
+        <tags>
+            
+            <tag> directive </tag>
+            
+            <tag> chart </tag>
+            
+            <tag> Angular 2 </tag>
+            
+            <tag> how to </tag>
+            
+        </tags>
         
-      
-    </div>
+    </entry>
     
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2016/11/09/2016-11-09-component-vs-directive/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nehcob">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sleight of Fist">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/11/09/2016-11-09-component-vs-directive/" itemprop="url">Component vs Directive in Angular 2</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-09T16:00:00-05:00">
-                11-09-2016
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
+    <entry>
+      <title><![CDATA[Open Source Charting Libraries Comparison]]></title>
+      <url>/2016/11/10/2016-11-10-charting-library/</url>
+      <content type="html"><![CDATA[<p>For current working project, our team is looking for a global charting library in our dashboard project.</p>
+<h5 id="coming-soon…"><a href="#coming-soon…" class="headerlink" title="coming soon…"></a>coming soon…</h5>]]></content>
       
         
-          
-            <h4 id="Overview-source-angular-io"><a href="#Overview-source-angular-io" class="headerlink" title="Overview (source: angular.io)"></a>Overview (source: <a href="https://angular.io/docs/ts/latest/guide/attribute-directives.html" target="_blank" rel="external">angular.io</a>)</h4><p>Let’s look at the documentations from Angular.io, there are total three kinds of directives in Angular 2:</p>
+        <tags>
+            
+            <tag> open source </tag>
+            
+            <tag> chart </tag>
+            
+            <tag> compare </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Component vs Directive in Angular 2]]></title>
+      <url>/2016/11/09/2016-11-09-component-vs-directive/</url>
+      <content type="html"><![CDATA[<h4 id="Overview-source-angular-io"><a href="#Overview-source-angular-io" class="headerlink" title="Overview (source: angular.io)"></a>Overview (source: <a href="https://angular.io/docs/ts/latest/guide/attribute-directives.html" target="_blank" rel="external">angular.io</a>)</h4><p>Let’s look at the documentations from Angular.io, there are total three kinds of directives in Angular 2:</p>
 <ul>
 <li><strong>Component</strong> - directives with a template</li>
 <li><strong>Structural directives</strong> - change the DOM layout by adding and removing DOM elements, such as <code>*ngIf</code>, <code>*ngFor</code></li>
@@ -1182,249 +315,49 @@
 </tr>
 </tbody>
 </table>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2016/10/25/2016-10-25-sublimelinter-trick/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nehcob">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sleight of Fist">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/10/25/2016-10-25-sublimelinter-trick/" itemprop="url">SublimeLinter path configure</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-25T16:00:00-04:00">
-                10-25-2016
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
+]]></content>
       
         
-          
-            <p>After install sublimeLinter package</p>
+        <tags>
+            
+            <tag> component </tag>
+            
+            <tag> directive </tag>
+            
+            <tag> angular 2 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[SublimeLinter path configure]]></title>
+      <url>/2016/10/25/2016-10-25-sublimelinter-trick/</url>
+      <content type="html"><![CDATA[<p>After install sublimeLinter package</p>
 <p>installed plugin such as sublimeLinter-php, sublimeLinter-jshint</p>
 <p>in Mac OSX, need to configuration user setting file: </p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">path: [</div><div class="line">    <span class="string">'/Users/ put your account name here /local/bin/'</span></div><div class="line">    ]</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2016/10/13/2016-10-13-game-of-life/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nehcob">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sleight of Fist">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/10/13/2016-10-13-game-of-life/" itemprop="url">Game of Life Revisit</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-13T22:00:00-04:00">
-                10-13-2016
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
+]]></content>
       
         
-          
-            <p><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank" rel="external">Conway’s Game of Life</a></p>
+        <tags>
+            
+            <tag> sublime </tag>
+            
+            <tag> linter </tag>
+            
+            <tag> jshint </tag>
+            
+            <tag> path </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Game of Life Revisit]]></title>
+      <url>/2016/10/13/2016-10-13-game-of-life/</url>
+      <content type="html"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank" rel="external">Conway’s Game of Life</a></p>
 <h5 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h5><p>Back to college time, I had assignment about using <code>C++</code> to write a game base on ‘Game of Life’, although I did pass that course any way, I had completed forgot how I did it. This question popped up while I did the practices on Leetcode,  I didn’t come up the good solution to pass all the test. I tried to get helps from discussion section, there is a top answer which provided by <a href="https://discuss.leetcode.com/topic/29054/easiest-java-solution-with-explanation" target="_blank" rel="external">@yavinci</a>. I think his solution is brilliant with great explanation. </p>
 <h5 id="Logic-behind-the-code"><a href="#Logic-behind-the-code" class="headerlink" title="Logic behind the code"></a>Logic behind the code</h5><p>Using 2 bit to store ‘current’ state and ‘next’ state</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">        [2nd bit  ,  1st bit] </div><div class="line">      [next state ,  current state]</div><div class="line">- 00  dead (next) &lt;- dead (current)</div><div class="line">- 01  dead (next) &lt;- live (current)  </div><div class="line">- 10  live (next) &lt;- dead (current)  </div><div class="line">- 11  live (next) &lt;- live (current)</div></pre></td></tr></table></figure>
@@ -1449,126 +382,25 @@
 <h5 id="update-every-cell-base-on-neighbors-conditions"><a href="#update-every-cell-base-on-neighbors-conditions" class="headerlink" title="update every cell base on neighbors conditions"></a>update every cell base on neighbors conditions</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> m = board.length;</div><div class="line"><span class="keyword">var</span> n = board[<span class="number">0</span>].length;</div><div class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; m; i++) &#123;</div><div class="line">    <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++) &#123;</div><div class="line">        <span class="keyword">var</span> lives = livesNeighbors(board, i, j, m, n);</div><div class="line">        <span class="comment">// in the beginning every 2nd bit should be 0</span></div><div class="line">        <span class="comment">// only check 2nd bit becomes 1</span></div><div class="line">        <span class="keyword">if</span> (board[i][j] === <span class="number">1</span> &amp;&amp; lives &gt;=<span class="number">2</span> &amp;&amp; lives &lt;= <span class="number">3</span>) &#123;</div><div class="line">            board[i][j] = <span class="number">3</span>;    <span class="comment">// Make the 2nd bit 1: 01 ---&gt; 11</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (board[i][j] === <span class="number">0</span> &amp;&amp; lives &lt; <span class="number">2</span>) &#123;</div><div class="line">            board[i][j] = <span class="number">2</span>;    <span class="comment">// Make the 2nd bit 1: 00 ---&gt; 10</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h5 id="transit-all-cell-into-next-state-only-keep-2nd-bit"><a href="#transit-all-cell-into-next-state-only-keep-2nd-bit" class="headerlink" title="transit all cell into next state (only keep 2nd bit)"></a>transit all cell into next state (only keep <code>2nd</code> bit)</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; m; i++) &#123;</div><div class="line">    <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++) &#123;</div><div class="line">        board[i][j] &gt;&gt;= <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h5 id="check-neighbors-function"><a href="#check-neighbors-function" class="headerlink" title="check neighbors function"></a>check neighbors function</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">livesNeighbors</span>(<span class="params">board, i, j, m, n</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> lives = <span class="number">0</span>;</div><div class="line">    <span class="comment">// when i, j is edge row or column, using Math.max and Math.min</span></div><div class="line">    <span class="keyword">for</span> (x = <span class="built_in">Math</span>.max(i - <span class="number">1</span>, <span class="number">0</span>); x &lt;= <span class="built_in">Math</span>.min(i + <span class="number">1</span>, <span class="number">0</span>); x++) &#123;</div><div class="line">        <span class="keyword">for</span> (y = <span class="built_in">Math</span>.max(j - <span class="number">1</span>, <span class="number">0</span>); y &lt;= <span class="built_in">Math</span>.min(j + <span class="number">1</span>, <span class="number">0</span>); y++) &#123;</div><div class="line">            lives += board[x][y] &amp; <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// delete current cell</span></div><div class="line">    lives -= board[i][j] &amp; <span class="number">1</span>;</div><div class="line">    <span class="keyword">return</span> lives;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2016/10/06/2016-10-06-javascript-unit-test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nehcob">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sleight of Fist">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/10/06/2016-10-06-javascript-unit-test/" itemprop="url">Jasmine JavaScript Testing</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-06T20:00:00-04:00">
-                10-06-2016
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
+]]></content>
       
         
-          
-            <p>This post enlighten by <a href="https://www.amazon.com/Jasmine-JavaScript-Testing-Paulo-Ragonha-ebook/dp/B00WQWY8S0/ref=sr_1_1?ie=UTF8&amp;qid=1475802581&amp;sr=8-1&amp;keywords=jasmine+javascript+testing+-+second+edition" target="_blank" rel="external">Jasmine JavaScript Testing</a></p>
+        <tags>
+            
+            <tag> game of life </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> algorithm </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Jasmine JavaScript Testing]]></title>
+      <url>/2016/10/06/2016-10-06-javascript-unit-test/</url>
+      <content type="html"><![CDATA[<p>This post enlighten by <a href="https://www.amazon.com/Jasmine-JavaScript-Testing-Paulo-Ragonha-ebook/dp/B00WQWY8S0/ref=sr_1_1?ie=UTF8&amp;qid=1475802581&amp;sr=8-1&amp;keywords=jasmine+javascript+testing+-+second+edition" target="_blank" rel="external">Jasmine JavaScript Testing</a></p>
 <h5 id="unit-test"><a href="#unit-test" class="headerlink" title="unit test"></a>unit test</h5><p>a piece of code tests a functionality of unit of application code.</p>
 <h5 id="Jasmine"><a href="#Jasmine" class="headerlink" title="Jasmine"></a>Jasmine</h5><p>Jasmine: <em>behavior-driven development</em> test framework</p>
 <h5 id="TDD-vs-BDD"><a href="#TDD-vs-BDD" class="headerlink" title="TDD vs. BDD"></a>TDD vs. BDD</h5><p><code>test-driven development</code> turns into <code>behavior-driven development</code> by <code>Dan North</code></p>
@@ -1598,126 +430,25 @@
 <li>run spec(<code>it</code>)</li>
 <li><code>afterEach</code>: teardown function, runs from outside after every spec(<code>it</code>)</li>
 </ul>
-<h6 id="Write-unit-test-in-Spec-js"><a href="#Write-unit-test-in-Spec-js" class="headerlink" title="Write unit test in *Spec.js"></a>Write unit test in <code>*Spec.js</code></h6><h6 id="⇅"><a href="#⇅" class="headerlink" title="⇅"></a>⇅</h6><h6 id="Debug-and-write-more-unit-test"><a href="#Debug-and-write-more-unit-test" class="headerlink" title="Debug and write more unit test"></a>Debug and write more unit test</h6>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2016/10/05/2016-10-05-unit-test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nehcob">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sleight of Fist">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/10/05/2016-10-05-unit-test/" itemprop="url">Unit Test, Karma, Jasmine</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-05T15:10:00-04:00">
-                10-05-2016
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
+<h6 id="Write-unit-test-in-Spec-js"><a href="#Write-unit-test-in-Spec-js" class="headerlink" title="Write unit test in *Spec.js"></a>Write unit test in <code>*Spec.js</code></h6><h6 id="⇅"><a href="#⇅" class="headerlink" title="⇅"></a>⇅</h6><h6 id="Debug-and-write-more-unit-test"><a href="#Debug-and-write-more-unit-test" class="headerlink" title="Debug and write more unit test"></a>Debug and write more unit test</h6>]]></content>
       
         
-          
-            <p>My current job content is developing and maintaining a web application which written in PHP. It requires same Javascript for front-end, but our team current development process based on others teams requirements:</p>
+        <tags>
+            
+            <tag> unit test </tag>
+            
+            <tag> karma </tag>
+            
+            <tag> jasmine </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Unit Test, Karma, Jasmine]]></title>
+      <url>/2016/10/05/2016-10-05-unit-test/</url>
+      <content type="html"><![CDATA[<p>My current job content is developing and maintaining a web application which written in PHP. It requires same Javascript for front-end, but our team current development process based on others teams requirements:</p>
 <p>When they ask, we develop…🙄</p>
 <p>No time line, no strictly requirement, all work check and test done by visual result in browser.</p>
 <p>After working on current project for over 6 months, I realized I have no any efficiency process to test my Javascript code (no any test for PHP side either). I wanna try on Karma and Jasmine on our PHP MVC framework, only do unit test for my Javascript part, no plan for PHP code so far.</p>
@@ -1742,646 +473,21 @@
 </ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">files: [</div><div class="line">    <span class="string">'www/js/*.js'</span>,              <span class="comment">// source file path</span></div><div class="line">    <span class="string">'test/www/js/*Spec.js'</span>      <span class="comment">// unit test file path</span></div><div class="line">]</div></pre></td></tr></table></figure>
 <p>using <code>minimatch</code> to have more control on file selection.</p>
-<h6 id="Write-unit-test-in-Spec-js"><a href="#Write-unit-test-in-Spec-js" class="headerlink" title="Write unit test in *Spec.js"></a>Write unit test in <code>*Spec.js</code></h6><h6 id="⇅"><a href="#⇅" class="headerlink" title="⇅"></a>⇅</h6><h6 id="Debug-and-write-more-unit-test"><a href="#Debug-and-write-more-unit-test" class="headerlink" title="Debug and write more unit test"></a>Debug and write more unit test</h6>
-          
+<h6 id="Write-unit-test-in-Spec-js"><a href="#Write-unit-test-in-Spec-js" class="headerlink" title="Write unit test in *Spec.js"></a>Write unit test in <code>*Spec.js</code></h6><h6 id="⇅"><a href="#⇅" class="headerlink" title="⇅"></a>⇅</h6><h6 id="Debug-and-write-more-unit-test"><a href="#Debug-and-write-more-unit-test" class="headerlink" title="Debug and write more unit test"></a>Debug and write more unit test</h6>]]></content>
+      
         
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="nehcob" />
-          <p class="site-author-name" itemprop="name">nehcob</p>
-           
-              <p class="site-description motion-element" itemprop="description">A Ember Spirit Player</p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">10</span>
-                <span class="site-state-item-name">posts</span>
-              </a>
-            </div>
-          
-
-          
-
-          
+        <tags>
             
+            <tag> unit test </tag>
             
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">25</span>
-                <span class="site-state-item-name">tags</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
+            <tag> karma </tag>
             
-              <span class="links-of-author-item">
-                <a href="https://github.com/whileLooper" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                    
-                </a>
-              </span>
+            <tag> jasmine </tag>
             
-              <span class="links-of-author-item">
-                <a href="mailto:bochentheone@gmail.com" target="_blank" title="E-Mail">
-                  
-                    <i class="fa fa-fw fa-envelope"></i>
-                  
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.linkedin.com/in/bo-chen-32180a64" target="_blank" title="Linkedin">
-                  
-                    <i class="fa fa-fw fa-linkedin"></i>
-                  
-                    
-                </a>
-              </span>
-            
-          
-        </div>
-
+        </tags>
         
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">nehcob</span>
-</div>
-
-
-<div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
-</div>
-
-<div class="theme-info">
-  Theme -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
-  </a>
-</div>
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
+    </entry>
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
   
   
-
-  
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-</body>
-</html>
+</search>
