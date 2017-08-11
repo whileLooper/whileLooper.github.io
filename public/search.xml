@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[关于断和续]]></title>
+      <url>/2017/08/10/2017-08-10-stop_and_continue/</url>
+      <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>空了半年的博客</p>
+<p>上个月过完了自己的28岁生日，终于用上了“年近30”</p>
+<p>开始随着时间的累积，值得记录的事物越来越多</p>
+<p>越发的觉得记录的重要性</p>
+<p>学着写点什么</p>
+<p>坚持把记录变成一种生活方式</p>
+<h3 id="断"><a href="#断" class="headerlink" title="断"></a>断</h3><p>从什么时候开始断说起</p>
+<p>2017年2月初，最后一篇博客</p>
+<p>工作上开始全力投入到项目从php 到Angular 2 的migration</p>
+<p>团队的人员分配问题，前端开发只有我和一个印度小哥（有过angular.js经验）</p>
+<p>投入绝大部分时间，精力</p>
+<p>学习了全新的框架和语言 （Angular2, TypeScript）</p>
+<p>遇到过许多难题和挑战，也都一一解决</p>
+<p>工作中没空写博客</p>
+<p>下班后也没心思去写博客</p>
+<p>导致断了记录的习惯</p>
+<h3 id="续"><a href="#续" class="headerlink" title="续"></a>续</h3><p>近期项目也稳定了快2个月了</p>
+<p>印度小哥上周刚走，由于跟Macys的合同最多只有18个月，必须离开公司</p>
+<p>前端又恢复到了2个半开发者，其中半个，韩国阿加西，前后端同时作业</p>
+<p>summer 是公司的slow season</p>
+<p>活不多，闲暇的时候开始想写博客</p>
+<p>每次写博客的时候都在纠结，到底打中文还是打英文呢</p>
+<p>我的中英文都是半斤八两，错误连篇</p>
+<p>反正也没人看，就自己看的舒服，怎么舒服怎么写，中英文都有 yeah！~~</p>
+<p>为了有动力更新， 换个新的主题先</p>
+<p>Hexo， NexT</p>
+<p>走起</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Write a Custom Filtering Pipe]]></title>
+      <url>/2017/02/20/2017-02-20-custom-filter-pipe/</url>
+      <content type="html"><![CDATA[<h4 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h4><p>Write your own custom filtering pipe</p>
+<p>This pipe is be able: </p>
+<ul>
+<li>filtering data by a single input string </li>
+<li>filtering data by a single string with multi condition separating by space</li>
+<li>treat all input as string</li>
+</ul>
+<h4 id="What-is-pipe-in-Angular-2"><a href="#What-is-pipe-in-Angular-2" class="headerlink" title="What is pipe in Angular 2"></a>What is pipe in Angular 2</h4><p>Pipes transform displayed values within a template.</p>
+<p>Basically pipe is one kind of musk, transform data displayed in Agular 2 HTML template.</p>
+<p>Angular comes with many build in pipes already, for basic usage: <code>DatePipe</code>, <code>UpperCasePipe</code>,<br><code>LowerCasePipe</code>, <code>CurrencyPipe</code> and <code>PercentPipe</code>.</p>
+<p>But for some cases, we need specific pipes for specific scenarios.</p>
+<p>For example, currently I need a pipe can filter table data for me, with this pipe,<br>I’m be able to filter table data by specific input, to narrow down the table data.</p>
+<h4 id="Custom-Pipes"><a href="#Custom-Pipes" class="headerlink" title="Custom Pipes"></a>Custom Pipes</h4><p>We can write our own custom pipes, by creating a pipe class, and imported this pipe module.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Pipe, PipeTransform &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</div><div class="line"></div><div class="line"><span class="comment">// # Filter Array of Objects</span></div><div class="line"></div><div class="line">@Pipe (&#123; <span class="attr">name</span>: <span class="string">'filter'</span> &#125;)</div><div class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">FilterArrayPipe</span> <span class="title">implements</span> <span class="title">PipeTransform</span>  </span>&#123;</div><div class="line">  transform(value: <span class="built_in">Array</span>&lt;any&gt;, <span class="attr">arg1</span>: any) &#123;</div><div class="line">    <span class="keyword">let</span> result: any;</div><div class="line"></div><div class="line">    <span class="comment">// split input arg into array by space</span></div><div class="line">    <span class="keyword">if</span> (!arg1 || arg1.trim() === <span class="string">''</span>) <span class="keyword">return</span> value;</div><div class="line"></div><div class="line">    <span class="comment">// split input arg into array, filter out not valid string</span></div><div class="line">    <span class="keyword">let</span> argArr = arg1.split(<span class="string">' '</span>).filter(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123; <span class="keyword">return</span> item !== <span class="string">''</span>; &#125;);</div><div class="line"></div><div class="line">    <span class="comment">// base on input arg array side return value</span></div><div class="line">    <span class="keyword">if</span> (argArr.length === <span class="number">0</span>) &#123;</div><div class="line">      <span class="keyword">return</span> value;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (argArr.length === <span class="number">1</span>) &#123;</div><div class="line">      <span class="comment">/**</span></div><div class="line"><span class="comment">       * one input string, through through data if match, return data</span></div><div class="line"><span class="comment">       */</span></div><div class="line"></div><div class="line">      <span class="keyword">let</span> filter = argArr[<span class="number">0</span>];</div><div class="line">      result = value.filter(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</div><div class="line">        <span class="keyword">let</span> str = <span class="built_in">JSON</span>.stringify(item);</div><div class="line">        <span class="keyword">if</span> (str.toLowerCase().indexOf(filter.toLowerCase()) !== <span class="number">-1</span>) &#123;</div><div class="line">          <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        &#125;<span class="keyword">else</span> &#123;</div><div class="line">          <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        &#125;</div><div class="line">      &#125;);</div><div class="line"></div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (argArr.length &gt; <span class="number">1</span>) &#123;</div><div class="line">      <span class="comment">/**</span></div><div class="line"><span class="comment">       * filter with multi column features</span></div><div class="line"><span class="comment">       */</span></div><div class="line">      <span class="keyword">let</span> i = <span class="number">0</span>;  <span class="comment">// pointer for arg array</span></div><div class="line">      <span class="keyword">let</span> data = value;</div><div class="line"></div><div class="line">      <span class="comment">// literate arg array, keep filter result</span></div><div class="line">      <span class="keyword">while</span> (i &lt; argArr.length) &#123;</div><div class="line">        result = data.filter(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</div><div class="line">          <span class="keyword">let</span> str = <span class="built_in">JSON</span>.stringify(item);</div><div class="line">          <span class="keyword">if</span> (str.toLowerCase().indexOf(argArr[i].toLowerCase()) !== <span class="number">-1</span>) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">          &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">          &#125;</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">        <span class="comment">// update target array</span></div><div class="line">        data = result;</div><div class="line">        i++;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> result;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>This pipe definition reveals the following key points:</p>
+<ul>
+<li><p>To tell Angular this pipe’s name is <code>filter</code>, apply <code>{ name: &#39;filter&#39; }</code> in @Pipe decorator.</p>
+</li>
+<li><p>A pipe is a class decorated with pipe metadata, in my pipe module, meadata is <code>value</code></p>
+</li>
+<li><p>The pipe class implements the <code>PipeTransform</code> interface’s transform method that accepts an input value followed by optional parameters and returns the transformed value. Basically we writting all the logic<br>in this method.</p>
+</li>
+<li><p>There will be one additional argument to the transform method for each parameter passed to the pipe. Your pipe has one such parameter: the exponent. Also we can create as many argument as we want.</p>
+</li>
+</ul>
+<p>For example:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">transform(value: any, <span class="attr">arg1</span>: any, <span class="attr">arg2</span>: any, <span class="attr">arg3</span>: any) &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>usage:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> *<span class="attr">ngFor</span>=<span class="string">"let item of data | filter: arg1 : arg2 : arg3"</span>&gt;</span></div><div class="line">  &#123;&#123;item&#125;&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>To tell Angular that this is a pipe, you apply the @Pipe decorator, which you import from the core Angular library. The @Pipe decorator allows you to define the pipe name that you’ll use within template expressions.<br>It must be a valid JavaScript identifier.</li>
+</ul>
+<h4 id="Import-Pipes-module-in-app"><a href="#Import-Pipes-module-in-app" class="headerlink" title="Import Pipes module in app"></a>Import Pipes module in app</h4><p>At last, don’t forget to <strong>import</strong> it in the module in order to use it.</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> Angular 2 </tag>
+            
+            <tag> how to </tag>
+            
+            <tag> filtering </tag>
+            
+            <tag> pipe </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Continuous Integration]]></title>
+      <url>/2017/01/20/2017-01-20-ci-deploy/</url>
+      <content type="html"><![CDATA[<h3 id="What-is-CI-continuous-integration"><a href="#What-is-CI-continuous-integration" class="headerlink" title="What is CI (continuous integration)"></a>What is CI (continuous integration)</h3><p>Continuous integration refers to the build and unit testing stages of the software release process.<br>Every revision that is committed triggers an automated build and test.</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="/images/posts/2017/continuous_integration.png" alt="CI"></h2><h3 id="Travis-CI-Github-Firebase-Angular-2"><a href="#Travis-CI-Github-Firebase-Angular-2" class="headerlink" title="Travis CI + Github + Firebase + Angular 2"></a>Travis CI + Github + Firebase + Angular 2</h3><ol>
+<li>Firebase init in project</li>
+<li>Writing code in local repo</li>
+<li>Pushing to Github repo</li>
+<li>Building code production in Travis CI</li>
+<li>Deploying production code to Firebase hosting</li>
+</ol>
+<hr>
+<h4 id="Firebase-init"><a href="#Firebase-init" class="headerlink" title="Firebase init"></a>Firebase init</h4><p>Before using <a href="https://firebase.google.com/" target="_blank" rel="external">Google Firebase</a>, need to apply for<br>firebase account.</p>
+<p>There are many features which Firebase provides for us, such as Authentication,<br>Database, Storage, Hosting… </p>
+<p>In this blog, only need to use Hosting feature, which is free.</p>
+<p>Do the Firebase initialization in the existing project directory</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm install --save firebase-tools</div><div class="line"></div><div class="line">firebase init</div></pre></td></tr></table></figure>
+<p>Following the <code>firebase init</code> instruction to config your project,<br>for my case, I’m building an Angular2 project, so I choose <code>dist</code> as my public<br>directory.</p>
+<p>After the initialization, need an access token for CI as environment variable.<br><a href="https://github.com/firebase/firebase-tools#using-with-ci-systems" target="_blank" rel="external">Using with CI Systems</a></p>
+<p>then do a deploy test:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">firebase deploy</div></pre></td></tr></table></figure>
+<hr>
+<h4 id="Using-Travis-CI"><a href="#Using-Travis-CI" class="headerlink" title="Using Travis CI"></a>Using Travis CI</h4><p>Greate documentation the complete beginner <a href="https://docs.travis-ci.com/user/for-beginners" target="_blank" rel="external">here</a></p>
+<ul>
+<li>Connecting Github account to Travis CI</li>
+<li>Choosing Github project repo to async</li>
+<li>Setting Firebase Token as the environment variable in Travis</li>
+<li>Writing a <code>travis.yml</code> config file in your project directory<br><a href="https://docs.travis-ci.com/user/customizing-the-build/" target="_blank" rel="external">Customizing the Build</a></li>
+</ul>
+<p>In order to deploy project from Travis, inside the <code>travis.yml</code>, add:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">after_success:</span></div><div class="line"><span class="bullet">  -</span> <span class="string">firebase</span> <span class="string">deploy</span> <span class="bullet">--token</span> <span class="string">$&#123;FIREBASE_TOKEN&#125;</span></div></pre></td></tr></table></figure>
+<p>write script to build your project:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">script:</span></div><div class="line"><span class="bullet">  -</span> <span class="string">npm</span> <span class="string">install</span></div><div class="line"><span class="bullet">  -</span> <span class="string">npm</span> <span class="string">run</span> <span class="attr">build:prod</span></div></pre></td></tr></table></figure>
+<hr>
+<h4 id="Push-change-to-Github-build-prod-on-Travis-CI-Deploy-to-Firebase"><a href="#Push-change-to-Github-build-prod-on-Travis-CI-Deploy-to-Firebase" class="headerlink" title="Push change to Github, build prod on Travis CI, Deploy to Firebase"></a>Push change to Github, build prod on Travis CI, Deploy to Firebase</h4><p>Done!</p>
+<p>Everything is automated!</p>
+<p>Awesome! 😎</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> Angular 2 </tag>
+            
+            <tag> Firebase </tag>
+            
+            <tag> Travis CI </tag>
+            
+            <tag> Deployment </tag>
+            
+            <tag> Github </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Write a directive for charting library in Angular 2]]></title>
+      <url>/2016/11/16/2016-11-16-directive-for-charting-library/</url>
+      <content type="html"><![CDATA[<h4 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h4><p>Writing a Angular 2 attribute directive for one of popular charting libraries.</p>
+<p>For example, <strong>Flot directive</strong> usage:</p>
+<p><code>*.component.html</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">flot-chart</span></span></div><div class="line"><span class="tag">    [<span class="attr">data</span>]=<span class="string">"data"</span></span></div><div class="line"><span class="tag">    [<span class="attr">options</span>]=<span class="string">"options"</span> <span class="attr">style</span>=<span class="string">"width: 100%; height: 260px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><code>*.component.ts</code></p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Component &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</div><div class="line"><span class="meta">@Component</span>(&#123;</div><div class="line">    moduleId: <span class="built_in">module</span>.id,</div><div class="line">    selector: <span class="string">'something-cmp'</span>,</div><div class="line">    templateUrl: <span class="string">'./*.component.html'</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> SomethingComponent &#123;</div><div class="line">    <span class="keyword">this</span>.data: <span class="built_in">any</span>;</div><div class="line"></div><div class="line">    <span class="keyword">constructor</span>(<span class="params"></span>) &#123;</div><div class="line">        <span class="keyword">this</span>.data = sampleData <span class="comment">// setting data with correct format</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>*.module.ts</code></p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; NgModule &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">import</span> &#123; CommonModule &#125; <span class="keyword">from</span> <span class="string">'@angular/common'</span>;</div><div class="line"><span class="keyword">import</span> &#123; SomeComponent &#125; <span class="keyword">from</span> <span class="string">'./path/to/SomeCompont'</span>;</div><div class="line"><span class="keyword">import</span> &#123; FlotModule &#125; <span class="keyword">from</span> <span class="string">'./path/to/FlotModule/index'</span>;</div><div class="line"></div><div class="line"><span class="meta">@NgModule</span>(&#123;</div><div class="line">    imports: [</div><div class="line">        CommonModule,</div><div class="line">        FlotModule</div><div class="line">    ],</div><div class="line">    declarations: [</div><div class="line">        SomeComponent</div><div class="line">    ],</div><div class="line">    exports: [</div><div class="line">        SomeComponent</div><div class="line">    ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<hr>
+<h4 id="Install-Library"><a href="#Install-Library" class="headerlink" title="Install Library"></a>Install Library</h4><p>This part is not import in this article, everyone’s project is different, all depends on different environment. Depending on the certain situation to choose a charting library, the concept is same for most of libraries.</p>
+<p>For my current working situation, I need to use several different charting libraries, most of them are open source, free to use :</p>
+<ol>
+<li><a href="https://jquery.com/" target="_blank" rel="external">jQuery</a>  <code>npm install --save jquery</code></li>
+<li><a href="https://www.npmjs.com/package/jquery-flot" target="_blank" rel="external">jquery-flot</a>  <code>npm install --save jquery-flot</code></li>
+<li><a href="https://d3js.org/" target="_blank" rel="external">D3</a>  <code>npm install --save d3</code></li>
+<li><a href="http://c3js.org/" target="_blank" rel="external">C3</a>  <code>npm install --save c3</code></li>
+<li>nvD3, MetricsGraphics.js, etc…</li>
+</ol>
+<hr>
+<h4 id="Project-Directory"><a href="#Project-Directory" class="headerlink" title="Project Directory"></a>Project Directory</h4><p>Create a folder to holds all directive for global usage:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">_ src</div><div class="line">  |_ app</div><div class="line">    |_ chart_libraries</div><div class="line">      |_ flot</div><div class="line">        |_ flot.directive.ts</div><div class="line">        |_ flot.module.ts</div><div class="line">        |_ index.ts</div><div class="line">      |_ D3</div><div class="line">        |_ ...</div><div class="line">      |_ C3</div><div class="line">        |_ ...</div><div class="line">      ...</div></pre></td></tr></table></figure>
+<hr>
+<h4 id="Create-Directive-for-Flot"><a href="#Create-Directive-for-Flot" class="headerlink" title="Create Directive for Flot"></a>Create Directive for <em>Flot</em></h4><h5 id="Create-directive-ts-for-Flot-Directive"><a href="#Create-directive-ts-for-Flot-Directive" class="headerlink" title="Create directive.ts for Flot Directive"></a>Create directive.ts for Flot Directive</h5><p><code>flot.directive.ts</code></p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Directive, ElementRef, Input &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</div><div class="line"><span class="keyword">declare</span> <span class="keyword">var</span> jQuery: <span class="built_in">any</span>;</div><div class="line"></div><div class="line"><span class="meta">@Directive</span> (&#123;</div><div class="line">  selector: <span class="string">'[flot-chart]'</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> FlotChart &#123;</div><div class="line">    $el: <span class="built_in">any</span></div><div class="line">    <span class="meta">@Input</span>() data: <span class="built_in">any</span>;</div><div class="line">    <span class="meta">@Input</span>() options: <span class="built_in">any</span>;</div><div class="line"></div><div class="line">    <span class="keyword">constructor</span>(<span class="params">el: ElementRef</span>) &#123;</div><div class="line">        <span class="keyword">this</span>.$el = jQuery(el.nativeElement);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    render(): <span class="built_in">void</span> &#123;</div><div class="line">        <span class="comment">// set any default options you want for flot chart</span></div><div class="line">        jQuery.plot(<span class="keyword">this</span>.$el, <span class="keyword">this</span>.data, <span class="keyword">this</span>.options || &#123;</div><div class="line">            series: &#123;</div><div class="line">              lines: &#123;</div><div class="line">                show: <span class="literal">true</span>,</div><div class="line">                lineWidth: <span class="number">1</span>,</div><div class="line">                fill: <span class="literal">false</span>,</div><div class="line">                fillColor: &#123; colors: [&#123; opacity: <span class="number">.001</span> &#125;, &#123; opacity: <span class="number">.5</span>&#125;] &#125;</div><div class="line">              &#125;,</div><div class="line">              points: &#123;</div><div class="line">                show: <span class="literal">false</span>,</div><div class="line">                fill: <span class="literal">true</span></div><div class="line">              &#125;,</div><div class="line">              shadowSize: <span class="number">0</span></div><div class="line">            &#125;,</div><div class="line">            xaxis: &#123;</div><div class="line">              mode: <span class="string">'time'</span>,</div><div class="line">              timezone: <span class="string">'browser'</span></div><div class="line">            &#125;,</div><div class="line">            legend: <span class="literal">false</span>,</div><div class="line">            grid: &#123;</div><div class="line">              show: <span class="literal">false</span>,</div><div class="line">              margin: <span class="number">0</span>,</div><div class="line">              labelMargin: <span class="number">0</span>,</div><div class="line">              axisMargin: <span class="number">0</span>,</div><div class="line">              hoverable: <span class="literal">true</span>,</div><div class="line">              clickable: <span class="literal">true</span>,</div><div class="line">              tickColor: <span class="string">'rgba(255,255,255,1)'</span>,</div><div class="line">              borderWidth: <span class="number">0</span></div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    ngOnInit(): <span class="built_in">void</span> &#123;</div><div class="line">        <span class="keyword">this</span>.render();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>declare var jQuery: any</code> is declaring the jQuery variable so that jQuery function can be used in this directive file, in order to <code>declare var</code> please set up inside the <code>webpack</code>.</p>
+<p><code>selector: &#39;[flot-chart]&#39;</code> inside the <code>@Directive</code> is very import, this is our HTML attribute selector, so that we can put this selector into HTML elements to use this directive.</p>
+<p><code>this.$el = jQuery(el.nativeElement)</code> is assigned current directive host DOM to <code>$el</code>. read more documentation about <a href="https://angular.io/docs/ts/latest/api/core/index/ElementRef-class.html" target="_blank" rel="external">ElementRef</a></p>
+<h5 id="Create-module-ts-for-Flot-Directive"><a href="#Create-module-ts-for-Flot-Directive" class="headerlink" title="Create module.ts for Flot Directive"></a>Create module.ts for Flot Directive</h5><p><code>flot.module.ts</code></p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; NgModule &#125;      <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</div><div class="line"></div><div class="line"><span class="keyword">import</span> <span class="string">'jquery-flot'</span>;</div><div class="line"><span class="keyword">import</span> <span class="string">'jquery.flot.animator/jquery.flot.animator'</span>;</div><div class="line"><span class="keyword">import</span> <span class="string">'jquery-flot/jquery.flot.time.js'</span>;</div><div class="line"></div><div class="line"><span class="keyword">import</span> &#123; FlotChart &#125; <span class="keyword">from</span> <span class="string">'./flot.directive'</span>;</div><div class="line"></div><div class="line"><span class="meta">@NgModule</span>(&#123;</div><div class="line">  declarations: [</div><div class="line">    FlotChart</div><div class="line">  ],</div><div class="line">  exports: [</div><div class="line">    FlotChart</div><div class="line">  ]</div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> FlotChartModule &#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Import all the Flot dependencies inside the module file, so that Flot can be properly use without errors.</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> directive </tag>
+            
+            <tag> chart </tag>
+            
+            <tag> Angular 2 </tag>
+            
+            <tag> how to </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Open Source Charting Libraries Comparison]]></title>
+      <url>/2016/11/10/2016-11-10-charting-library/</url>
+      <content type="html"><![CDATA[<p>For current working project, our team is looking for a global charting library in our dashboard project.</p>
+<h5 id="coming-soon…"><a href="#coming-soon…" class="headerlink" title="coming soon…"></a>coming soon…</h5>]]></content>
+      
+        
+        <tags>
+            
+            <tag> open source </tag>
+            
+            <tag> chart </tag>
+            
+            <tag> compare </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Component vs Directive in Angular 2]]></title>
+      <url>/2016/11/09/2016-11-09-component-vs-directive/</url>
+      <content type="html"><![CDATA[<h4 id="Overview-source-angular-io"><a href="#Overview-source-angular-io" class="headerlink" title="Overview (source: angular.io)"></a>Overview (source: <a href="https://angular.io/docs/ts/latest/guide/attribute-directives.html" target="_blank" rel="external">angular.io</a>)</h4><p>Let’s look at the documentations from Angular.io, there are total three kinds of directives in Angular 2:</p>
+<ul>
+<li><strong>Component</strong> - directives with a template</li>
+<li><strong>Structural directives</strong> - change the DOM layout by adding and removing DOM elements, such as <code>*ngIf</code>, <code>*ngFor</code></li>
+<li><strong>Attribute directives</strong> - change the appearance or behavior of an element</li>
+</ul>
+<p>Component actually is one kind of directives in Angular 2, it is a directive with template. This post is going to focus on <strong>Component</strong> and <strong>Attribute Directives</strong>. Let me dive into each kind of directives, and find out what are their characteristics.</p>
+<h4 id="Component-source-angular-io"><a href="#Component-source-angular-io" class="headerlink" title="Component (source: angular.io)"></a>Component (source: <a href="https://angular.io/docs/ts/latest/quickstart.html#!#root-component" target="_blank" rel="external">angular.io</a>)</h4><p>Every Angular application has at least one component: the root component, also can has children component.</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Component &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</div><div class="line"><span class="meta">@Component</span>(&#123;</div><div class="line">  selector: <span class="string">'my-app'</span>,</div><div class="line">  template: <span class="string">'&lt;h1&gt;Hello Angular!&lt;/h1&gt;'</span></div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123; &#125;</div></pre></td></tr></table></figure>
+<p>Each component comes with:</p>
+<ul>
+<li><strong>An Import statement</strong> import { Component }</li>
+<li><p><strong>@Component decorator</strong> that associates metadata with component class:</p>
+<ul>
+<li>a <em>selector</em> </li>
+<li>a <em>template</em></li>
+<li>etc</li>
+</ul>
+</li>
+<li><p><strong>Input and Output Properties</strong></p>
+</li>
+<li><strong>Lifecycle</strong></li>
+<li><strong>Providers</strong></li>
+<li><p><strong>Host Element</strong> - a component can interact with its hos DOM:</p>
+<ul>
+<li>listen to host events</li>
+<li>update host’s properties</li>
+<li>invoke methods on host DOM</li>
+</ul>
+</li>
+<li><p>Components are <strong>Self-describing</strong>:</p>
+<ul>
+<li>knows how to <strong>interact</strong> with host</li>
+<li>know to <strong>render</strong> itself</li>
+<li><strong>configure</strong> dependency injection</li>
+<li>well-<strong>defined</strong> input and output properties</li>
+</ul>
+</li>
+</ul>
+<p>Base on self-describing characteristic, any component can be bootstrapped as an application, can be loaded into router outlet, or be used in some other component directly.</p>
+<h4 id="Directives-source-angular-io"><a href="#Directives-source-angular-io" class="headerlink" title="Directives (source: angular.io)"></a>Directives (source: <a href="https://angular.io/docs/ts/latest/guide/attribute-directives.html" target="_blank" rel="external">angular.io</a>)</h4><p>More precisely, it is attribute directives, it is used to change appearance and add behavior to DOM</p>
+<p>Example:</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Directive, ElementRef, Input, Renderer &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</div><div class="line"><span class="meta">@Directive</span>(&#123; selector: <span class="string">'[myHighlight]'</span> &#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> HighlightDirective &#123;</div><div class="line">    <span class="keyword">constructor</span>(<span class="params">el: ElementRef, renderer: Renderer</span>) &#123;</div><div class="line">       renderer.setElementStyle(el.nativeElement, <span class="string">'backgroundColor'</span>, <span class="string">'yellow'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The import statement specifies symbols from the Angular core:</p>
+<ol>
+<li><strong>Directive</strong> provides the functionality of the @Directive decorator.</li>
+<li><strong>ElementRef</strong> injects into the directive’s constructor so the code can access the DOM element. <a href="https://angular.io/docs/ts/latest/api/core/index/ElementRef-class.html" target="_blank" rel="external">api</a></li>
+<li><strong>Input</strong> allows data to flow from the binding expression into the directive.</li>
+<li><strong>Renderer</strong> allows the code to change the DOM element’s style. <a href="https://angular.io/docs/ts/latest/api/core/index/Renderer-class.html" target="_blank" rel="external">api</a></li>
+</ol>
+<p><code>selector: &#39;[myHighlight]&#39;</code> is a CSS selector to identify the HTML in the template associate with directives, usage:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">myHighlight</span>&gt;</span>Highlight me!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>It is hard to explain all the detail about directive, I prefer to read over the documentation from <a href="https://angular.io/docs/ts/latest/guide/attribute-directives.html" target="_blank" rel="external">angular.io</a>. By creating a example directive will help you understand what attribute directives is.</p>
+<h4 id="Overall-Comparison-source-CODEANDYOU"><a href="#Overall-Comparison-source-CODEANDYOU" class="headerlink" title="Overall Comparison (source: CODEANDYOU)"></a>Overall Comparison (source: <a href="http://www.codeandyou.com/2016/01/difference-between-component-and-directive-in-Angular2.html" target="_blank" rel="external">CODEANDYOU</a>)</h4><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Directive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>For register component we use @Component meta-data annotation.</td>
+<td>For register directives we use @Directive meta-data annotation.</td>
+</tr>
+<tr>
+<td>Component is a directive which use shadow DOM to create encapsulate visual behavior called components.  Components are typically used to create UI widgets.</td>
+<td>Directives is used to add behavior to an existing DOM element.</td>
+</tr>
+<tr>
+<td>Component is used to break up the application into smaller components.</td>
+<td>Directive is use to design re-usable components.</td>
+</tr>
+<tr>
+<td>Only one component can be present per DOM element.</td>
+<td>Many directive can be used in a per DOM element.</td>
+</tr>
+<tr>
+<td>@View decorator or template URL template are mandatory in the component.</td>
+<td>Directive don’t have View.</td>
+</tr>
+<tr>
+<td>Component is used to define pipes.</td>
+<td>You can’t define Pipes in directive.</td>
+</tr>
+<tr>
+<td>viewEncapsulation can be define in components because they have views.</td>
+<td>viewEncapsulation can be define in components because they have views.</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> component </tag>
+            
+            <tag> directive </tag>
+            
+            <tag> angular 2 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[SublimeLinter path configure]]></title>
+      <url>/2016/10/25/2016-10-25-sublimelinter-trick/</url>
+      <content type="html"><![CDATA[<p>After install sublimeLinter package</p>
+<p>installed plugin such as sublimeLinter-php, sublimeLinter-jshint</p>
+<p>in Mac OSX, need to configuration user setting file: </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">path: [</div><div class="line">    <span class="string">'/Users/ put your account name here /local/bin/'</span></div><div class="line">    ]</div></pre></td></tr></table></figure>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> sublime </tag>
+            
+            <tag> linter </tag>
+            
+            <tag> jshint </tag>
+            
+            <tag> path </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Game of Life Revisit]]></title>
+      <url>/2016/10/13/2016-10-13-game-of-life/</url>
+      <content type="html"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank" rel="external">Conway’s Game of Life</a></p>
+<h5 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h5><p>Back to college time, I had assignment about using <code>C++</code> to write a game base on ‘Game of Life’, although I did pass that course any way, I had completed forgot how I did it. This question popped up while I did the practices on Leetcode,  I didn’t come up the good solution to pass all the test. I tried to get helps from discussion section, there is a top answer which provided by <a href="https://discuss.leetcode.com/topic/29054/easiest-java-solution-with-explanation" target="_blank" rel="external">@yavinci</a>. I think his solution is brilliant with great explanation. </p>
+<h5 id="Logic-behind-the-code"><a href="#Logic-behind-the-code" class="headerlink" title="Logic behind the code"></a>Logic behind the code</h5><p>Using 2 bit to store ‘current’ state and ‘next’ state</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">        [2nd bit  ,  1st bit] </div><div class="line">      [next state ,  current state]</div><div class="line">- 00  dead (next) &lt;- dead (current)</div><div class="line">- 01  dead (next) &lt;- live (current)  </div><div class="line">- 10  live (next) &lt;- dead (current)  </div><div class="line">- 11  live (next) &lt;- live (current)</div></pre></td></tr></table></figure>
+<ol>
+<li>Every cell is 0 or 1, in 2 bit it is either <code>00</code> or <code>01</code></li>
+<li>Notice that <code>1st</code> state is independent of <code>2nd</code> state.</li>
+<li>All cells update at same time</li>
+<li>count # neighbors from <code>1st</code> state and send <code>2nd</code> state bit</li>
+<li>Since <code>2nd</code> state default to dead, no consideration for situation <code>01-&gt;00</code></li>
+<li>After update all cells, delete cell’s <code>1st</code> state by <code>&gt;&gt;1</code></li>
+</ol>
+<p>For each cell’s <code>1st</code> bit, check the 8 cells around itself, and set the cell’s <code>2nd</code> bit.</p>
+<ol>
+<li>Transition <code>01 -&gt; 11</code>: when <code>board[i][j] == 1</code> and lives &gt;= 2 &amp;&amp; lives &lt;= 3.</li>
+<li>Transition <code>00 -&gt; 10</code>: when <code>board[i][j] == 0</code> and lives == 3.</li>
+</ol>
+<p>To get the current state, simply do</p>
+<p><code>board[i][j] &amp; 1</code></p>
+<p>To get the next state, simply do</p>
+<p><code>board[i][j] &gt;&gt; 1</code></p>
+<h5 id="Code-break-down"><a href="#Code-break-down" class="headerlink" title="Code break down"></a>Code break down</h5><p>There are <em>three</em> main section in the code</p>
+<h5 id="update-every-cell-base-on-neighbors-conditions"><a href="#update-every-cell-base-on-neighbors-conditions" class="headerlink" title="update every cell base on neighbors conditions"></a>update every cell base on neighbors conditions</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> m = board.length;</div><div class="line"><span class="keyword">var</span> n = board[<span class="number">0</span>].length;</div><div class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; m; i++) &#123;</div><div class="line">    <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++) &#123;</div><div class="line">        <span class="keyword">var</span> lives = livesNeighbors(board, i, j, m, n);</div><div class="line">        <span class="comment">// in the beginning every 2nd bit should be 0</span></div><div class="line">        <span class="comment">// only check 2nd bit becomes 1</span></div><div class="line">        <span class="keyword">if</span> (board[i][j] === <span class="number">1</span> &amp;&amp; lives &gt;=<span class="number">2</span> &amp;&amp; lives &lt;= <span class="number">3</span>) &#123;</div><div class="line">            board[i][j] = <span class="number">3</span>;    <span class="comment">// Make the 2nd bit 1: 01 ---&gt; 11</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (board[i][j] === <span class="number">0</span> &amp;&amp; lives &lt; <span class="number">2</span>) &#123;</div><div class="line">            board[i][j] = <span class="number">2</span>;    <span class="comment">// Make the 2nd bit 1: 00 ---&gt; 10</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="transit-all-cell-into-next-state-only-keep-2nd-bit"><a href="#transit-all-cell-into-next-state-only-keep-2nd-bit" class="headerlink" title="transit all cell into next state (only keep 2nd bit)"></a>transit all cell into next state (only keep <code>2nd</code> bit)</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; m; i++) &#123;</div><div class="line">    <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++) &#123;</div><div class="line">        board[i][j] &gt;&gt;= <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="check-neighbors-function"><a href="#check-neighbors-function" class="headerlink" title="check neighbors function"></a>check neighbors function</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">livesNeighbors</span>(<span class="params">board, i, j, m, n</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> lives = <span class="number">0</span>;</div><div class="line">    <span class="comment">// when i, j is edge row or column, using Math.max and Math.min</span></div><div class="line">    <span class="keyword">for</span> (x = <span class="built_in">Math</span>.max(i - <span class="number">1</span>, <span class="number">0</span>); x &lt;= <span class="built_in">Math</span>.min(i + <span class="number">1</span>, <span class="number">0</span>); x++) &#123;</div><div class="line">        <span class="keyword">for</span> (y = <span class="built_in">Math</span>.max(j - <span class="number">1</span>, <span class="number">0</span>); y &lt;= <span class="built_in">Math</span>.min(j + <span class="number">1</span>, <span class="number">0</span>); y++) &#123;</div><div class="line">            lives += board[x][y] &amp; <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// delete current cell</span></div><div class="line">    lives -= board[i][j] &amp; <span class="number">1</span>;</div><div class="line">    <span class="keyword">return</span> lives;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> game of life </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> algorithm </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Jasmine JavaScript Testing]]></title>
+      <url>/2016/10/06/2016-10-06-javascript-unit-test/</url>
+      <content type="html"><![CDATA[<p>This post enlighten by <a href="https://www.amazon.com/Jasmine-JavaScript-Testing-Paulo-Ragonha-ebook/dp/B00WQWY8S0/ref=sr_1_1?ie=UTF8&amp;qid=1475802581&amp;sr=8-1&amp;keywords=jasmine+javascript+testing+-+second+edition" target="_blank" rel="external">Jasmine JavaScript Testing</a></p>
+<h5 id="unit-test"><a href="#unit-test" class="headerlink" title="unit test"></a>unit test</h5><p>a piece of code tests a functionality of unit of application code.</p>
+<h5 id="Jasmine"><a href="#Jasmine" class="headerlink" title="Jasmine"></a>Jasmine</h5><p>Jasmine: <em>behavior-driven development</em> test framework</p>
+<h5 id="TDD-vs-BDD"><a href="#TDD-vs-BDD" class="headerlink" title="TDD vs. BDD"></a>TDD vs. BDD</h5><p><code>test-driven development</code> turns into <code>behavior-driven development</code> by <code>Dan North</code></p>
+<h5 id="BDD"><a href="#BDD" class="headerlink" title="BDD"></a>BDD</h5><ul>
+<li>Given: this provides an initial context</li>
+<li>When: this defines the event occurs</li>
+<li>Then: this ensures an outcome</li>
+</ul>
+<h5 id="Jasmine-BDD-example"><a href="#Jasmine-BDD-example" class="headerlink" title="Jasmine BDD example"></a>Jasmine BDD example</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">describe(<span class="string">"Player"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    describe(<span class="string">"when song has been paused"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">       it(<span class="string">"should indicate that the song is paused"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        &#125;); </div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h5 id="spec"><a href="#spec" class="headerlink" title="spec"></a>spec</h5><p>each unit test call <code>spec</code>, short for <code>specification</code></p>
+<h5 id="write-a-Jasmine-test"><a href="#write-a-Jasmine-test" class="headerlink" title="write a Jasmine test"></a>write a Jasmine test</h5><p><code>describe</code> function is a <code>global</code> Jasmine function, used to define test contest, it creates a new test suite(a collection of test cases), acceptes two params:</p>
+<ul>
+<li><code>string</code>: name of test suite</li>
+<li><code>function</code>: a function that will contains all its specs</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">describe(<span class="string">"Investment"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; &#125;);</div></pre></td></tr></table></figure>
+<p><code>it</code>, another <code>golbal</code> Jasmine function, accepts two params:</p>
+<ul>
+<li><code>string</code>: title of the spec</li>
+<li><code>function</code>: a function that will contains the spec code</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">describe(<span class="string">"Investment"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    it(<span class="string">"should be of a stock"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p><code>expect</code>, an assertion or expectation is a comparison between two values, result of comparison is true means success, along with a <code>matcher</code> that indicates what comparison must be made with the values.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">describe(<span class="string">"Investment"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </div><div class="line">    it(<span class="string">"should be of a stock"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; </div><div class="line">        expect(investment.stock).toBe(stock);</div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h6 id="Setup-and-teardown"><a href="#Setup-and-teardown" class="headerlink" title="Setup and teardown"></a>Setup and teardown</h6><ul>
+<li><code>beforeEach</code>: setup function, runs from outside before every spec(<code>it</code>)</li>
+<li>run spec(<code>it</code>)</li>
+<li><code>afterEach</code>: teardown function, runs from outside after every spec(<code>it</code>)</li>
+</ul>
+<h6 id="Write-unit-test-in-Spec-js"><a href="#Write-unit-test-in-Spec-js" class="headerlink" title="Write unit test in *Spec.js"></a>Write unit test in <code>*Spec.js</code></h6><h6 id="⇅"><a href="#⇅" class="headerlink" title="⇅"></a>⇅</h6><h6 id="Debug-and-write-more-unit-test"><a href="#Debug-and-write-more-unit-test" class="headerlink" title="Debug and write more unit test"></a>Debug and write more unit test</h6>]]></content>
+      
+        
+        <tags>
+            
+            <tag> unit test </tag>
+            
+            <tag> karma </tag>
+            
+            <tag> jasmine </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Unit Test, Karma, Jasmine]]></title>
+      <url>/2016/10/05/2016-10-05-unit-test/</url>
+      <content type="html"><![CDATA[<p>My current job content is developing and maintaining a web application which written in PHP. It requires same Javascript for front-end, but our team current development process based on others teams requirements:</p>
+<p>When they ask, we develop…🙄</p>
+<p>No time line, no strictly requirement, all work check and test done by visual result in browser.</p>
+<p>After working on current project for over 6 months, I realized I have no any efficiency process to test my Javascript code (no any test for PHP side either). I wanna try on Karma and Jasmine on our PHP MVC framework, only do unit test for my Javascript part, no plan for PHP code so far.</p>
+<h6 id="Task-break-down"><a href="#Task-break-down" class="headerlink" title="Task break down"></a>Task break down</h6><ol>
+<li>set up environment</li>
+<li>write unit test case for current exist Javascript file</li>
+<li>run and debug</li>
+<li>repeat step 2, step 3</li>
+</ol>
+<h6 id="Set-up-test-environment-in-current-project"><a href="#Set-up-test-environment-in-current-project" class="headerlink" title="Set up test environment in current project"></a>Set up test environment in current project</h6><ol>
+<li>Initiated a <code>Node.js</code> project under the current project directory</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure>
+<ol>
+<li>Install <code>Karma</code>, <code>Jasmine</code>, <code>minimatch</code> and others dependencies base on installation result</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install karma --save-dev</div><div class="line">npm install karma-cli -g</div><div class="line">npm install karma-jasmine --save-dev</div><div class="line">npm install minimatch --save-dev</div></pre></td></tr></table></figure>
+<ol>
+<li>Configure <code>karma.conf.js</code>, see configuration instruction <a href="http://karma-runner.github.io/1.0/intro/configuration.html" target="_blank" rel="external">here</a>. Select <code>Jasmine</code> as frameworks.</li>
+<li>Specify file paths in <code>karma.conf.js</code>, add current project dependencies such as <code>jQuery</code>, <code>Bootstrap</code> and other Javascript libraries if necessary.</li>
+<li>Finally specify the unit test file and source file path in <code>karma.conf.js</code>, for example: </li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">files: [</div><div class="line">    <span class="string">'www/js/*.js'</span>,              <span class="comment">// source file path</span></div><div class="line">    <span class="string">'test/www/js/*Spec.js'</span>      <span class="comment">// unit test file path</span></div><div class="line">]</div></pre></td></tr></table></figure>
+<p>using <code>minimatch</code> to have more control on file selection.</p>
+<h6 id="Write-unit-test-in-Spec-js"><a href="#Write-unit-test-in-Spec-js" class="headerlink" title="Write unit test in *Spec.js"></a>Write unit test in <code>*Spec.js</code></h6><h6 id="⇅"><a href="#⇅" class="headerlink" title="⇅"></a>⇅</h6><h6 id="Debug-and-write-more-unit-test"><a href="#Debug-and-write-more-unit-test" class="headerlink" title="Debug and write more unit test"></a>Debug and write more unit test</h6>]]></content>
+      
+        
+        <tags>
+            
+            <tag> unit test </tag>
+            
+            <tag> karma </tag>
+            
+            <tag> jasmine </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>

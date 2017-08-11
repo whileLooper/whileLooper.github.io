@@ -2,7 +2,11 @@
 title: Write a Custom Filtering Pipe
 layout: post
 date:   2017-02-20 18:00:00 
-tags: ['Angular 2', 'filtering', 'pipe', 'how to']
+tags: 
+  - Angular 2
+  - filtering
+  - pipe
+  - how to
 author: "Bo Chen"
 ---
 
