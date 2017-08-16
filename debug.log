@@ -2882,3 +2882,5 @@
 {"name":"hexo","hostname":"a4285760","pid":66035,"level":20,"msg":"Generator: \u001b[35mxml\u001b[39m","time":"2017-08-14T13:37:35.415Z","v":0}
 {"name":"hexo","hostname":"a4285760","pid":66035,"level":20,"msg":"Generator: \u001b[35mtag\u001b[39m","time":"2017-08-14T13:37:35.417Z","v":0}
 {"name":"hexo","hostname":"a4285760","pid":66035,"level":20,"msg":"Generator: \u001b[35masset\u001b[39m","time":"2017-08-14T13:37:35.426Z","v":0}
+{"name":"hexo","hostname":"a4285760","pid":66035,"level":30,"msg":"Farewell","time":"2017-08-14T13:39:05.631Z","v":0}
+{"name":"hexo","hostname":"a4285760","pid":66035,"level":20,"msg":"Database saved","time":"2017-08-14T13:39:05.674Z","v":0}
