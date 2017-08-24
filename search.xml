@@ -7,13 +7,15 @@
       <url>/2017/08/23/2017-08-23-message_update_component/</url>
       <content type="html"><![CDATA[<h3 id="Descritpion"><a href="#Descritpion" class="headerlink" title="Descritpion"></a>Descritpion</h3><p>This is a tiny message update component:</p>
 <ul>
-<li>written in Angular2, bootstrap</li>
+<li>require in Angular2, Bootstrap, Fontawesome</li>
 <li>be able to show dynamic message from backend</li>
 <li>be able to update message to backend</li>
 <li>be able to show different icon base on users actions</li>
 </ul>
 <h3 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h3><p><img src="/postImages/demo.gif" alt="Demo"></p>
-<h3 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h3><script src="https://gist.github.com/whileLooper/57376c728037f3138c54c14916ef5e63.js"></script>]]></content>
+<h3 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h3><script src="https://gist.github.com/whileLooper/57376c728037f3138c54c14916ef5e63.js"></script>
+
+<script src="https://gist.github.com/whileLooper/96308fbd017da51df8385e5f5e3ca481.js"></script>]]></content>
       
         
         <tags>
@@ -251,9 +253,9 @@
             
             <tag> Angular 2 </tag>
             
-            <tag> how to </tag>
-            
             <tag> directive </tag>
+            
+            <tag> how to </tag>
             
         </tags>
         
