@@ -5,14 +5,15 @@
     <entry>
       <title><![CDATA[Angular 2 Message Update Component]]></title>
       <url>/2017/08/23/2017-08-23-message_update_component/</url>
-      <content type="html"><![CDATA[<h3 id="Descritpion"><a href="#Descritpion" class="headerlink" title="Descritpion"></a>Descritpion</h3><p>This is a tiny message update component:</p>
+      <content type="html"><![CDATA[<h3 id="Descritpion"><a href="#Descritpion" class="headerlink" title="Descritpion"></a>Descritpion</h3><p>This is a tiny message update component I have wrote in wor:</p>
 <ul>
-<li>require in Angular2, Bootstrap, Fontawesome</li>
+<li>requires Angular2, Bootstrap, Fontawesome</li>
 <li>be able to show dynamic message from backend</li>
 <li>be able to update message to backend</li>
 <li>be able to show different icon base on users actions</li>
 </ul>
 <h3 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h3><p><img src="/postImages/demo.gif" alt="Demo"></p>
+<a id="more"></a>
 <h3 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h3><script src="https://gist.github.com/whileLooper/57376c728037f3138c54c14916ef5e63.js"></script>
 
 <script src="https://gist.github.com/whileLooper/96308fbd017da51df8385e5f5e3ca481.js"></script>]]></content>
@@ -36,6 +37,7 @@
 <p>很快的让我进入了整个故事</p>
 <p>随着深入的阅读，不断出现对剧情的猜测</p>
 <p>真的很有意思</p>
+<a id="more"></a>
 <p>从不同的角色角度交代剧情细节</p>
 <p>时不时出现的新线索和值得揣测的对话</p>
 <p>让故事的走向不断的变化，不断的推翻旧的猜测</p>
@@ -70,6 +72,7 @@
 <p>越发的觉得记录的重要性</p>
 <p>学着写点什么</p>
 <p>坚持把记录变成一种生活方式</p>
+<a id="more"></a>
 <h3 id="断"><a href="#断" class="headerlink" title="断"></a>断</h3><p>从什么时候开始断说起</p>
 <p>2017年2月初，最后一篇博客</p>
 <p>工作上开始全力投入到项目从php 到Angular 2 的migration</p>
@@ -110,7 +113,9 @@
 <ul>
 <li>filtering data by a single input string </li>
 <li>filtering data by a single string with multi condition separating by space</li>
-<li>treat all input as string</li>
+<li><p>treat all input as string</p>
+<a id="more"></a>
+</li>
 </ul>
 <h4 id="What-is-pipe-in-Angular-2"><a href="#What-is-pipe-in-Angular-2" class="headerlink" title="What is pipe in Angular 2"></a>What is pipe in Angular 2</h4><p>Pipes transform displayed values within a template.</p>
 <p>Basically pipe is one kind of musk, transform data displayed in Agular 2 HTML template.</p>
@@ -145,11 +150,11 @@
             
             <tag> Angular 2 </tag>
             
+            <tag> how to </tag>
+            
             <tag> filtering </tag>
             
             <tag> pipe </tag>
-            
-            <tag> how to </tag>
             
         </tags>
         
@@ -159,7 +164,7 @@
       <title><![CDATA[Continuous Integration]]></title>
       <url>/2017/01/20/2017-01-20-ci-deploy/</url>
       <content type="html"><![CDATA[<h3 id="What-is-CI-continuous-integration"><a href="#What-is-CI-continuous-integration" class="headerlink" title="What is CI (continuous integration)"></a>What is CI (continuous integration)</h3><p>Continuous integration refers to the build and unit testing stages of the software release process.<br>Every revision that is committed triggers an automated build and test.</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><img src="/images/posts/2017/continuous_integration.png" alt="CI"></h2><h3 id="Travis-CI-Github-Firebase-Angular-2"><a href="#Travis-CI-Github-Firebase-Angular-2" class="headerlink" title="Travis CI + Github + Firebase + Angular 2"></a>Travis CI + Github + Firebase + Angular 2</h3><ol>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h3 id="Travis-CI-Github-Firebase-Angular-2"><a href="#Travis-CI-Github-Firebase-Angular-2" class="headerlink" title="Travis CI + Github + Firebase + Angular 2"></a>Travis CI + Github + Firebase + Angular 2</h3><ol>
 <li>Firebase init in project</li>
 <li>Writing code in local repo</li>
 <li>Pushing to Github repo</li>
@@ -215,6 +220,7 @@
       <title><![CDATA[Write a directive for charting library in Angular 2]]></title>
       <url>/2016/11/16/2016-11-16-directive-for-charting-library/</url>
       <content type="html"><![CDATA[<h4 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h4><p>Writing a Angular 2 attribute directive for one of popular charting libraries.</p>
+<a id="more"></a>
 <p>For example, <strong>Flot directive</strong> usage:</p>
 <p><code>*.component.html</code></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">flot-chart</span></span></div><div class="line"><span class="tag">    [<span class="attr">data</span>]=<span class="string">"data"</span></span></div><div class="line"><span class="tag">    [<span class="attr">options</span>]=<span class="string">"options"</span> <span class="attr">style</span>=<span class="string">"width: 100%; height: 260px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -249,9 +255,9 @@
         
         <tags>
             
-            <tag> chart </tag>
-            
             <tag> Angular 2 </tag>
+            
+            <tag> chart </tag>
             
             <tag> directive </tag>
             
@@ -379,9 +385,9 @@
         
         <tags>
             
-            <tag> component </tag>
-            
             <tag> directive </tag>
+            
+            <tag> component </tag>
             
             <tag> angular 2 </tag>
             
