@@ -3,6 +3,57 @@
   
     
     <entry>
+      <title><![CDATA[恶意 （-东野圭吾）]]></title>
+      <url>/2017/08/21/2017-08-21-eyi_reading/</url>
+      <content type="html"><![CDATA[<h3 id="《恶意》"><a href="#《恶意》" class="headerlink" title="《恶意》"></a>《恶意》</h3><p>受某猪的影响开始阅读她最喜欢的作家的小说</p>
+<p>随便在一堆东野圭吾的小说中挑了一本： 《恶意》</p>
+<p>太久没有静下来阅读长篇小说</p>
+<p>简单的文字，简短的对话</p>
+<p>很快的让我进入了整个故事</p>
+<p>随着深入的阅读，不断出现对剧情的猜测</p>
+<p>真的很有意思</p>
+<p>从不同的角色角度交代剧情细节</p>
+<p>时不时出现的新线索和值得揣测的对话</p>
+<p>让故事的走向不断的变化，不断的推翻旧的猜测</p>
+<p>下半部分的受访者陈述让故事又一次峰回路转</p>
+<p>渐渐理清了野野口与日高的儿时关系</p>
+<p>让读者从其他人的角度看懂他们的性格</p>
+<p>而不是之前主观的感觉</p>
+<p>书的最后加贺警官也揭露了所有线索和疑点</p>
+<p>整个案情的真相这时已经完全呈现给读者</p>
+<p>故事的结尾让我感到震惊的同时也很震撼</p>
+<p>人性真的很恶心啊……</p>
+<p>想起了一句金典： 人之初性本恶</p>
+<p>从小到大的恶一直在成长，最后变成了恶魔</p>
+<p>野野口对日高也只有纯粹的恶意，没有恨，只是单纯的对他人的不爽</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 读书笔记 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Angular 2 Message Update Component]]></title>
+      <url>/2017/08/10/2017-08-23-message_update_component/</url>
+      <content type="html"><![CDATA[<h3 id="Descritpion"><a href="#Descritpion" class="headerlink" title="Descritpion"></a>Descritpion</h3><p>This is a tiny message update component, it is written in Angular2, bootstrap.</p>
+<p>It’s be able to show dynamic message which is sent from </p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> Angular2, widget, component </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[关于断和续]]></title>
       <url>/2017/08/10/2017-08-10-stop_and_continue/</url>
       <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>空了半年的博客</p>
@@ -86,11 +137,11 @@
             
             <tag> Angular 2 </tag>
             
+            <tag> how to </tag>
+            
             <tag> filtering </tag>
             
             <tag> pipe </tag>
-            
-            <tag> how to </tag>
             
         </tags>
         
@@ -192,9 +243,9 @@
             
             <tag> chart </tag>
             
-            <tag> directive </tag>
-            
             <tag> Angular 2 </tag>
+            
+            <tag> directive </tag>
             
             <tag> how to </tag>
             
