@@ -3,6 +3,28 @@
   
     
     <entry>
+      <title><![CDATA[Angular 2 Message Update Component]]></title>
+      <url>/2017/08/23/2017-08-23-message_update_component/</url>
+      <content type="html"><![CDATA[<h3 id="Descritpion"><a href="#Descritpion" class="headerlink" title="Descritpion"></a>Descritpion</h3><p>This is a tiny message update component:</p>
+<ul>
+<li>written in Angular2, bootstrap</li>
+<li>be able to show dynamic message from backend</li>
+<li>be able to update message to backend</li>
+<li>be able to show different icon base on users actions</li>
+</ul>
+<h3 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h3><p><img src="/source/postImages/demo.gif" alt="Demo"></p>
+<h3 id="Source-Code"><a href="#Source-Code" class="headerlink" title="Source Code"></a>Source Code</h3><script src="https://gist.github.com/whileLooper/57376c728037f3138c54c14916ef5e63.js"></script>]]></content>
+      
+        
+        <tags>
+            
+            <tag> Angular2, widget, component </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[恶意 （-东野圭吾）]]></title>
       <url>/2017/08/21/2017-08-21-eyi_reading/</url>
       <content type="html"><![CDATA[<h3 id="《恶意》"><a href="#《恶意》" class="headerlink" title="《恶意》"></a>《恶意》</h3><p>受某猪的影响开始阅读她最喜欢的作家的小说</p>
@@ -32,22 +54,6 @@
         <tags>
             
             <tag> 读书笔记 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Angular 2 Message Update Component]]></title>
-      <url>/2017/08/10/2017-08-23-message_update_component/</url>
-      <content type="html"><![CDATA[<h3 id="Descritpion"><a href="#Descritpion" class="headerlink" title="Descritpion"></a>Descritpion</h3><p>This is a tiny message update component, it is written in Angular2, bootstrap.</p>
-<p>It’s be able to show dynamic message which is sent from </p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> Angular2, widget, component </tag>
             
         </tags>
         
@@ -137,11 +143,11 @@
             
             <tag> Angular 2 </tag>
             
-            <tag> how to </tag>
-            
             <tag> filtering </tag>
             
             <tag> pipe </tag>
+            
+            <tag> how to </tag>
             
         </tags>
         
@@ -241,13 +247,13 @@
         
         <tags>
             
-            <tag> directive </tag>
-            
             <tag> chart </tag>
             
             <tag> Angular 2 </tag>
             
             <tag> how to </tag>
+            
+            <tag> directive </tag>
             
         </tags>
         
@@ -371,9 +377,9 @@
         
         <tags>
             
-            <tag> component </tag>
-            
             <tag> directive </tag>
+            
+            <tag> component </tag>
             
             <tag> angular 2 </tag>
             

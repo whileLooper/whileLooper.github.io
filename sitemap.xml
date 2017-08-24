@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http:bochentheone.com/2017/08/10/2017-08-23-message_update_component/</loc>
+    <loc>http:bochentheone.com/2017/08/23/2017-08-23-message_update_component/</loc>
     
-    <lastmod>2017-08-24T01:05:35.000Z</lastmod>
+    <lastmod>2017-08-24T01:19:36.000Z</lastmod>
     
   </url>
   
@@ -51,21 +51,7 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/10/06/2016-10-06-javascript-unit-test/</loc>
-    
-    <lastmod>2017-08-10T15:48:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http:bochentheone.com/2016/11/10/2016-11-10-charting-library/</loc>
-    
-    <lastmod>2017-08-10T15:48:53.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http:bochentheone.com/2016/11/09/2016-11-09-component-vs-directive/</loc>
     
     <lastmod>2017-08-10T15:48:53.000Z</lastmod>
     
@@ -79,14 +65,28 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/10/13/2016-10-13-game-of-life/</loc>
+    <loc>http:bochentheone.com/2016/11/16/2016-11-16-directive-for-charting-library/</loc>
     
     <lastmod>2017-08-10T15:48:53.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/11/16/2016-11-16-directive-for-charting-library/</loc>
+    <loc>http:bochentheone.com/2016/10/06/2016-10-06-javascript-unit-test/</loc>
+    
+    <lastmod>2017-08-10T15:48:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2016/11/09/2016-11-09-component-vs-directive/</loc>
+    
+    <lastmod>2017-08-10T15:48:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2016/10/13/2016-10-13-game-of-life/</loc>
     
     <lastmod>2017-08-10T15:48:53.000Z</lastmod>
     
