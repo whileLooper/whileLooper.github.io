@@ -3,9 +3,39 @@
   
     
     <entry>
+      <title><![CDATA[写于2017年末， 2018年初]]></title>
+      <url>/2017/12/21/2017-12-21-look-back/</url>
+      <content type="html"><![CDATA[<p>时隔4个月的回归（🤦🏻‍♂️）。。。</p>
+<p>2017年，已经成为我目前人生中最重要的一年</p>
+<ul>
+<li><p>感情方面的确定</p>
+</li>
+<li><p>双方父母的肯定与支持</p>
+</li>
+<li><p>二人的婚纱照</p>
+</li>
+<li><p>属于自己的第一套房子，搬新居</p>
+</li>
+<li><p>通过买股票的方式存钱</p>
+</li>
+</ul>
+<p>可以算的上是完美的收官了， 2017会有个大人物被carry over到2018</p>
+<p>2018年， 我相信会比2017年更加精彩，因为这个大人物的到来</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Angular 2 Message Update Component]]></title>
       <url>/2017/08/23/2017-08-23-message_update_component/</url>
-      <content type="html"><![CDATA[<h3 id="Descritpion"><a href="#Descritpion" class="headerlink" title="Descritpion"></a>Descritpion</h3><p>This is a tiny message update component I have wrote in wor:</p>
+      <content type="html"><![CDATA[<h3 id="Descritpion"><a href="#Descritpion" class="headerlink" title="Descritpion"></a>Descritpion</h3><p>This is a tiny message update component I have wrote during work:</p>
 <ul>
 <li>requires Angular2, Bootstrap, Fontawesome</li>
 <li>be able to show dynamic message from backend</li>
@@ -257,9 +287,9 @@
             
             <tag> chart </tag>
             
-            <tag> directive </tag>
-            
             <tag> Angular 2 </tag>
+            
+            <tag> directive </tag>
             
             <tag> how to </tag>
             
@@ -385,9 +415,9 @@
         
         <tags>
             
-            <tag> component </tag>
-            
             <tag> directive </tag>
+            
+            <tag> component </tag>
             
             <tag> angular 2 </tag>
             
