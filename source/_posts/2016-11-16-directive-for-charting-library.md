@@ -9,6 +9,8 @@ author: "Bo Chen"
 #### Goal
 Writing a Angular 2 attribute directive for one of popular charting libraries.
 
+<!-- more --> 
+
 For example, **Flot directive** usage:
 
 `*.component.html`

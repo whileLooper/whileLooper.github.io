@@ -13,6 +13,8 @@ author: "Bo Chen"
 #### Goal
 Write your own custom filtering pipe
 
+<!-- more --> 
+
 This pipe is be able: 
  - filtering data by a single input string 
  - filtering data by a single string with multi condition separating by space

@@ -3,6 +3,40 @@
   
     
     <entry>
+      <title><![CDATA[2018, 4月]]></title>
+      <url>/2018/04/25/2018-04-26-work-review/</url>
+      <content type="html"><![CDATA[<p>  2018年1月-4月的工作终结和回顾，记录下来自己所做的，所改变的，正在发生的。。。</p>
+<a id="more"></a> 
+<h3 id="技术层面"><a href="#技术层面" class="headerlink" title="技术层面"></a>技术层面</h3><p>4个月的工作内容中没有大方面的改变。</p>
+<p>对团队的前端项目连续进行两次升级，从Angular 2.5 升级到来Anuglar 4.2版本， Bootstrap 4正式版本的升级。</p>
+<p>对项目升级的两种方案进行来对比:</p>
+<ul>
+<li>从新的template上面开始慢慢移植现有的页面和功能</li>
+<li>从当前版本的项目上面移植template所做的更新</li>
+</ul>
+<p>由于之前的升级采用的是第一种方案，更新的是速度取决与我们项目的大小，平均速度是个fixed rate。</p>
+<p>尝试使用第二种方案，前期进度较为缓慢，由于需要花时间阅读和对比代码，分析template的更新之处，<br> 后期速度会直线上升，不会受到项目大小影响，同时也了解到Angular具体哪里更新和变话</p>
+<p>个人对这次template的更新并不觉得有太多的变化，从bootstrap beta到了正式版本反而给我们加大了修改class name的工作量</p>
+<p>下次template的更新反而更感兴趣，引入了强大的Angular Cli，还有更新到了Angular 5.2稳定版本</p>
+<p>Angular 5对service worker更好的支持，和 Cli所提供的强大功能都很值得期待</p>
+<h3 id="工作能力层面"><a href="#工作能力层面" class="headerlink" title="工作能力层面"></a>工作能力层面</h3><p>由于一段长时间的懒散，被经理抓去谈话, 指出一些问题和需要改变的地方</p>
+<p>本人承认，待在conform zone太久导致天天不想干活这个是真的</p>
+<p>个人觉得搞笑的是，他所说的: ‘need more communication with teams’, 真是满脸的黑人问号，<br>团队工作环境是在个工作室里，全队人围着一张桌子有说有笑，有问题都是随时应答的。反而是他自己一个人在office</p>
+<p>直到两次 1 on 1 后才知道，原来他说的more communication其实指的是跟他more communicate。靠，说白了，是要我时不时跟他汇报下我在干哈</p>
+<p>而且他貌似很享受这种micro management，真是越来越受不了 🙄</p>
+<h3 id="闲言碎语"><a href="#闲言碎语" class="headerlink" title="闲言碎语"></a>闲言碎语</h3><p>teams are great, but it is about time to leave… for personal goods</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[恶意 （-东野圭吾）]]></title>
       <url>/2017/08/21/2017-08-21-eyi_reading/</url>
       <content type="html"><![CDATA[<h3 id="《恶意》"><a href="#《恶意》" class="headerlink" title="《恶意》"></a>《恶意》</h3><p>受某猪的影响开始阅读她最喜欢的作家的小说</p>
@@ -72,6 +106,7 @@
       <title><![CDATA[Write a Custom Filtering Pipe]]></title>
       <url>/2017/02/20/2017-02-20-custom-filter-pipe/</url>
       <content type="html"><![CDATA[<h4 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h4><p>Write your own custom filtering pipe</p>
+<a id="more"></a> 
 <p>This pipe is be able: </p>
 <ul>
 <li>filtering data by a single input string </li>
@@ -111,11 +146,11 @@
             
             <tag> Angular 2 </tag>
             
-            <tag> how to </tag>
-            
             <tag> filtering </tag>
             
             <tag> pipe </tag>
+            
+            <tag> how to </tag>
             
         </tags>
         
@@ -124,7 +159,7 @@
     <entry>
       <title><![CDATA[Continuous Integration]]></title>
       <url>/2017/01/20/2017-01-20-ci-deploy/</url>
-      <content type="html"><![CDATA[<h3 id="What-is-CI-continuous-integration"><a href="#What-is-CI-continuous-integration" class="headerlink" title="What is CI (continuous integration)"></a>What is CI (continuous integration)</h3><p>Continuous integration refers to the build and unit testing stages of the software release process.<br>Every revision that is committed triggers an automated build and test.</p>
+      <content type="html"><![CDATA[<h3 id="What-is-CI-continuous-integration"><a href="#What-is-CI-continuous-integration" class="headerlink" title="What is CI (continuous integration)"></a>What is CI (continuous integration)</h3><p>Continuous integration refers to the build and unit testing stages of the software release process.<br>Every revision that is committed triggers an automated build and test.<br><a id="more"></a> </p>
 <h2 id=""><a href="#" class="headerlink" title=""></a><img src="/images/posts/2017/continuous_integration.png" alt="CI"></h2><h3 id="Travis-CI-Github-Firebase-Angular-2"><a href="#Travis-CI-Github-Firebase-Angular-2" class="headerlink" title="Travis CI + Github + Firebase + Angular 2"></a>Travis CI + Github + Firebase + Angular 2</h3><ol>
 <li>Firebase init in project</li>
 <li>Writing code in local repo</li>
@@ -181,6 +216,7 @@
       <title><![CDATA[Write a directive for charting library in Angular 2]]></title>
       <url>/2016/11/16/2016-11-16-directive-for-charting-library/</url>
       <content type="html"><![CDATA[<h4 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h4><p>Writing a Angular 2 attribute directive for one of popular charting libraries.</p>
+<a id="more"></a> 
 <p>For example, <strong>Flot directive</strong> usage:</p>
 <p><code>*.component.html</code></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">flot-chart</span></span></div><div class="line"><span class="tag">    [<span class="attr">data</span>]=<span class="string">"data"</span></span></div><div class="line"><span class="tag">    [<span class="attr">options</span>]=<span class="string">"options"</span> <span class="attr">style</span>=<span class="string">"width: 100%; height: 260px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
@@ -215,13 +251,13 @@
         
         <tags>
             
-            <tag> directive </tag>
-            
-            <tag> chart </tag>
-            
             <tag> Angular 2 </tag>
             
             <tag> how to </tag>
+            
+            <tag> chart </tag>
+            
+            <tag> directive </tag>
             
         </tags>
         
@@ -256,6 +292,7 @@
 <li><strong>Attribute directives</strong> - change the appearance or behavior of an element</li>
 </ul>
 <p>Component actually is one kind of directives in Angular 2, it is a directive with template. This post is going to focus on <strong>Component</strong> and <strong>Attribute Directives</strong>. Let me dive into each kind of directives, and find out what are their characteristics.</p>
+<a id="more"></a> 
 <h4 id="Component-source-angular-io"><a href="#Component-source-angular-io" class="headerlink" title="Component (source: angular.io)"></a>Component (source: <a href="https://angular.io/docs/ts/latest/quickstart.html#!#root-component" target="_blank" rel="external">angular.io</a>)</h4><p>Every Angular application has at least one component: the root component, also can has children component.</p>
 <figure class="highlight ts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; Component &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</div><div class="line"><span class="meta">@Component</span>(&#123;</div><div class="line">  selector: <span class="string">'my-app'</span>,</div><div class="line">  template: <span class="string">'&lt;h1&gt;Hello Angular!&lt;/h1&gt;'</span></div><div class="line">&#125;)</div><div class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123; &#125;</div></pre></td></tr></table></figure>
 <p>Each component comes with:</p>
@@ -345,9 +382,9 @@
         
         <tags>
             
-            <tag> component </tag>
-            
             <tag> directive </tag>
+            
+            <tag> component </tag>
             
             <tag> angular 2 </tag>
             
@@ -384,6 +421,7 @@
       <url>/2016/10/13/2016-10-13-game-of-life/</url>
       <content type="html"><![CDATA[<p><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank" rel="external">Conway’s Game of Life</a></p>
 <h5 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h5><p>Back to college time, I had assignment about using <code>C++</code> to write a game base on ‘Game of Life’, although I did pass that course any way, I had completed forgot how I did it. This question popped up while I did the practices on Leetcode,  I didn’t come up the good solution to pass all the test. I tried to get helps from discussion section, there is a top answer which provided by <a href="https://discuss.leetcode.com/topic/29054/easiest-java-solution-with-explanation" target="_blank" rel="external">@yavinci</a>. I think his solution is brilliant with great explanation. </p>
+<a id="more"></a> 
 <h5 id="Logic-behind-the-code"><a href="#Logic-behind-the-code" class="headerlink" title="Logic behind the code"></a>Logic behind the code</h5><p>Using 2 bit to store ‘current’ state and ‘next’ state</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">        [2nd bit  ,  1st bit] </div><div class="line">      [next state ,  current state]</div><div class="line">- 00  dead (next) &lt;- dead (current)</div><div class="line">- 01  dead (next) &lt;- live (current)  </div><div class="line">- 10  live (next) &lt;- dead (current)  </div><div class="line">- 11  live (next) &lt;- live (current)</div></pre></td></tr></table></figure>
 <ol>
@@ -426,6 +464,7 @@
       <title><![CDATA[Jasmine JavaScript Testing]]></title>
       <url>/2016/10/06/2016-10-06-javascript-unit-test/</url>
       <content type="html"><![CDATA[<p>This post enlighten by <a href="https://www.amazon.com/Jasmine-JavaScript-Testing-Paulo-Ragonha-ebook/dp/B00WQWY8S0/ref=sr_1_1?ie=UTF8&amp;qid=1475802581&amp;sr=8-1&amp;keywords=jasmine+javascript+testing+-+second+edition" target="_blank" rel="external">Jasmine JavaScript Testing</a></p>
+<a id="more"></a> 
 <h5 id="unit-test"><a href="#unit-test" class="headerlink" title="unit test"></a>unit test</h5><p>a piece of code tests a functionality of unit of application code.</p>
 <h5 id="Jasmine"><a href="#Jasmine" class="headerlink" title="Jasmine"></a>Jasmine</h5><p>Jasmine: <em>behavior-driven development</em> test framework</p>
 <h5 id="TDD-vs-BDD"><a href="#TDD-vs-BDD" class="headerlink" title="TDD vs. BDD"></a>TDD vs. BDD</h5><p><code>test-driven development</code> turns into <code>behavior-driven development</code> by <code>Dan North</code></p>

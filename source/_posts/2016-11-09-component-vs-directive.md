@@ -15,6 +15,8 @@ Let's look at the documentations from Angular.io, there are total three kinds of
 
 Component actually is one kind of directives in Angular 2, it is a directive with template. This post is going to focus on **Component** and **Attribute Directives**. Let me dive into each kind of directives, and find out what are their characteristics.
 
+<!-- more --> 
+
 #### Component (source: [angular.io](https://angular.io/docs/ts/latest/quickstart.html#!#root-component))
 Every Angular application has at least one component: the root component, also can has children component.
 

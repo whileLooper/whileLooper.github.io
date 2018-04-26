@@ -7,6 +7,8 @@ author: "Bo Chen"
 ---
 This post enlighten by [Jasmine JavaScript Testing](https://www.amazon.com/Jasmine-JavaScript-Testing-Paulo-Ragonha-ebook/dp/B00WQWY8S0/ref=sr_1_1?ie=UTF8&qid=1475802581&sr=8-1&keywords=jasmine+javascript+testing+-+second+edition)
 
+<!-- more --> 
+
 ##### unit test
 a piece of code tests a functionality of unit of application code.
 

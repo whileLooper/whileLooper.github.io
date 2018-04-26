@@ -10,6 +10,8 @@ author: "Bo Chen"
 ##### Foreword
 Back to college time, I had assignment about using `C++` to write a game base on 'Game of Life', although I did pass that course any way, I had completed forgot how I did it. This question popped up while I did the practices on Leetcode,  I didn't come up the good solution to pass all the test. I tried to get helps from discussion section, there is a top answer which provided by [@yavinci](https://discuss.leetcode.com/topic/29054/easiest-java-solution-with-explanation). I think his solution is brilliant with great explanation. 
 
+<!-- more --> 
+
 ##### Logic behind the code
 Using 2 bit to store 'current' state and 'next' state
 
