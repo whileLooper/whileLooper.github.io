@@ -48,10 +48,9 @@ index_with_subtitle: false
 menu:
   home: /
   #categories: /categories/
-  #about: /about/
   archives: /archives/
   tags: /tags/
-  about: /tags/
+  resume: /resume/resume.pdf
   #sitemap: /sitemap.xml
   #commonweal: /404/
 
@@ -62,16 +61,15 @@ menu:
 #   When an question mask icon presenting up means that the item has no mapping icon.
 menu_icons:
   enable: true
-  #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
   home: home
-  about: id-card-o
+  #about: id-card-o
   categories: th
   schedule: calendar
   tags: tags
   archives: archive
   sitemap: sitemap
   commonweal: heartbeat
-  resume: id-card-o
+  resume: id-card
 
 
 # ---------------------------------------------------------------
