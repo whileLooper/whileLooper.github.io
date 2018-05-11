@@ -8,8 +8,22 @@
       <content type="html"><![CDATA[<h3 id="What-is-Puppeteer"><a href="#What-is-Puppeteer" class="headerlink" title="What is Puppeteer"></a>What is Puppeteer</h3><blockquote>
 <p>Puppeteer is a Node library which provides a high-level API to control headless Chrome or Chromium over the DevTools Protocol. It can also be configured to use full (non-headless) Chrome or Chromium.</p>
 </blockquote>
-<p>Well, according to the <a href="https://github.com/GoogleChrome/puppeteer" target="_blank" rel="external">Puppeteer</a> office github documentation, It is a <strong>library</strong>, it provides <strong>API</strong> services, and it controls <strong>Chrome</strong>.</p>
-<a id="more"></a> ]]></content>
+<p>Well, according to the <a href="https://github.com/GoogleChrome/puppeteer" target="_blank" rel="external">Puppeteer</a> office Github documentation, It is a <strong>library</strong>, it provides <strong>API</strong> services, and it controls <strong>Chrome</strong>. It’s maintained by Chrome DevTools team, only supported in Node v7.6 or greater version, and only works with Chrome or Chromium.</p>
+<blockquote>
+<p>Manipulates Chrome like a puppeteer with your code.</p>
+</blockquote>
+<a id="more"></a> 
+<h3 id="Requirements-Environment"><a href="#Requirements-Environment" class="headerlink" title="Requirements / Environment"></a>Requirements / Environment</h3><ol>
+<li>Node &gt;= v7.6, Puppeteer requires <code>async/await</code></li>
+<li><p>Need latest <code>chrome driver</code>, it will be automatically downloaded when you install <code>puppeteer</code> from <code>npm</code></p>
+<p><code>npm install puppeteer --save</code></p>
+</li>
+</ol>
+<h3 id="Quick-Try-Out"><a href="#Quick-Try-Out" class="headerlink" title="Quick Try Out"></a>Quick Try Out</h3><p>Puppeteer provides a <a href="https://try-puppeteer.appspot.com/" target="_blank" rel="external">playground</a> for a quick try out.</p>
+<p>Taking a snapshot for my favirate clothing website:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> puppeteer = <span class="built_in">require</span>(<span class="string">'puppeteer'</span>);</div><div class="line"></div><div class="line">(<span class="keyword">async</span> () =&gt; &#123;</div><div class="line">  <span class="keyword">const</span> browser = <span class="keyword">await</span> puppeteer.launch();   <span class="comment">// creating a browser instance</span></div><div class="line">  <span class="keyword">const</span> page = <span class="keyword">await</span> browser.newPage();       <span class="comment">// Use browser to create a new page obj</span></div><div class="line">  <span class="keyword">await</span> page.click(<span class="string">'a &gt; img[alt=Rb6bjbbjkyi]'</span>);  <span class="comment">// using selector to click a img with specific item number</span></div><div class="line">  <span class="keyword">await</span> page.goto(<span class="string">'http://www.supremenewyork.com/shop/new'</span>);  <span class="comment">// take page obj to your link</span></div><div class="line">  <span class="keyword">await</span> page.screenshot(&#123;<span class="attr">path</span>: <span class="string">'supreme.png'</span>&#125;); <span class="comment">// take a screenshot and save to path</span></div><div class="line"></div><div class="line">  <span class="keyword">await</span> browser.close();  <span class="comment">// don't forget to close your browser</span></div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
+<h3 id="Thoughts"><a href="#Thoughts" class="headerlink" title="Thoughts"></a>Thoughts</h3><p>The whole working process just like using a regular browser, open a web browser, enter a link, and go to the page, take a screenshot of the page, then close browser. Very easy to understand and use.</p>
+<p>Base on the documentation, most of developers are using puppeteer as a testing tools for their projects, also it can be used to automating  and scraping the website, you know, writing a robot to auto copping limited clothes or sneakers…🔥</p>
+]]></content>
       
         
         <tags>
@@ -275,11 +289,11 @@
         
         <tags>
             
+            <tag> Angular 2 </tag>
+            
             <tag> directive </tag>
             
             <tag> chart </tag>
-            
-            <tag> Angular 2 </tag>
             
             <tag> how to </tag>
             
@@ -296,9 +310,9 @@
         
         <tags>
             
-            <tag> open source </tag>
-            
             <tag> chart </tag>
+            
+            <tag> open source </tag>
             
             <tag> compare </tag>
             
@@ -406,9 +420,9 @@
         
         <tags>
             
-            <tag> component </tag>
-            
             <tag> directive </tag>
+            
+            <tag> component </tag>
             
             <tag> angular 2 </tag>
             
