@@ -3,6 +3,30 @@
   
     
     <entry>
+      <title><![CDATA[Puppeteer First Touch]]></title>
+      <url>/2018/05/10/2018-05-10-puppeteer-first-touch/</url>
+      <content type="html"><![CDATA[<h3 id="What-is-Puppeteer"><a href="#What-is-Puppeteer" class="headerlink" title="What is Puppeteer"></a>What is Puppeteer</h3><blockquote>
+<p>Puppeteer is a Node library which provides a high-level API to control headless Chrome or Chromium over the DevTools Protocol. It can also be configured to use full (non-headless) Chrome or Chromium.</p>
+</blockquote>
+<p>Well, according to the <a href="https://github.com/GoogleChrome/puppeteer" target="_blank" rel="external">Puppeteer</a> office github documentation, It is a <strong>library</strong>, it provides <strong>API</strong> services, and it controls <strong>Chrome</strong>.</p>
+<a id="more"></a> ]]></content>
+      
+        
+        <tags>
+            
+            <tag> Puppeteer </tag>
+            
+            <tag> headless </tag>
+            
+            <tag> chrome </tag>
+            
+            <tag> nodejs </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[2018, 4月]]></title>
       <url>/2018/04/25/2018-04-26-work-review/</url>
       <content type="html"><![CDATA[<p>  2018年1月-4月的工作终结和回顾，记录下来自己所做的，所改变的，正在发生的。。。</p>
@@ -103,30 +127,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Puppeteer First Touch]]></title>
-      <url>/2017/02/20/2018-05-10-puppeteer-first-touch/</url>
-      <content type="html"><![CDATA[<h3 id="What-is-Puppeteer"><a href="#What-is-Puppeteer" class="headerlink" title="What is Puppeteer"></a>What is Puppeteer</h3><blockquote>
-<p>Puppeteer is a Node library which provides a high-level API to control headless Chrome or Chromium over the DevTools Protocol. It can also be configured to use full (non-headless) Chrome or Chromium.</p>
-</blockquote>
-<p>Well, according to the <a href="https://github.com/GoogleChrome/puppeteer" target="_blank" rel="external">Puppeteer</a> office github documentation, It is a <strong>library</strong>, it provides <strong>API</strong> services, and it controls <strong>Chrome</strong>.</p>
-<a id="more"></a> ]]></content>
-      
-        
-        <tags>
-            
-            <tag> Puppeteer </tag>
-            
-            <tag> headless </tag>
-            
-            <tag> chrome </tag>
-            
-            <tag> nodejs </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Write a Custom Filtering Pipe]]></title>
       <url>/2017/02/20/2017-02-20-custom-filter-pipe/</url>
       <content type="html"><![CDATA[<h4 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h4><p>Write your own custom filtering pipe</p>
@@ -170,11 +170,11 @@
             
             <tag> Angular 2 </tag>
             
+            <tag> how to </tag>
+            
             <tag> filtering </tag>
             
             <tag> pipe </tag>
-            
-            <tag> how to </tag>
             
         </tags>
         
@@ -275,13 +275,13 @@
         
         <tags>
             
-            <tag> Angular 2 </tag>
-            
-            <tag> how to </tag>
-            
             <tag> directive </tag>
             
             <tag> chart </tag>
+            
+            <tag> Angular 2 </tag>
+            
+            <tag> how to </tag>
             
         </tags>
         
