@@ -47,6 +47,7 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
+  code: /tags/monday-clean-code
   #categories: /categories/
   archives: /archives/
   tags: /tags/
@@ -70,6 +71,7 @@ menu_icons:
   sitemap: sitemap
   commonweal: heartbeat
   resume: id-card
+  code: code
 
 
 # ---------------------------------------------------------------

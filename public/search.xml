@@ -3,6 +3,25 @@
   
     
     <entry>
+      <title><![CDATA[Variables]]></title>
+      <url>/2018/05/14/2018-05-14.clean-code/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>Monday Clean Code</p>
+<h5 id="Use-meaningful-and-pronounceable-variable-names"><a href="#Use-meaningful-and-pronounceable-variable-names" class="headerlink" title="Use meaningful and pronounceable variable names"></a>Use meaningful and pronounceable variable names</h5></blockquote>
+<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> yyyymmdstr = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
+<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> currentDate = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> monday clean code </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Puppeteer First Touch]]></title>
       <url>/2018/05/10/2018-05-10-puppeteer-first-touch/</url>
       <content type="html"><![CDATA[<h3 id="What-is-Puppeteer"><a href="#What-is-Puppeteer" class="headerlink" title="What is Puppeteer"></a>What is Puppeteer</h3><blockquote>
@@ -291,9 +310,9 @@
             
             <tag> Angular 2 </tag>
             
-            <tag> directive </tag>
-            
             <tag> chart </tag>
+            
+            <tag> directive </tag>
             
             <tag> how to </tag>
             
@@ -310,9 +329,9 @@
         
         <tags>
             
-            <tag> chart </tag>
-            
             <tag> open source </tag>
+            
+            <tag> chart </tag>
             
             <tag> compare </tag>
             
@@ -420,9 +439,9 @@
         
         <tags>
             
-            <tag> directive </tag>
-            
             <tag> component </tag>
+            
+            <tag> directive </tag>
             
             <tag> angular 2 </tag>
             
