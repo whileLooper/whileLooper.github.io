@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http:bochentheone.com/2018/05/29/2018-05-29.clean-code/</loc>
+    
+    <lastmod>2018-05-29T19:10:12.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2018/05/14/2018-05-21.clean-code/</loc>
+    
+    <lastmod>2018-05-21T17:45:07.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http:bochentheone.com/2018/05/14/2018-05-14.clean-code/</loc>
     
-    <lastmod>2018-05-14T19:53:14.000Z</lastmod>
+    <lastmod>2018-05-15T13:29:03.000Z</lastmod>
     
   </url>
   
@@ -65,7 +79,14 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2017/08/10/2017-08-10-stop_and_continue/</loc>
+    <loc>http:bochentheone.com/2016/11/10/2016-11-10-charting-library/</loc>
+    
+    <lastmod>2018-04-19T19:25:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2017/08/21/2017-08-21-eyi_reading/</loc>
     
     <lastmod>2018-04-19T19:25:06.000Z</lastmod>
     
@@ -79,14 +100,7 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/11/10/2016-11-10-charting-library/</loc>
-    
-    <lastmod>2018-04-19T19:25:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http:bochentheone.com/2017/08/21/2017-08-21-eyi_reading/</loc>
+    <loc>http:bochentheone.com/2017/08/10/2017-08-10-stop_and_continue/</loc>
     
     <lastmod>2018-04-19T19:25:06.000Z</lastmod>
     

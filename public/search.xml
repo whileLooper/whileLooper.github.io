@@ -3,10 +3,47 @@
   
     
     <entry>
-      <title><![CDATA[Monday Clean Code]]></title>
+      <title><![CDATA[Use searchable names]]></title>
+      <url>/2018/05/29/2018-05-29.clean-code/</url>
+      <content type="html"><![CDATA[<blockquote>
+<h3 id="Use-searchable-names"><a href="#Use-searchable-names" class="headerlink" title="Use searchable names"></a>Use searchable names</h3></blockquote>
+<p>We will read more code than we will ever write. It’s important that the code we do write is readable and searchable.<br>By <em>not</em> naming variables that end up being meaningful for understanding our program, we hurt our readers.<br>Make your names searchable. Tools like<br><a href="https://github.com/danielstjules/buddy.js" target="_blank" rel="external">buddy.js</a> and <a href="https://github.com/eslint/eslint/blob/660e0918933e6e7fede26bc675a0763a6b357c94/docs/rules/no-magic-numbers.md" target="_blank" rel="external">ESLint</a><br>can help identify unnamed constants.</p>
+<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// What the heck is 86400000 for?</span></div><div class="line">setTimeout(blastOff, <span class="number">86400000</span>);</div></pre></td></tr></table></figure></p>
+<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Declare them as capitalized named constants.</span></div><div class="line"><span class="keyword">const</span> MILLISECONDS_IN_A_DAY = <span class="number">86400000</span>;</div><div class="line"></div><div class="line">setTimeout(blastOff, MILLISECONDS_IN_A_DAY);</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> monday clean code </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Use the same vocabulary for the same type of variable]]></title>
+      <url>/2018/05/14/2018-05-21.clean-code/</url>
+      <content type="html"><![CDATA[<blockquote>
+<h3 id="Use-the-same-vocabulary-for-the-same-type-of-variable"><a href="#Use-the-same-vocabulary-for-the-same-type-of-variable" class="headerlink" title="Use the same vocabulary for the same type of variable"></a>Use the same vocabulary for the same type of variable</h3></blockquote>
+<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">getUserInfo();</div><div class="line">getClientData();</div><div class="line">getCustomerRecord();</div></pre></td></tr></table></figure></p>
+<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getUser();</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> monday clean code </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Variables]]></title>
       <url>/2018/05/14/2018-05-14.clean-code/</url>
       <content type="html"><![CDATA[<blockquote>
-<h4 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h4><h4 id="Use-meaningful-and-pronounceable-variable-names"><a href="#Use-meaningful-and-pronounceable-variable-names" class="headerlink" title="Use meaningful and pronounceable variable names"></a>Use meaningful and pronounceable variable names</h4></blockquote>
+<h4 id="Monday-Clean-Code"><a href="#Monday-Clean-Code" class="headerlink" title="Monday Clean Code"></a>Monday Clean Code</h4><h4 id="Use-meaningful-and-pronounceable-variable-names"><a href="#Use-meaningful-and-pronounceable-variable-names" class="headerlink" title="Use meaningful and pronounceable variable names"></a>Use meaningful and pronounceable variable names</h4></blockquote>
 <p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> yyyymmdstr = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
 <p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> currentDate = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
 ]]></content>
@@ -307,9 +344,9 @@
         
         <tags>
             
-            <tag> directive </tag>
-            
             <tag> chart </tag>
+            
+            <tag> directive </tag>
             
             <tag> Angular 2 </tag>
             
