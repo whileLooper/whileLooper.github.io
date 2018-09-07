@@ -3,6 +3,25 @@
   
     
     <entry>
+      <title><![CDATA[Recent Update]]></title>
+      <url>/2018/09/07/2018-09-07-recent-update/</url>
+      <content type="html"><![CDATA[<ul>
+<li>Little Bowie (that’s right, his name is Bowie Chen) is growing so fast 😱, 10 weeks, 14lbs now!!!</li>
+<li>Start a new job, two weeks ago! Like it, surrounding by bunch nerds!</li>
+<li>Reading a book called 《真实的四大家族》</li>
+</ul>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Use searchable names]]></title>
       <url>/2018/05/29/2018-05-29.clean-code/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -239,11 +258,11 @@
             
             <tag> Angular 2 </tag>
             
-            <tag> how to </tag>
-            
             <tag> filtering </tag>
             
             <tag> pipe </tag>
+            
+            <tag> how to </tag>
             
         </tags>
         
@@ -344,9 +363,9 @@
         
         <tags>
             
-            <tag> chart </tag>
-            
             <tag> directive </tag>
+            
+            <tag> chart </tag>
             
             <tag> Angular 2 </tag>
             
