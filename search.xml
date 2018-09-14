@@ -3,6 +3,58 @@
   
     
     <entry>
+      <title><![CDATA[Current tech stack I'm using at work]]></title>
+      <url>/2018/09/14/2018-09-14-current-study-list/</url>
+      <content type="html"><![CDATA[<p>Keep updating this list.</p>
+<ul>
+<li style="list-style: none"><input type="checkbox"> React<ul>
+<li style="list-style: none"><input type="checkbox"> Props vs State</li>
+</ul>
+</li>
+<li style="list-style: none"><input type="checkbox"> Reflux</li>
+<li style="list-style: none"><input type="checkbox"> Node.js<ul>
+<li style="list-style: none"><input type="checkbox"> Async/Await</li>
+<li style="list-style: none"><input type="checkbox"> Restify API framework</li>
+</ul>
+</li>
+<li style="list-style: none"><input type="checkbox"> AWS<ul>
+<li style="list-style: none"><input type="checkbox"> S3 Bucket Storage</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> learning </tag>
+            
+            <tag> tech stack </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JavaScript's async 初步认识 (unfinished)]]></title>
+      <url>/2018/09/12/2018-09-12-javascript-async/</url>
+      <content type="html"><![CDATA[<h1 id="JavsScript-is-Single-Thread-CAN’T-multitask"><a href="#JavsScript-is-Single-Thread-CAN’T-multitask" class="headerlink" title="JavsScript is Single Thread, CAN’T multitask"></a>JavsScript is Single Thread, CAN’T multitask</h1><p> 我们常说的JavaScript是单线程，所指的是JS引擎中负责解释和执行JavaScript代码的线程只有一个。不妨叫它<strong>主线程</strong>。</p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> learning </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Recent Update]]></title>
       <url>/2018/09/07/2018-09-07-recent-update/</url>
       <content type="html"><![CDATA[<ul>
@@ -258,11 +310,11 @@
             
             <tag> Angular 2 </tag>
             
+            <tag> how to </tag>
+            
             <tag> filtering </tag>
             
             <tag> pipe </tag>
-            
-            <tag> how to </tag>
             
         </tags>
         

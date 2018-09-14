@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http:bochentheone.com/2018/09/12/2018-09-12-javascript-async/</loc>
+    
+    <lastmod>2018-09-14T14:36:50.025Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2018/09/14/2018-09-14-current-study-list/</loc>
+    
+    <lastmod>2018-09-14T14:36:21.163Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http:bochentheone.com/2018/09/07/2018-09-07-recent-update/</loc>
     
     <lastmod>2018-09-07T16:54:26.376Z</lastmod>
@@ -58,13 +72,6 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2017/02/20/2017-02-20-custom-filter-pipe/</loc>
-    
-    <lastmod>2018-09-07T13:17:52.974Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http:bochentheone.com/2017/08/21/2017-08-21-eyi_reading/</loc>
     
     <lastmod>2018-09-07T13:17:52.974Z</lastmod>
@@ -72,7 +79,14 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/11/10/2016-11-10-charting-library/</loc>
+    <loc>http:bochentheone.com/2017/02/20/2017-02-20-custom-filter-pipe/</loc>
+    
+    <lastmod>2018-09-07T13:17:52.974Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2016/11/16/2016-11-16-directive-for-charting-library/</loc>
     
     <lastmod>2018-09-07T13:17:52.973Z</lastmod>
     
@@ -86,13 +100,6 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/11/16/2016-11-16-directive-for-charting-library/</loc>
-    
-    <lastmod>2018-09-07T13:17:52.973Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http:bochentheone.com/2016/11/09/2016-11-09-component-vs-directive/</loc>
     
     <lastmod>2018-09-07T13:17:52.973Z</lastmod>
@@ -100,7 +107,14 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/10/06/2016-10-06-javascript-unit-test/</loc>
+    <loc>http:bochentheone.com/2016/11/10/2016-11-10-charting-library/</loc>
+    
+    <lastmod>2018-09-07T13:17:52.973Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2016/10/13/2016-10-13-game-of-life/</loc>
     
     <lastmod>2018-09-07T13:17:52.972Z</lastmod>
     
@@ -114,7 +128,7 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/10/13/2016-10-13-game-of-life/</loc>
+    <loc>http:bochentheone.com/2016/10/06/2016-10-06-javascript-unit-test/</loc>
     
     <lastmod>2018-09-07T13:17:52.972Z</lastmod>
     
