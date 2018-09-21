@@ -3,6 +3,36 @@
   
     
     <entry>
+      <title><![CDATA[Start with Sequelize]]></title>
+      <url>/2018/09/21/2018-09-21-start-with-sequelize/</url>
+      <content type="html"><![CDATA[<h2 id="Ticket-create-a-new-model-and-associate-to-another-modal"><a href="#Ticket-create-a-new-model-and-associate-to-another-modal" class="headerlink" title="Ticket: create a new model, and associate to another modal"></a>Ticket: create a new model, and associate to another modal</h2><h3 id="Create-Model"><a href="#Create-Model" class="headerlink" title="Create Model"></a>Create Model</h3><p>For example, this ticket detail is creating a new model, contains information about some specific url.</p>
+<p>From Sequelize official documentation, Models are defined with <code>sequelize.define(&#39;name&#39;, {attributes}, {options})</code>.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> LinkDetail = sequelize.define(<span class="string">'link_detail'</span>, &#123;</div><div class="line">    url: &#123;</div><div class="line">        type: Sequelize.STRING</div><div class="line">    &#125;,</div><div class="line">    description: &#123;</div><div class="line">        type: Sequelize.STRING</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>and for future repeat use, wrap it with <code>module.exports</code>: </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">sequelize, DataTypes</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> LinkDetail = sequelize.define(<span class="string">'link_detail'</span>, &#123;</div><div class="line">        url: &#123;</div><div class="line">            type: Sequelize.STRING</div><div class="line">        &#125;,</div><div class="line">        description: &#123;</div><div class="line">            type: Sequelize.STRING</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> LinkDetail;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Associations"><a href="#Associations" class="headerlink" title="Associations"></a>Associations</h3><p>So far, at this point, half of ticket is done, get into Associations, in this ticket, this link model is associated to another model which is called <strong>story</strong> model, and they are <strong>One-To-One associations</strong>.</p>
+<pre><code>One-To-One associations are associations between exactly two models connected by a single foreign key.
+</code></pre><p><strong>BelongsTo</strong></p>
+<p><code>BelongsTo</code> associations are associations where the foreign key for the one-to-one relation exists on the source model.</p>
+<p><code>LinkDetail.belongsTo(Story);</code></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> learning </tag>
+            
+            <tag> Sequelize </tag>
+            
+            <tag> Database </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Current tech stack I'm using at work]]></title>
       <url>/2018/09/14/2018-09-14-current-study-list/</url>
       <content type="html"><![CDATA[<p>Keep updating this list.</p>
@@ -13,9 +43,9 @@
 </li>
 <li style="list-style: none"><input type="checkbox"> Reflux<ul>
 <li><a href="https://www.cnblogs.com/lovesueee/p/4893218.html" target="_blank" rel="external">ReFlux细说</a> (必读文章)</li>
-<li>了解 Flux 和 Reflux 的基本概念和区别 </li>
+<li style="list-style: none"><input type="checkbox" checked> 了解 Flux 和 Reflux 的基本概念和区别 </li>
+<li style="list-style: none"><input type="checkbox"> 了解 熟悉 Reflux 的 API， 让代码简洁优雅</li>
 <li>Reflux 在 Flux 的核心概念上取消掉了<code>dispatcher</code> 的角色，从而解决了存在于Flux中 <code>action</code> 和 <code>stores</code> 之间 <strong>多对对</strong> 的关系，把 <code>publisher</code> 的角色融合到 <code>action</code>中，<code>stores</code> 也有目的性的subscribe action，而不是监听所有 actions，不造成任何资源的浪费</li>
-<li>了解 熟悉 Reflux 的 API， 让代码简洁优雅</li>
 </ul>
 </li>
 <li style="list-style: none"><input type="checkbox"> Node.js<ul>

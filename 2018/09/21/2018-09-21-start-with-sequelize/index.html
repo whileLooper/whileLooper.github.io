@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="monday clean code," />
+  <meta name="keywords" content="JavaScript,learning,Sequelize,Database," />
 
 
 
@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="Use the same vocabulary for the same type of variable Bad:123getUserInfo();getClientData();getCustomerRecord(); Good:1getUser();">
-<meta name="keywords" content="monday clean code">
+<meta name="description" content="Ticket: create a new model, and associate to another modalCreate ModelFor example, this ticket detail is creating a new model, contains information about some specific url. From Sequelize official doc">
+<meta name="keywords" content="JavaScript,learning,Sequelize,Database">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Use the same vocabulary for the same type of variable">
-<meta property="og:url" content="http:bochentheone.com/2018/05/14/2018-05-21.clean-code/index.html">
+<meta property="og:title" content="Start with Sequelize">
+<meta property="og:url" content="http:bochentheone.com/2018/09/21/2018-09-21-start-with-sequelize/index.html">
 <meta property="og:site_name" content="LEVELING UP">
-<meta property="og:description" content="Use the same vocabulary for the same type of variable Bad:123getUserInfo();getClientData();getCustomerRecord(); Good:1getUser();">
+<meta property="og:description" content="Ticket: create a new model, and associate to another modalCreate ModelFor example, this ticket detail is creating a new model, contains information about some specific url. From Sequelize official doc">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-07T13:17:52.976Z">
+<meta property="og:updated_time" content="2018-09-21T17:33:46.925Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Use the same vocabulary for the same type of variable">
-<meta name="twitter:description" content="Use the same vocabulary for the same type of variable Bad:123getUserInfo();getClientData();getCustomerRecord(); Good:1getUser();">
+<meta name="twitter:title" content="Start with Sequelize">
+<meta name="twitter:description" content="Ticket: create a new model, and associate to another modalCreate ModelFor example, this ticket detail is creating a new model, contains information about some specific url. From Sequelize official doc">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http:bochentheone.com/2018/05/14/2018-05-21.clean-code/"/>
+  <link rel="canonical" href="http:bochentheone.com/2018/09/21/2018-09-21-start-with-sequelize/"/>
 
 
 
 
 
-  <title>Use the same vocabulary for the same type of variable | LEVELING UP</title>
+  <title>Start with Sequelize | LEVELING UP</title>
   
 
 
@@ -286,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2018/05/14/2018-05-21.clean-code/">
+    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2018/09/21/2018-09-21-start-with-sequelize/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="nehcob">
@@ -303,7 +303,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Use the same vocabulary for the same type of variable</h1>
+          <h1 class="post-title" itemprop="name headline">Start with Sequelize</h1>
         
 
         <div class="post-meta">
@@ -315,8 +315,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-14T00:00:00-04:00">
-                05-14-2018
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-21T00:00:00-04:00">
+                09-21-2018
               </time>
             
 
@@ -353,10 +353,16 @@
       
 
       
-        <blockquote>
-<h3 id="Use-the-same-vocabulary-for-the-same-type-of-variable"><a href="#Use-the-same-vocabulary-for-the-same-type-of-variable" class="headerlink" title="Use the same vocabulary for the same type of variable"></a>Use the same vocabulary for the same type of variable</h3></blockquote>
-<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">getUserInfo();</div><div class="line">getClientData();</div><div class="line">getCustomerRecord();</div></pre></td></tr></table></figure></p>
-<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getUser();</div></pre></td></tr></table></figure></p>
+        <h2 id="Ticket-create-a-new-model-and-associate-to-another-modal"><a href="#Ticket-create-a-new-model-and-associate-to-another-modal" class="headerlink" title="Ticket: create a new model, and associate to another modal"></a>Ticket: create a new model, and associate to another modal</h2><h3 id="Create-Model"><a href="#Create-Model" class="headerlink" title="Create Model"></a>Create Model</h3><p>For example, this ticket detail is creating a new model, contains information about some specific url.</p>
+<p>From Sequelize official documentation, Models are defined with <code>sequelize.define(&#39;name&#39;, {attributes}, {options})</code>.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> LinkDetail = sequelize.define(<span class="string">'link_detail'</span>, &#123;</div><div class="line">    url: &#123;</div><div class="line">        type: Sequelize.STRING</div><div class="line">    &#125;,</div><div class="line">    description: &#123;</div><div class="line">        type: Sequelize.STRING</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>and for future repeat use, wrap it with <code>module.exports</code>: </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">sequelize, DataTypes</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> LinkDetail = sequelize.define(<span class="string">'link_detail'</span>, &#123;</div><div class="line">        url: &#123;</div><div class="line">            type: Sequelize.STRING</div><div class="line">        &#125;,</div><div class="line">        description: &#123;</div><div class="line">            type: Sequelize.STRING</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> LinkDetail;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Associations"><a href="#Associations" class="headerlink" title="Associations"></a>Associations</h3><p>So far, at this point, half of ticket is done, get into Associations, in this ticket, this link model is associated to another model which is called <strong>story</strong> model, and they are <strong>One-To-One associations</strong>.</p>
+<pre><code>One-To-One associations are associations between exactly two models connected by a single foreign key.
+</code></pre><p><strong>BelongsTo</strong></p>
+<p><code>BelongsTo</code> associations are associations where the foreign key for the one-to-one relation exists on the source model.</p>
+<p><code>LinkDetail.belongsTo(Story);</code></p>
 
       
     </div>
@@ -374,7 +380,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/monday-clean-code/" rel="tag"># monday clean code</a>
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/learning/" rel="tag"># learning</a>
+          
+            <a href="/tags/Sequelize/" rel="tag"># Sequelize</a>
+          
+            <a href="/tags/Database/" rel="tag"># Database</a>
           
         </div>
       
@@ -387,8 +399,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/10/2018-05-10-puppeteer-first-touch/" rel="next" title="Puppeteer First Touch">
-                <i class="fa fa-chevron-left"></i> Puppeteer First Touch
+              <a href="/2018/09/14/2018-09-14-current-study-list/" rel="next" title="Current tech stack I'm using at work">
+                <i class="fa fa-chevron-left"></i> Current tech stack I'm using at work
               </a>
             
           </div>
@@ -396,10 +408,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/14/2018-05-14.clean-code/" rel="prev" title="Variables">
-                Variables <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -553,7 +561,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-the-same-vocabulary-for-the-same-type-of-variable"><span class="nav-number">1.</span> <span class="nav-text">Use the same vocabulary for the same type of variable</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ticket-create-a-new-model-and-associate-to-another-modal"><span class="nav-number">1.</span> <span class="nav-text">Ticket: create a new model, and associate to another modal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-Model"><span class="nav-number">1.1.</span> <span class="nav-text">Create Model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Associations"><span class="nav-number">1.2.</span> <span class="nav-text">Associations</span></a></li></ol></li></ol></div>
             
 
           </div>
