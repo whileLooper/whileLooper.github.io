@@ -15,7 +15,15 @@
 <pre><code>One-To-One associations are associations between exactly two models connected by a single foreign key.
 </code></pre><p><strong>BelongsTo</strong></p>
 <p><code>BelongsTo</code> associations are associations where the foreign key for the one-to-one relation exists on the source model.</p>
-<p><code>LinkDetail.belongsTo(Story);</code></p>
+<p><strong>HasOne</strong></p>
+<p><code>HasOne</code> associations are associations where the foreign key for the one-to-one relation exists on the target model.</p>
+<h3 id="Difference-between-HasOne-and-BelongsTo"><a href="#Difference-between-HasOne-and-BelongsTo" class="headerlink" title="Difference between HasOne and BelongsTo"></a>Difference between HasOne and BelongsTo</h3><p>Read the official documentation, they have a greate example! <a href="http://docs.sequelizejs.com/manual/tutorial/associations.html#one-to-one-associations" target="_blank" rel="external">click here</a></p>
+<p>After comparing the differences between <code>belongsTo</code> and <code>hasOne</code>, in this case we should use <code>hasOne</code>:</p>
+<p><code>LinkDetail.hasOne(Story)</code>, add <code>storyId</code> attribute to target model which is <code>Story</code> model.</p>
+<h3 id="Add-association-to-model-define-function"><a href="#Add-association-to-model-define-function" class="headerlink" title="Add association to model define function"></a>Add association to model define function</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">sequelize, DataTypes</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> LinkDetail = sequelize.define(<span class="string">'link_detail'</span>, &#123;</div><div class="line">        url: &#123;</div><div class="line">            type: Sequelize.STRING</div><div class="line">        &#125;,</div><div class="line">        description: &#123;</div><div class="line">            type: Sequelize.STRING</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    LinkDetail.associations = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">        LinkDetail.hasOne(Story);</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> LinkDetail;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>### In the end</p>
+<p>Of cause, in my real ticket, its not this easy, there are more detail about model structure, more attributes and more associations between others. Need to spend time to read through the documentation, it is always my best friend, when I start something new.</p>
+<p>Once again, <strong>read the documentation</strong>! IT’S FREE!!!</p>
 ]]></content>
       
         
@@ -351,11 +359,11 @@
             
             <tag> Angular 2 </tag>
             
+            <tag> how to </tag>
+            
             <tag> filtering </tag>
             
             <tag> pipe </tag>
-            
-            <tag> how to </tag>
             
         </tags>
         
@@ -587,9 +595,9 @@
         
         <tags>
             
-            <tag> component </tag>
-            
             <tag> directive </tag>
+            
+            <tag> component </tag>
             
             <tag> angular 2 </tag>
             
