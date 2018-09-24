@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="LEVELING UP">
 <meta property="og:description" content="Ticket: create a new model, and associate to another modalCreate ModelFor example, this ticket detail is creating a new model, contains information about some specific url. From Sequelize official doc">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-21T18:00:41.059Z">
+<meta property="og:updated_time" content="2018-09-21T18:05:05.669Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Start with Sequelize">
 <meta name="twitter:description" content="Ticket: create a new model, and associate to another modalCreate ModelFor example, this ticket detail is creating a new model, contains information about some specific url. From Sequelize official doc">
@@ -369,8 +369,7 @@
 <p>After comparing the differences between <code>belongsTo</code> and <code>hasOne</code>, in this case we should use <code>hasOne</code>:</p>
 <p><code>LinkDetail.hasOne(Story)</code>, add <code>storyId</code> attribute to target model which is <code>Story</code> model.</p>
 <h3 id="Add-association-to-model-define-function"><a href="#Add-association-to-model-define-function" class="headerlink" title="Add association to model define function"></a>Add association to model define function</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">sequelize, DataTypes</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> LinkDetail = sequelize.define(<span class="string">'link_detail'</span>, &#123;</div><div class="line">        url: &#123;</div><div class="line">            type: Sequelize.STRING</div><div class="line">        &#125;,</div><div class="line">        description: &#123;</div><div class="line">            type: Sequelize.STRING</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    LinkDetail.associations = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">        LinkDetail.hasOne(Story);</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> LinkDetail;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>### In the end</p>
-<p>Of cause, in my real ticket, its not this easy, there are more detail about model structure, more attributes and more associations between others. Need to spend time to read through the documentation, it is always my best friend, when I start something new.</p>
+<h3 id="In-the-end"><a href="#In-the-end" class="headerlink" title="In the end"></a>In the end</h3><p>Of cause, in my real ticket, its not this easy, there are more detail about model structure, more attributes and more associations between others. Need to spend time to read through the documentation, it is always my best friend, when I start something new.</p>
 <p>Once again, <strong>read the documentation</strong>! IT’S FREE!!!</p>
 
       
@@ -417,6 +416,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/24/2018-09-24-monday-clean-code/" rel="prev" title="Use searchable names">
+                Use searchable names <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -493,7 +496,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -570,7 +573,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ticket-create-a-new-model-and-associate-to-another-modal"><span class="nav-number">1.</span> <span class="nav-text">Ticket: create a new model, and associate to another modal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-Model"><span class="nav-number">1.1.</span> <span class="nav-text">Create Model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Associations"><span class="nav-number">1.2.</span> <span class="nav-text">Associations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Difference-between-HasOne-and-BelongsTo"><span class="nav-number">1.3.</span> <span class="nav-text">Difference between HasOne and BelongsTo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Add-association-to-model-define-function"><span class="nav-number">1.4.</span> <span class="nav-text">Add association to model define function</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ticket-create-a-new-model-and-associate-to-another-modal"><span class="nav-number">1.</span> <span class="nav-text">Ticket: create a new model, and associate to another modal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-Model"><span class="nav-number">1.1.</span> <span class="nav-text">Create Model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Associations"><span class="nav-number">1.2.</span> <span class="nav-text">Associations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Difference-between-HasOne-and-BelongsTo"><span class="nav-number">1.3.</span> <span class="nav-text">Difference between HasOne and BelongsTo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Add-association-to-model-define-function"><span class="nav-number">1.4.</span> <span class="nav-text">Add association to model define function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#In-the-end"><span class="nav-number">1.5.</span> <span class="nav-text">In the end</span></a></li></ol></li></ol></div>
             
 
           </div>

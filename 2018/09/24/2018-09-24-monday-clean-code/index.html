@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="monday clean code," />
 
 
 
@@ -94,16 +94,18 @@
 
 
 
-<meta name="description" content="a tiny player of massively multiplayer online role-playing game named EARTH ONLINE">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LEVELING UP">
-<meta property="og:url" content="http:bochentheone.com/tags/linter/index.html">
+<meta name="description" content="Use default arguments instead of short circuiting or conditionalsDefault arguments are often cleaner than short circuiting. Be aware that if youuse them, your function will only provide default values">
+<meta name="keywords" content="monday clean code">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Use searchable names">
+<meta property="og:url" content="http:bochentheone.com/2018/09/24/2018-09-24-monday-clean-code/index.html">
 <meta property="og:site_name" content="LEVELING UP">
-<meta property="og:description" content="a tiny player of massively multiplayer online role-playing game named EARTH ONLINE">
+<meta property="og:description" content="Use default arguments instead of short circuiting or conditionalsDefault arguments are often cleaner than short circuiting. Be aware that if youuse them, your function will only provide default values">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-09-24T15:06:19.242Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LEVELING UP">
-<meta name="twitter:description" content="a tiny player of massively multiplayer online role-playing game named EARTH ONLINE">
+<meta name="twitter:title" content="Use searchable names">
+<meta name="twitter:description" content="Use default arguments instead of short circuiting or conditionalsDefault arguments are often cleaner than short circuiting. Be aware that if youuse them, your function will only provide default values">
 
 
 
@@ -132,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http:bochentheone.com/tags/linter/"/>
+  <link rel="canonical" href="http:bochentheone.com/2018/09/24/2018-09-24-monday-clean-code/"/>
 
 
 
 
 
-  <title>Tag: linter | LEVELING UP</title>
+  <title>Use searchable names | LEVELING UP</title>
   
 
 
@@ -166,7 +168,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -270,54 +272,149 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>linter<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2018/09/24/2018-09-24-monday-clean-code/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nehcob">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LEVELING UP">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2016/10/25/2016-10-25-sublimelinter-trick/" itemprop="url">
-              
-                <span itemprop="name">SublimeLinter path configure</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Use searchable names</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-10-25T16:00:00-04:00"
-              content="10-25-2016" >
-          10-25
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-24T00:00:00-04:00">
+                09-24-2018
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Use-default-arguments-instead-of-short-circuiting-or-conditionals"><a href="#Use-default-arguments-instead-of-short-circuiting-or-conditionals" class="headerlink" title="Use default arguments instead of short circuiting or conditionals"></a>Use default arguments instead of short circuiting or conditionals</h3><p>Default arguments are often cleaner than short circuiting. Be aware that if you<br>use them, your function will only provide default values for <code>undefined</code><br>arguments. Other “falsy” values such as <code>&#39;&#39;</code>, <code>&quot;&quot;</code>, <code>false</code>, <code>null</code>, <code>0</code>, and<br><code>NaN</code>, will not be replaced by a default value.</p>
+<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMicrobrewery</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> breweryName = name || <span class="string">'Hipster Brew Co.'</span>;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMicrobrewery</span>(<span class="params">name = <span class="string">'Hipster Brew Co.'</span></span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/monday-clean-code/" rel="tag"># monday clean code</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/21/2018-09-21-start-with-sequelize/" rel="next" title="Start with Sequelize">
+                <i class="fa fa-chevron-left"></i> Start with Sequelize
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -325,6 +422,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -345,8 +446,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -428,6 +538,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Use-default-arguments-instead-of-short-circuiting-or-conditionals"><span class="nav-number">1.</span> <span class="nav-text">Use default arguments instead of short circuiting or conditionals</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -547,10 +673,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 

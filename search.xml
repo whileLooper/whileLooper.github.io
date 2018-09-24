@@ -3,6 +3,23 @@
   
     
     <entry>
+      <title><![CDATA[Use searchable names]]></title>
+      <url>/2018/09/24/2018-09-24-monday-clean-code/</url>
+      <content type="html"><![CDATA[<h3 id="Use-default-arguments-instead-of-short-circuiting-or-conditionals"><a href="#Use-default-arguments-instead-of-short-circuiting-or-conditionals" class="headerlink" title="Use default arguments instead of short circuiting or conditionals"></a>Use default arguments instead of short circuiting or conditionals</h3><p>Default arguments are often cleaner than short circuiting. Be aware that if you<br>use them, your function will only provide default values for <code>undefined</code><br>arguments. Other “falsy” values such as <code>&#39;&#39;</code>, <code>&quot;&quot;</code>, <code>false</code>, <code>null</code>, <code>0</code>, and<br><code>NaN</code>, will not be replaced by a default value.</p>
+<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMicrobrewery</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> breweryName = name || <span class="string">'Hipster Brew Co.'</span>;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMicrobrewery</span>(<span class="params">name = <span class="string">'Hipster Brew Co.'</span></span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> monday clean code </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Start with Sequelize]]></title>
       <url>/2018/09/21/2018-09-21-start-with-sequelize/</url>
       <content type="html"><![CDATA[<h2 id="Ticket-create-a-new-model-and-associate-to-another-modal"><a href="#Ticket-create-a-new-model-and-associate-to-another-modal" class="headerlink" title="Ticket: create a new model, and associate to another modal"></a>Ticket: create a new model, and associate to another modal</h2><h3 id="Create-Model"><a href="#Create-Model" class="headerlink" title="Create Model"></a>Create Model</h3><p>For example, this ticket detail is creating a new model, contains information about some specific url.</p>
@@ -21,8 +38,7 @@
 <p>After comparing the differences between <code>belongsTo</code> and <code>hasOne</code>, in this case we should use <code>hasOne</code>:</p>
 <p><code>LinkDetail.hasOne(Story)</code>, add <code>storyId</code> attribute to target model which is <code>Story</code> model.</p>
 <h3 id="Add-association-to-model-define-function"><a href="#Add-association-to-model-define-function" class="headerlink" title="Add association to model define function"></a>Add association to model define function</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">sequelize, DataTypes</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> LinkDetail = sequelize.define(<span class="string">'link_detail'</span>, &#123;</div><div class="line">        url: &#123;</div><div class="line">            type: Sequelize.STRING</div><div class="line">        &#125;,</div><div class="line">        description: &#123;</div><div class="line">            type: Sequelize.STRING</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    LinkDetail.associations = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">        LinkDetail.hasOne(Story);</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> LinkDetail;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>### In the end</p>
-<p>Of cause, in my real ticket, its not this easy, there are more detail about model structure, more attributes and more associations between others. Need to spend time to read through the documentation, it is always my best friend, when I start something new.</p>
+<h3 id="In-the-end"><a href="#In-the-end" class="headerlink" title="In the end"></a>In the end</h3><p>Of cause, in my real ticket, its not this easy, there are more detail about model structure, more attributes and more associations between others. Need to spend time to read through the documentation, it is always my best friend, when I start something new.</p>
 <p>Once again, <strong>read the documentation</strong>! IT’S FREE!!!</p>
 ]]></content>
       
@@ -359,11 +375,11 @@
             
             <tag> Angular 2 </tag>
             
-            <tag> how to </tag>
-            
             <tag> filtering </tag>
             
             <tag> pipe </tag>
+            
+            <tag> how to </tag>
             
         </tags>
         
@@ -466,9 +482,9 @@
             
             <tag> chart </tag>
             
-            <tag> Angular 2 </tag>
-            
             <tag> directive </tag>
+            
+            <tag> Angular 2 </tag>
             
             <tag> how to </tag>
             
@@ -595,9 +611,9 @@
         
         <tags>
             
-            <tag> directive </tag>
-            
             <tag> component </tag>
+            
+            <tag> directive </tag>
             
             <tag> angular 2 </tag>
             
