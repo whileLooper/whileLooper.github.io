@@ -89,7 +89,7 @@ module.exports = (sequelize, DataTypes) => {
 }
 ```
 
-### In the end
+### In the end
 
 Of cause, in my real ticket, its not this easy, there are more detail about model structure, more attributes and more associations between others. Need to spend time to read through the documentation, it is always my best friend, when I start something new.
 
