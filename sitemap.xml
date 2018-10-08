@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http:bochentheone.com/2018/10/08/2018-10-08-function-parameters/</loc>
+    
+    <lastmod>2018-10-08T18:02:23.101Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2018/09/24/2018-09-24-monday-clean-code/</loc>
+    
+    <lastmod>2018-10-08T17:56:51.221Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2018/09/14/2018-09-14-current-study-list/</loc>
+    
+    <lastmod>2018-10-03T18:44:59.022Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http:bochentheone.com/2018/09/28/2018-09-28-one-month-in-new-team/</loc>
     
     <lastmod>2018-10-02T17:55:05.667Z</lastmod>
@@ -16,23 +37,9 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2018/09/24/2018-09-24-monday-clean-code/</loc>
-    
-    <lastmod>2018-09-24T15:06:19.242Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http:bochentheone.com/2018/09/21/2018-09-21-start-with-sequelize/</loc>
     
     <lastmod>2018-09-21T18:05:05.669Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http:bochentheone.com/2018/09/14/2018-09-14-current-study-list/</loc>
-    
-    <lastmod>2018-09-21T17:35:06.812Z</lastmod>
     
   </url>
   
@@ -86,7 +93,7 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2017/08/21/2017-08-21-eyi_reading/</loc>
+    <loc>http:bochentheone.com/2017/08/10/2017-08-10-stop_and_continue/</loc>
     
     <lastmod>2018-09-07T13:17:52.974Z</lastmod>
     
@@ -100,9 +107,16 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2017/08/10/2017-08-10-stop_and_continue/</loc>
+    <loc>http:bochentheone.com/2017/08/21/2017-08-21-eyi_reading/</loc>
     
     <lastmod>2018-09-07T13:17:52.974Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2016/11/16/2016-11-16-directive-for-charting-library/</loc>
+    
+    <lastmod>2018-09-07T13:17:52.973Z</lastmod>
     
   </url>
   
@@ -128,21 +142,14 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/11/16/2016-11-16-directive-for-charting-library/</loc>
-    
-    <lastmod>2018-09-07T13:17:52.973Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http:bochentheone.com/2016/10/06/2016-10-06-javascript-unit-test/</loc>
+    <loc>http:bochentheone.com/2016/10/25/2016-10-25-sublimelinter-trick/</loc>
     
     <lastmod>2018-09-07T13:17:52.972Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/10/25/2016-10-25-sublimelinter-trick/</loc>
+    <loc>http:bochentheone.com/2016/10/06/2016-10-06-javascript-unit-test/</loc>
     
     <lastmod>2018-09-07T13:17:52.972Z</lastmod>
     

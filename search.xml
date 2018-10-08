@@ -3,6 +3,23 @@
   
     
     <entry>
+      <title><![CDATA[Function arguments (2 or fewer ideally)]]></title>
+      <url>/2018/10/08/2018-10-08-function-parameters/</url>
+      <content type="html"><![CDATA[<h2 id="Limiting-the-amount-of-function-arguments"><a href="#Limiting-the-amount-of-function-arguments" class="headerlink" title="Limiting the amount of function arguments"></a>Limiting the amount of function arguments</h2><p>It is very important and useful to limit the amount of function arguments, because it makes testing your function easier. Having more than three leads to a combinatorial explosion where you have to test tons of different cases with each separate argument. Using a object if you can’t avoid a situation requires more than 3 arguments.</p>
+<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMenu</span>(<span class="params">title, body, buttonText, cancellable</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMenu</span>(<span class="params">&#123; title, body, buttonText, cancellable &#125;</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">createMenu(&#123;</div><div class="line">  title: <span class="string">'Foo'</span>,</div><div class="line">  body: <span class="string">'Bar'</span>,</div><div class="line">  buttonText: <span class="string">'Baz'</span>,</div><div class="line">  cancellable: <span class="literal">true</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> monday clean code </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[新团队的第一个月]]></title>
       <url>/2018/09/28/2018-09-28-one-month-in-new-team/</url>
       <content type="html"><![CDATA[<p>新公司，新团队，一个月啦</p>
@@ -35,7 +52,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Use searchable names]]></title>
+      <title><![CDATA[Use default arguments instead of short circuiting or conditionals]]></title>
       <url>/2018/09/24/2018-09-24-monday-clean-code/</url>
       <content type="html"><![CDATA[<h3 id="Use-default-arguments-instead-of-short-circuiting-or-conditionals"><a href="#Use-default-arguments-instead-of-short-circuiting-or-conditionals" class="headerlink" title="Use default arguments instead of short circuiting or conditionals"></a>Use default arguments instead of short circuiting or conditionals</h3><p>Default arguments are often cleaner than short circuiting. Be aware that if you<br>use them, your function will only provide default values for <code>undefined</code><br>arguments. Other “falsy” values such as <code>&#39;&#39;</code>, <code>&quot;&quot;</code>, <code>false</code>, <code>null</code>, <code>0</code>, and<br><code>NaN</code>, will not be replaced by a default value.</p>
 <p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMicrobrewery</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> breweryName = name || <span class="string">'Hipster Brew Co.'</span>;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -103,6 +120,10 @@
 <li style="list-style: none"><input type="checkbox" checked> 了解 Flux 和 Reflux 的基本概念和区别 </li>
 <li style="list-style: none"><input type="checkbox"> 了解 熟悉 Reflux 的 API， 让代码简洁优雅</li>
 <li>Reflux 在 Flux 的核心概念上取消掉了<code>dispatcher</code> 的角色，从而解决了存在于Flux中 <code>action</code> 和 <code>stores</code> 之间 <strong>多对多</strong> 的关系，把 <code>publisher</code> 的角色融合到 <code>action</code>中，<code>stores</code> 也有目的性的subscribe action，而不是监听所有 actions，不造成任何资源的浪费</li>
+</ul>
+</li>
+<li style="list-style: none"><input type="checkbox"> Storybook.js<ul>
+<li>a library to better manage and documentation your web components.</li>
 </ul>
 </li>
 <li style="list-style: none"><input type="checkbox"> Node.js<ul>
@@ -217,12 +238,12 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Variables]]></title>
-      <url>/2018/05/14/2018-05-14.clean-code/</url>
+      <title><![CDATA[Use the same vocabulary for the same type of variable]]></title>
+      <url>/2018/05/14/2018-05-21.clean-code/</url>
       <content type="html"><![CDATA[<blockquote>
-<h4 id="Monday-Clean-Code"><a href="#Monday-Clean-Code" class="headerlink" title="Monday Clean Code"></a>Monday Clean Code</h4><h4 id="Use-meaningful-and-pronounceable-variable-names"><a href="#Use-meaningful-and-pronounceable-variable-names" class="headerlink" title="Use meaningful and pronounceable variable names"></a>Use meaningful and pronounceable variable names</h4></blockquote>
-<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> yyyymmdstr = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
-<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> currentDate = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
+<h3 id="Use-the-same-vocabulary-for-the-same-type-of-variable"><a href="#Use-the-same-vocabulary-for-the-same-type-of-variable" class="headerlink" title="Use the same vocabulary for the same type of variable"></a>Use the same vocabulary for the same type of variable</h3></blockquote>
+<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">getUserInfo();</div><div class="line">getClientData();</div><div class="line">getCustomerRecord();</div></pre></td></tr></table></figure></p>
+<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getUser();</div></pre></td></tr></table></figure></p>
 ]]></content>
       
         
@@ -235,12 +256,12 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Use the same vocabulary for the same type of variable]]></title>
-      <url>/2018/05/14/2018-05-21.clean-code/</url>
+      <title><![CDATA[Variables]]></title>
+      <url>/2018/05/14/2018-05-14.clean-code/</url>
       <content type="html"><![CDATA[<blockquote>
-<h3 id="Use-the-same-vocabulary-for-the-same-type-of-variable"><a href="#Use-the-same-vocabulary-for-the-same-type-of-variable" class="headerlink" title="Use the same vocabulary for the same type of variable"></a>Use the same vocabulary for the same type of variable</h3></blockquote>
-<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">getUserInfo();</div><div class="line">getClientData();</div><div class="line">getCustomerRecord();</div></pre></td></tr></table></figure></p>
-<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getUser();</div></pre></td></tr></table></figure></p>
+<h4 id="Monday-Clean-Code"><a href="#Monday-Clean-Code" class="headerlink" title="Monday Clean Code"></a>Monday Clean Code</h4><h4 id="Use-meaningful-and-pronounceable-variable-names"><a href="#Use-meaningful-and-pronounceable-variable-names" class="headerlink" title="Use meaningful and pronounceable variable names"></a>Use meaningful and pronounceable variable names</h4></blockquote>
+<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> yyyymmdstr = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
+<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> currentDate = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
 ]]></content>
       
         
@@ -539,9 +560,9 @@
         
         <tags>
             
-            <tag> chart </tag>
-            
             <tag> directive </tag>
+            
+            <tag> chart </tag>
             
             <tag> Angular 2 </tag>
             
