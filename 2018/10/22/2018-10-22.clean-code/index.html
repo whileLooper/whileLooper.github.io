@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="Monday Clean CodeUse meaningful and pronounceable variable names Bad:1const yyyymmdstr = moment().format(&apos;YYYY/MM/DD&apos;); Good:1const currentDate = moment().format(&apos;YYYY/MM/DD&apos;);">
+<meta name="description" content="Remove dead codeDead code is just as bad as duplicate code. There’s no reason to keep it in your codebase. If it’s not being called, get rid of it! It will still be safe in your version history if you">
 <meta name="keywords" content="monday clean code">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Variables">
-<meta property="og:url" content="http:bochentheone.com/2018/05/14/2018-05-14.clean-code/index.html">
+<meta property="og:title" content="Delete Dead Code">
+<meta property="og:url" content="http:bochentheone.com/2018/10/22/2018-10-22.clean-code/index.html">
 <meta property="og:site_name" content="LEVELING UP">
-<meta property="og:description" content="Monday Clean CodeUse meaningful and pronounceable variable names Bad:1const yyyymmdstr = moment().format(&apos;YYYY/MM/DD&apos;); Good:1const currentDate = moment().format(&apos;YYYY/MM/DD&apos;);">
+<meta property="og:description" content="Remove dead codeDead code is just as bad as duplicate code. There’s no reason to keep it in your codebase. If it’s not being called, get rid of it! It will still be safe in your version history if you">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-07T13:17:52.975Z">
+<meta property="og:updated_time" content="2018-10-22T14:11:15.825Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Variables">
-<meta name="twitter:description" content="Monday Clean CodeUse meaningful and pronounceable variable names Bad:1const yyyymmdstr = moment().format(&apos;YYYY/MM/DD&apos;); Good:1const currentDate = moment().format(&apos;YYYY/MM/DD&apos;);">
+<meta name="twitter:title" content="Delete Dead Code">
+<meta name="twitter:description" content="Remove dead codeDead code is just as bad as duplicate code. There’s no reason to keep it in your codebase. If it’s not being called, get rid of it! It will still be safe in your version history if you">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http:bochentheone.com/2018/05/14/2018-05-14.clean-code/"/>
+  <link rel="canonical" href="http:bochentheone.com/2018/10/22/2018-10-22.clean-code/"/>
 
 
 
 
 
-  <title>Variables | LEVELING UP</title>
+  <title>Delete Dead Code | LEVELING UP</title>
   
 
 
@@ -286,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2018/05/14/2018-05-14.clean-code/">
+    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2018/10/22/2018-10-22.clean-code/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="nehcob">
@@ -303,7 +303,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Variables</h1>
+          <h1 class="post-title" itemprop="name headline">Delete Dead Code</h1>
         
 
         <div class="post-meta">
@@ -315,8 +315,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-14T00:00:00-04:00">
-                05-14-2018
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-22T00:00:00-04:00">
+                10-22-2018
               </time>
             
 
@@ -353,11 +353,11 @@
       
 
       
-        <blockquote>
-<h4 id="Monday-Clean-Code"><a href="#Monday-Clean-Code" class="headerlink" title="Monday Clean Code"></a>Monday Clean Code</h4><h4 id="Use-meaningful-and-pronounceable-variable-names"><a href="#Use-meaningful-and-pronounceable-variable-names" class="headerlink" title="Use meaningful and pronounceable variable names"></a>Use meaningful and pronounceable variable names</h4></blockquote>
-<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> yyyymmdstr = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
-<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> currentDate = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
-
+        <h2 id="Remove-dead-code"><a href="#Remove-dead-code" class="headerlink" title="Remove dead code"></a>Remove dead code</h2><p>Dead code is just as bad as duplicate code. There’s no reason to keep it in your codebase. If it’s not being called, get rid of it! It will still be safe in your version history if you still need it.</p>
+<p><strong>Bad:</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">oldRequestModule</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">newRequestModule</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>const req = newRequestModule;<br>inventoryTracker(‘apples’, req, ‘www.inventory-awesome.io’);</p>
+<p><strong>Good:</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">newRequestModule</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> req = newRequestModule;</div><div class="line">inventoryTracker(<span class="string">'apples'</span>, req, <span class="string">'www.inventory-awesome.io'</span>);</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -387,8 +387,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/14/2018-05-21.clean-code/" rel="next" title="Use the same vocabulary for the same type of variable">
-                <i class="fa fa-chevron-left"></i> Use the same vocabulary for the same type of variable
+              <a href="/2018/10/08/2018-10-08-function-parameters/" rel="next" title="Function arguments (2 or fewer ideally)">
+                <i class="fa fa-chevron-left"></i> Function arguments (2 or fewer ideally)
               </a>
             
           </div>
@@ -396,10 +396,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/29/2018-05-29.clean-code/" rel="prev" title="Use searchable names">
-                Use searchable names <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -553,7 +549,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Monday-Clean-Code"><span class="nav-number">1.</span> <span class="nav-text">Monday Clean Code</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Use-meaningful-and-pronounceable-variable-names"><span class="nav-number">2.</span> <span class="nav-text">Use meaningful and pronounceable variable names</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Remove-dead-code"><span class="nav-number">1.</span> <span class="nav-text">Remove dead code</span></a></li></ol></div>
             
 
           </div>
