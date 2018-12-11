@@ -44,6 +44,23 @@
     </entry>
     
     <entry>
+      <title><![CDATA[前端争霸]]></title>
+      <url>/2018/12/11/2018-12-11-front-end-winner/</url>
+      <content type="html"><![CDATA[<p>前端群雄逐鹿，群魔乱舞，各种兵器，各种剑法，没有最强只有更强，</p>
+<p>但是！ </p>
+<p>却有最强的内功心法: <strong>SOLID</strong></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Delete Dead Code]]></title>
       <url>/2018/10/22/2018-10-22-clean-code/</url>
       <content type="html"><![CDATA[<h2 id="Remove-dead-code"><a href="#Remove-dead-code" class="headerlink" title="Remove dead code"></a>Remove dead code</h2><p>Dead code is just as bad as duplicate code. There’s no reason to keep it in your codebase. If it’s not being called, get rid of it! It will still be safe in your version history if you still need it.</p>
@@ -621,9 +638,9 @@
             
             <tag> directive </tag>
             
-            <tag> Angular 2 </tag>
-            
             <tag> chart </tag>
+            
+            <tag> Angular 2 </tag>
             
             <tag> how to </tag>
             
