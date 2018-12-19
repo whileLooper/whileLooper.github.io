@@ -3,6 +3,104 @@
   
     
     <entry>
+      <title><![CDATA[关于翻译英文技术博客的意图]]></title>
+      <url>/2018/12/19/2018-12-19-thoughs-about-blog/</url>
+      <content type="html"><![CDATA[<p>最近萌发出通过翻译一些平常看到的国外技术博客的想法</p>
+<h4 id="出发点"><a href="#出发点" class="headerlink" title="出发点:"></a>出发点:</h4><ul>
+<li>目前自己博客内容没什么营养，偶尔也才写一两篇技术性博客，还没什么营养，想通过翻译技术博客来增加自己博客的内容</li>
+<li>提高中文写作能力，中文写作水平从高一出国后就止步了</li>
+<li>提高英文阅读能力，日常生活在，英语说还行，但是阅读量几乎没有</li>
+<li>借此来让自己对某件事无的坚持，积累自己的读者，做点有内容的东西， 从简单容易坚持的项目出发</li>
+</ul>
+<p></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[最近在瞎捣鼓的项目]]></title>
+      <url>/2018/12/11/2018-12-11-recent-projects/</url>
+      <content type="html"><![CDATA[<h2 id="supreme-restock-monitoring-tool-hold"><a href="#supreme-restock-monitoring-tool-hold" class="headerlink" title="supreme restock monitoring tool (hold)"></a>supreme restock monitoring tool (<strong>hold</strong>)</h2><ul>
+<li>Node.js</li>
+<li><p>cheerio</p>
+<p><strong>Done</strong>:成功的检查supreme官网的自动补货信息，自动发送Slack bot msg 到对应channel</p>
+<p><strong>Imcomplete</strong>: 无法再在云端运行，HTML request return 403 error</p>
+</li>
+</ul>
+<h2 id="VScode-todo-extension-hold"><a href="#VScode-todo-extension-hold" class="headerlink" title="VScode todo extension (hold)"></a>VScode todo extension (<strong>hold</strong>)</h2><ul>
+<li><p>Javascript</p>
+<p><strong>Done</strong>:简单的vscode command</p>
+</li>
+</ul>
+<h2 id="A-image-scraping-app-dropped"><a href="#A-image-scraping-app-dropped" class="headerlink" title="A image scraping app (dropped)"></a>A image scraping app (<strong>dropped</strong>)</h2><ul>
+<li>Node.js</li>
+<li><p>cheerio</p>
+<p><strong>Done</strong>: 基本能从6park爬取一定数量的图片，成功部署heroku</p>
+<p><strong>Incomplete</strong>: 页面载入太慢，图片链接json文件无法更新</p>
+</li>
+</ul>
+<h2 id="黑胶唱片推荐网站-working"><a href="#黑胶唱片推荐网站-working" class="headerlink" title="黑胶唱片推荐网站 (working)"></a>黑胶唱片推荐网站 (<strong>working</strong>)</h2><ul>
+<li>Gastbyjs</li>
+<li>Node.js</li>
+<li><p>Netlify 部署</p>
+<p><strong>Done</strong>: 部署到Netlify</p>
+<p><strong>Imcomplete</strong>: 内容创作</p>
+</li>
+</ul>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Delete Dead Code]]></title>
+      <url>/2018/10/22/2018-10-22-clean-code/</url>
+      <content type="html"><![CDATA[<h2 id="Remove-dead-code"><a href="#Remove-dead-code" class="headerlink" title="Remove dead code"></a>Remove dead code</h2><p>Dead code is just as bad as duplicate code. There’s no reason to keep it in your codebase. If it’s not being called, get rid of it! It will still be safe in your version history if you still need it.</p>
+<p><strong>Bad:</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">oldRequestModule</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">newRequestModule</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>const req = newRequestModule;<br>inventoryTracker(‘apples’, req, ‘www.inventory-awesome.io’);</p>
+<p><strong>Good:</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">newRequestModule</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> req = newRequestModule;</div><div class="line">inventoryTracker(<span class="string">'apples'</span>, req, <span class="string">'www.inventory-awesome.io'</span>);</div></pre></td></tr></table></figure>]]></content>
+      
+        
+        <tags>
+            
+            <tag> monday clean code </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Function arguments (2 or fewer ideally)]]></title>
+      <url>/2018/10/08/2018-10-08-function-parameters/</url>
+      <content type="html"><![CDATA[<h2 id="Limiting-the-amount-of-function-arguments"><a href="#Limiting-the-amount-of-function-arguments" class="headerlink" title="Limiting the amount of function arguments"></a>Limiting the amount of function arguments</h2><p>It is very important and useful to limit the amount of function arguments, because it makes testing your function easier. Having more than three leads to a combinatorial explosion where you have to test tons of different cases with each separate argument. Using a object if you can’t avoid a situation requires more than 3 arguments.</p>
+<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMenu</span>(<span class="params">title, body, buttonText, cancellable</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMenu</span>(<span class="params">&#123; title, body, buttonText, cancellable &#125;</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">createMenu(&#123;</div><div class="line">  title: <span class="string">'Foo'</span>,</div><div class="line">  body: <span class="string">'Bar'</span>,</div><div class="line">  buttonText: <span class="string">'Baz'</span>,</div><div class="line">  cancellable: <span class="literal">true</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> monday clean code </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[新团队的第一个月]]></title>
       <url>/2018/09/28/2018-09-28-one-month-in-new-team/</url>
       <content type="html"><![CDATA[<p>新公司，新团队，一个月啦</p>
@@ -35,7 +133,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Use searchable names]]></title>
+      <title><![CDATA[Use default arguments instead of short circuiting or conditionals]]></title>
       <url>/2018/09/24/2018-09-24-monday-clean-code/</url>
       <content type="html"><![CDATA[<h3 id="Use-default-arguments-instead-of-short-circuiting-or-conditionals"><a href="#Use-default-arguments-instead-of-short-circuiting-or-conditionals" class="headerlink" title="Use default arguments instead of short circuiting or conditionals"></a>Use default arguments instead of short circuiting or conditionals</h3><p>Default arguments are often cleaner than short circuiting. Be aware that if you<br>use them, your function will only provide default values for <code>undefined</code><br>arguments. Other “falsy” values such as <code>&#39;&#39;</code>, <code>&quot;&quot;</code>, <code>false</code>, <code>null</code>, <code>0</code>, and<br><code>NaN</code>, will not be replaced by a default value.</p>
 <p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMicrobrewery</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> breweryName = name || <span class="string">'Hipster Brew Co.'</span>;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -103,6 +201,10 @@
 <li style="list-style: none"><input type="checkbox" checked> 了解 Flux 和 Reflux 的基本概念和区别 </li>
 <li style="list-style: none"><input type="checkbox"> 了解 熟悉 Reflux 的 API， 让代码简洁优雅</li>
 <li>Reflux 在 Flux 的核心概念上取消掉了<code>dispatcher</code> 的角色，从而解决了存在于Flux中 <code>action</code> 和 <code>stores</code> 之间 <strong>多对多</strong> 的关系，把 <code>publisher</code> 的角色融合到 <code>action</code>中，<code>stores</code> 也有目的性的subscribe action，而不是监听所有 actions，不造成任何资源的浪费</li>
+</ul>
+</li>
+<li style="list-style: none"><input type="checkbox"> Storybook.js<ul>
+<li>a library to better manage and documentation your web components.</li>
 </ul>
 </li>
 <li style="list-style: none"><input type="checkbox"> Node.js<ul>
@@ -539,11 +641,11 @@
         
         <tags>
             
-            <tag> chart </tag>
-            
             <tag> directive </tag>
             
             <tag> Angular 2 </tag>
+            
+            <tag> chart </tag>
             
             <tag> how to </tag>
             
@@ -560,9 +662,9 @@
         
         <tags>
             
-            <tag> open source </tag>
-            
             <tag> chart </tag>
+            
+            <tag> open source </tag>
             
             <tag> compare </tag>
             

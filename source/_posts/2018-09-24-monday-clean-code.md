@@ -1,5 +1,5 @@
 ---
-title: Use searchable names
+title: Use default arguments instead of short circuiting or conditionals
 layout: post
 date:   2018-09-24
 tags: 
