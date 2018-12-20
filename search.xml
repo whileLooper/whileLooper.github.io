@@ -3,30 +3,8 @@
   
     
     <entry>
-      <title><![CDATA[关于翻译英文技术博客的意图]]></title>
-      <url>/2018/12/19/2018-12-19-thoughs-about-blog/</url>
-      <content type="html"><![CDATA[<p>最近萌发出通过翻译一些平常看到的国外技术博客的想法</p>
-<h4 id="出发点"><a href="#出发点" class="headerlink" title="出发点:"></a>出发点:</h4><ul>
-<li>目前自己博客内容没什么营养，偶尔也才写一两篇技术性博客，还没什么营养，想通过翻译技术博客来增加自己博客的内容</li>
-<li>提高中文写作能力，中文写作水平从高一出国后就止步了</li>
-<li>提高英文阅读能力，日常生活在，英语说还行，但是阅读量几乎没有</li>
-<li>借此来让自己对某件事无的坚持，积累自己的读者，做点有内容的东西， 从简单容易坚持的项目出发</li>
-</ul>
-<p></p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> 随笔 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[静态化与服务器渲染 （Static vs. Server Rendering)]]></title>
-      <url>/2018/12/19/2018-12-19-test/</url>
+      <url>/2018/12/20/2018-12-19-static-vs-server/</url>
       <content type="html"><![CDATA[<p>  静态化渲染和服务器渲染二者都为你的APP页面进行HTML渲染， 然而他们之间有个巨大的差异。。。<br>  Static rendering and server rendering both involve rendering HTML for each of your app’s pages- but there’s one major difference between them…</p>
 <p>也许你曾听过静态化渲染与服务器渲染，你也知道他们二者都可以提高SEO，让你的网站或者APP进行生成HTML页面。当然你也可以使用 <a href="https://reactjs.org/docs/react-dom-server.html#rendertostring" target="_blank" rel="external">ReactDOMServer.renderToString()</a>实现上述两种目的。</p>
 <p>这么说，他们两者看上去是一种东西？对吧？他们几乎几乎差不多一样，接下来让我解释下。</p>
@@ -62,6 +40,28 @@
 <p>由于近期对<strong>Frontend Armory</strong>这个网站的兴趣，发现上面有些不错的前端基本概念文章，所以想以此为长期学习的地方，通过翻译来提升自己，也帮助他人。</p>
 ]]></content>
       
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[关于翻译英文技术博客的意图]]></title>
+      <url>/2018/12/19/2018-12-19-thoughs-about-blog/</url>
+      <content type="html"><![CDATA[<p>最近萌发出通过翻译一些平常看到的国外技术博客的想法</p>
+<h4 id="出发点"><a href="#出发点" class="headerlink" title="出发点:"></a>出发点:</h4><ul>
+<li>目前自己博客内容没什么营养，偶尔也才写一两篇技术性博客，还没什么营养，想通过翻译技术博客来增加自己博客的内容</li>
+<li>提高中文写作能力，中文写作水平从高一出国后就止步了</li>
+<li>提高英文阅读能力，日常生活在，英语说还行，但是阅读量几乎没有</li>
+<li>借此来让自己对某件事无的坚持，积累自己的读者，做点有内容的东西， 从简单容易坚持的项目出发</li>
+</ul>
+<p></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
         
     </entry>
     
@@ -359,12 +359,12 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Variables]]></title>
-      <url>/2018/05/14/2018-05-14.clean-code/</url>
+      <title><![CDATA[Use the same vocabulary for the same type of variable]]></title>
+      <url>/2018/05/14/2018-05-21.clean-code/</url>
       <content type="html"><![CDATA[<blockquote>
-<h4 id="Monday-Clean-Code"><a href="#Monday-Clean-Code" class="headerlink" title="Monday Clean Code"></a>Monday Clean Code</h4><h4 id="Use-meaningful-and-pronounceable-variable-names"><a href="#Use-meaningful-and-pronounceable-variable-names" class="headerlink" title="Use meaningful and pronounceable variable names"></a>Use meaningful and pronounceable variable names</h4></blockquote>
-<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> yyyymmdstr = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
-<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> currentDate = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
+<h3 id="Use-the-same-vocabulary-for-the-same-type-of-variable"><a href="#Use-the-same-vocabulary-for-the-same-type-of-variable" class="headerlink" title="Use the same vocabulary for the same type of variable"></a>Use the same vocabulary for the same type of variable</h3></blockquote>
+<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">getUserInfo();</div><div class="line">getClientData();</div><div class="line">getCustomerRecord();</div></pre></td></tr></table></figure></p>
+<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getUser();</div></pre></td></tr></table></figure></p>
 ]]></content>
       
         
@@ -377,12 +377,12 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Use the same vocabulary for the same type of variable]]></title>
-      <url>/2018/05/14/2018-05-21.clean-code/</url>
+      <title><![CDATA[Variables]]></title>
+      <url>/2018/05/14/2018-05-14.clean-code/</url>
       <content type="html"><![CDATA[<blockquote>
-<h3 id="Use-the-same-vocabulary-for-the-same-type-of-variable"><a href="#Use-the-same-vocabulary-for-the-same-type-of-variable" class="headerlink" title="Use the same vocabulary for the same type of variable"></a>Use the same vocabulary for the same type of variable</h3></blockquote>
-<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">getUserInfo();</div><div class="line">getClientData();</div><div class="line">getCustomerRecord();</div></pre></td></tr></table></figure></p>
-<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getUser();</div></pre></td></tr></table></figure></p>
+<h4 id="Monday-Clean-Code"><a href="#Monday-Clean-Code" class="headerlink" title="Monday Clean Code"></a>Monday Clean Code</h4><h4 id="Use-meaningful-and-pronounceable-variable-names"><a href="#Use-meaningful-and-pronounceable-variable-names" class="headerlink" title="Use meaningful and pronounceable variable names"></a>Use meaningful and pronounceable variable names</h4></blockquote>
+<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> yyyymmdstr = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
+<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> currentDate = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
 ]]></content>
       
         
@@ -683,9 +683,9 @@
             
             <tag> chart </tag>
             
-            <tag> directive </tag>
-            
             <tag> Angular 2 </tag>
+            
+            <tag> directive </tag>
             
             <tag> how to </tag>
             
@@ -812,9 +812,9 @@
         
         <tags>
             
-            <tag> component </tag>
-            
             <tag> directive </tag>
+            
+            <tag> component </tag>
             
             <tag> angular 2 </tag>
             

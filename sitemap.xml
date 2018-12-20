@@ -2,9 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http:bochentheone.com/2018/12/19/2018-12-19-test/</loc>
+    <loc>http:bochentheone.com/2018/12/20/2018-12-19-static-vs-server/</loc>
     
-    <lastmod>2018-12-20T18:14:22.925Z</lastmod>
+    <lastmod>2018-12-20T18:27:46.225Z</lastmod>
     
   </url>
   
@@ -86,14 +86,14 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2018/05/14/2018-05-21.clean-code/</loc>
+    <loc>http:bochentheone.com/2018/05/29/2018-05-29.clean-code/</loc>
     
     <lastmod>2018-09-07T13:17:52.976Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2018/05/29/2018-05-29.clean-code/</loc>
+    <loc>http:bochentheone.com/2018/05/14/2018-05-21.clean-code/</loc>
     
     <lastmod>2018-09-07T13:17:52.976Z</lastmod>
     
@@ -107,14 +107,14 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2018/04/25/2018-04-26-work-review/</loc>
+    <loc>http:bochentheone.com/2018/05/10/2018-05-10-puppeteer-first-touch/</loc>
     
     <lastmod>2018-09-07T13:17:52.975Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2018/05/10/2018-05-10-puppeteer-first-touch/</loc>
+    <loc>http:bochentheone.com/2018/04/25/2018-04-26-work-review/</loc>
     
     <lastmod>2018-09-07T13:17:52.975Z</lastmod>
     
@@ -142,6 +142,13 @@
   </url>
   
   <url>
+    <loc>http:bochentheone.com/2016/11/09/2016-11-09-component-vs-directive/</loc>
+    
+    <lastmod>2018-09-07T13:17:52.973Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http:bochentheone.com/2017/01/20/2017-01-20-ci-deploy/</loc>
     
     <lastmod>2018-09-07T13:17:52.973Z</lastmod>
@@ -156,13 +163,6 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/11/09/2016-11-09-component-vs-directive/</loc>
-    
-    <lastmod>2018-09-07T13:17:52.973Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http:bochentheone.com/2016/11/10/2016-11-10-charting-library/</loc>
     
     <lastmod>2018-09-07T13:17:52.973Z</lastmod>
@@ -170,14 +170,14 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/10/06/2016-10-06-javascript-unit-test/</loc>
+    <loc>http:bochentheone.com/2016/10/25/2016-10-25-sublimelinter-trick/</loc>
     
     <lastmod>2018-09-07T13:17:52.972Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/10/25/2016-10-25-sublimelinter-trick/</loc>
+    <loc>http:bochentheone.com/2016/10/06/2016-10-06-javascript-unit-test/</loc>
     
     <lastmod>2018-09-07T13:17:52.972Z</lastmod>
     
