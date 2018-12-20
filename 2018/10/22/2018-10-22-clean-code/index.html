@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="LEVELING UP">
 <meta property="og:description" content="Remove dead codeDead code is just as bad as duplicate code. There’s no reason to keep it in your codebase. If it’s not being called, get rid of it! It will still be safe in your version history if you">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-11T16:44:01.425Z">
+<meta property="og:updated_time" content="2018-12-20T16:54:21.651Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Delete Dead Code">
 <meta name="twitter:description" content="Remove dead codeDead code is just as bad as duplicate code. There’s no reason to keep it in your codebase. If it’s not being called, get rid of it! It will still be safe in your version history if you">
@@ -354,8 +354,7 @@
 
       
         <h2 id="Remove-dead-code"><a href="#Remove-dead-code" class="headerlink" title="Remove dead code"></a>Remove dead code</h2><p>Dead code is just as bad as duplicate code. There’s no reason to keep it in your codebase. If it’s not being called, get rid of it! It will still be safe in your version history if you still need it.</p>
-<p><strong>Bad:</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">oldRequestModule</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">newRequestModule</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>const req = newRequestModule;<br>inventoryTracker(‘apples’, req, ‘www.inventory-awesome.io’);</p>
+<p><strong>Bad:</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">oldRequestModule</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">newRequestModule</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> req = newRequestModule;</div><div class="line">inventoryTracker(<span class="string">'apples'</span>, req, <span class="string">'www.inventory-awesome.io'</span>);</div></pre></td></tr></table></figure></p>
 <p><strong>Good:</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">newRequestModule</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> req = newRequestModule;</div><div class="line">inventoryTracker(<span class="string">'apples'</span>, req, <span class="string">'www.inventory-awesome.io'</span>);</div></pre></td></tr></table></figure>
       
@@ -476,7 +475,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

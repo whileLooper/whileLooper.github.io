@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http:bochentheone.com/2018/12/19/2018-12-19-test/</loc>
+    
+    <lastmod>2018-12-20T18:14:22.925Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2018/10/22/2018-10-22-clean-code/</loc>
+    
+    <lastmod>2018-12-20T16:54:21.651Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http:bochentheone.com/2018/12/19/2018-12-19-thoughs-about-blog/</loc>
     
     <lastmod>2018-12-19T19:42:25.205Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>http:bochentheone.com/2018/12/11/2018-12-11-recent-projects/</loc>
     
     <lastmod>2018-12-11T16:58:19.864Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http:bochentheone.com/2018/10/22/2018-10-22-clean-code/</loc>
-    
-    <lastmod>2018-12-11T16:44:01.425Z</lastmod>
     
   </url>
   
@@ -79,13 +86,6 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2018/05/29/2018-05-29.clean-code/</loc>
-    
-    <lastmod>2018-09-07T13:17:52.976Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http:bochentheone.com/2018/05/14/2018-05-21.clean-code/</loc>
     
     <lastmod>2018-09-07T13:17:52.976Z</lastmod>
@@ -93,9 +93,9 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2018/04/25/2018-04-26-work-review/</loc>
+    <loc>http:bochentheone.com/2018/05/29/2018-05-29.clean-code/</loc>
     
-    <lastmod>2018-09-07T13:17:52.975Z</lastmod>
+    <lastmod>2018-09-07T13:17:52.976Z</lastmod>
     
   </url>
   
@@ -107,9 +107,23 @@
   </url>
   
   <url>
+    <loc>http:bochentheone.com/2018/04/25/2018-04-26-work-review/</loc>
+    
+    <lastmod>2018-09-07T13:17:52.975Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http:bochentheone.com/2018/05/10/2018-05-10-puppeteer-first-touch/</loc>
     
     <lastmod>2018-09-07T13:17:52.975Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2017/02/20/2017-02-20-custom-filter-pipe/</loc>
+    
+    <lastmod>2018-09-07T13:17:52.974Z</lastmod>
     
   </url>
   
@@ -128,21 +142,7 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2017/02/20/2017-02-20-custom-filter-pipe/</loc>
-    
-    <lastmod>2018-09-07T13:17:52.974Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http:bochentheone.com/2017/01/20/2017-01-20-ci-deploy/</loc>
-    
-    <lastmod>2018-09-07T13:17:52.973Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http:bochentheone.com/2016/11/10/2016-11-10-charting-library/</loc>
     
     <lastmod>2018-09-07T13:17:52.973Z</lastmod>
     
@@ -163,7 +163,14 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/10/13/2016-10-13-game-of-life/</loc>
+    <loc>http:bochentheone.com/2016/11/10/2016-11-10-charting-library/</loc>
+    
+    <lastmod>2018-09-07T13:17:52.973Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2016/10/06/2016-10-06-javascript-unit-test/</loc>
     
     <lastmod>2018-09-07T13:17:52.972Z</lastmod>
     
@@ -177,7 +184,7 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/10/06/2016-10-06-javascript-unit-test/</loc>
+    <loc>http:bochentheone.com/2016/10/13/2016-10-13-game-of-life/</loc>
     
     <lastmod>2018-09-07T13:17:52.972Z</lastmod>
     
