@@ -103,12 +103,12 @@
 <meta property="og:description" content="到底什么是DOMThe Document Object Model（文档对象模型）, 或者叫DOM，是网页的接口。它本质上是网页的API，允许程序读取和操作页面内容，结构和样式。接下来让我们进一步解析。 一个网页是如何构建的一个浏览器如何从HTML源文档到视窗中展现样式和交互式页面的过程被称为“关键渲染路径（Critical Rendering Path）”,虽然这个过程可以被分解为多个步骤， 但">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://bitsofco.de/content/images/2018/11/HTML-to-Render-Tree-to-Final.png">
-<meta property="og:image" content="http:bochentheone.com/2018/12/28/20180-12-28-what-exactly-is-the-DOM/images/example1_node_tree.png">
-<meta property="og:image" content="http:bochentheone.com/2018/12/28/20180-12-28-what-exactly-is-the-DOM/images/example2_node_tree.png">
-<meta property="og:image" content="http:bochentheone.com/2018/12/28/20180-12-28-what-exactly-is-the-DOM/images/example3_node_tree.png">
-<meta property="og:image" content="http:bochentheone.com/2018/12/28/20180-12-28-what-exactly-is-the-DOM/images/example4_node_tree.png">
+<meta property="og:image" content="http:/images/example1_node_tree.png">
+<meta property="og:image" content="http:/images/example2_node_tree.png">
+<meta property="og:image" content="http:/images/example3_node_tree.png">
+<meta property="og:image" content="http:/images/example4_node_tree.png">
 <meta property="og:image" content="https://bitsofco.de/content/images/2018/11/Pseudo-element-in-devtools-inspector.png">
-<meta property="og:updated_time" content="2019-01-03T03:46:30.663Z">
+<meta property="og:updated_time" content="2019-01-03T03:48:09.101Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="到底什么是DOM">
 <meta name="twitter:description" content="到底什么是DOMThe Document Object Model（文档对象模型）, 或者叫DOM，是网页的接口。它本质上是网页的API，允许程序读取和操作页面内容，结构和样式。接下来让我们进一步解析。 一个网页是如何构建的一个浏览器如何从HTML源文档到视窗中展现样式和交互式页面的过程被称为“关键渲染路径（Critical Rendering Path）”,虽然这个过程可以被分解为多个步骤， 但">
@@ -373,14 +373,14 @@
 <p>来看看一下这个例子：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">title</span>&gt;</span>My first web page<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>How are you?<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>以上文档的节点树表达形式：</p>
-<p><img src="images/example1_node_tree.png" alt="example 1 node tree"></p>
+<p><img src="/images/example1_node_tree.png" alt="example 1 node tree"></p>
 <h1 id="DOM-不是什么"><a href="#DOM-不是什么" class="headerlink" title="DOM 不是什么"></a>DOM 不是什么</h1><p>根据上述例子，DOM是源HTML文档的一对一映射。 但是，正如我所提到的，还是有差异的。 为了完全理解DOM是什么，我们需要看看它不是什么。</p>
 <h2 id="DOM不是你的源代码"><a href="#DOM不是你的源代码" class="headerlink" title="DOM不是你的源代码"></a>DOM<em>不是</em>你的源代码</h2><p>尽管DOM是从源HTML文档创建的，但它并不总是完全相同。 这里有两个实例展示了：DOM可以与源HTML不同。</p>
 <h3 id="1-当HTML无效时"><a href="#1-当HTML无效时" class="headerlink" title="1. 当HTML无效时"></a>1. 当HTML无效时</h3><p>DOM是有效HTML文档的接口。在创建DOM的过程中，浏览器可能会矫正HTML中的无效代码。</p>
 <p>例子：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">Hello, world!</div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>上述文档中缺失<code>&lt;head&gt;</code>和<code>&lt;body&gt;</code>元素，对于有效HTML来说这是必需的。如果我们查看生成的DOM树，我们会发现这里被自动矫正了：</p>
-<p><img src="images/example2_node_tree.png" alt="example 2 node tree"></p>
+<p><img src="/images/example2_node_tree.png" alt="example 2 node tree"></p>
 <h3 id="2-当JavaScript修改DOM时"><a href="#2-当JavaScript修改DOM时" class="headerlink" title="2. 当JavaScript修改DOM时"></a>2. 当JavaScript修改DOM时</h3><p>DOM除了作为查看HTML文档内容的接口之外，还可以被修改，使其成为一个实时资源。</p>
 <p>例如，我们可以使用JavaScript为DOM创建其他节点。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> newParagraph = <span class="built_in">document</span>.createElement(<span class="string">"p"</span>);</div><div class="line"><span class="keyword">var</span> paragraphContent = <span class="built_in">document</span>.createTextNode(<span class="string">"I'm new!"</span>);</div><div class="line">newParagraph.appendChild(paragraphContent);</div><div class="line"><span class="built_in">document</span>.body.appendChild(newParagraph);</div></pre></td></tr></table></figure>
@@ -389,9 +389,9 @@
 <p>因为渲染树仅仅关注与渲染的内容本身，所以它会排除视觉上隐藏的元素。比如：具有<code>display: none</code>的元素。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"display: none;"</span>&gt;</span>How are you?<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>在DOM里将包含<code>&lt;p&gt;</code>元素：</p>
-<p><img src="images/example3_node_tree.png" alt="example 3 node tree"></p>
+<p><img src="/images/example3_node_tree.png" alt="example 3 node tree"></p>
 <p>但是，渲染树以及因此在视窗中看到的内容却不包含该元素。</p>
-<p><img src="images/example4_node_tree.png" alt="example 4 node tree"></p>
+<p><img src="/images/example4_node_tree.png" alt="example 4 node tree"></p>
 <h2 id="浏览器中的DOM并不是DOM"><a href="#浏览器中的DOM并不是DOM" class="headerlink" title="浏览器中的DOM并不是DOM"></a>浏览器中的DOM<em>并不是</em>DOM</h2><p>一点点小差异，因为DevTools元素检查器提供了最接近的DOM。但是，DevTools检查器包含里不在DOM中的其他信息。</p>
 <p>最好的例子是CSS伪元素。Pseudo-elements created using the <code>::before</code> and <code>::after</code> selectors form part of the CSSOM and render tree, but are not technically part of the DOM.。因为DOM仅仅由源HTML文档构建，不包含应用于元素的样式。</p>
 <p>尽管伪元素不是DOM的一部分，但他们仍然在我们的DevTools元素检查器中。</p>
