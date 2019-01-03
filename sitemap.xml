@@ -4,7 +4,7 @@
   <url>
     <loc>http:bochentheone.com/2018/12/28/20180-12-28-what-exactly-is-the-DOM/</loc>
     
-    <lastmod>2019-01-03T03:48:09.101Z</lastmod>
+    <lastmod>2019-01-03T03:50:44.063Z</lastmod>
     
   </url>
   
@@ -93,13 +93,6 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2018/05/14/2018-05-21.clean-code/</loc>
-    
-    <lastmod>2018-09-07T13:17:52.976Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http:bochentheone.com/2018/05/29/2018-05-29.clean-code/</loc>
     
     <lastmod>2018-09-07T13:17:52.976Z</lastmod>
@@ -107,9 +100,9 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2018/04/25/2018-04-26-work-review/</loc>
+    <loc>http:bochentheone.com/2018/05/14/2018-05-21.clean-code/</loc>
     
-    <lastmod>2018-09-07T13:17:52.975Z</lastmod>
+    <lastmod>2018-09-07T13:17:52.976Z</lastmod>
     
   </url>
   
@@ -128,9 +121,9 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2017/08/10/2017-08-10-stop_and_continue/</loc>
+    <loc>http:bochentheone.com/2018/04/25/2018-04-26-work-review/</loc>
     
-    <lastmod>2018-09-07T13:17:52.974Z</lastmod>
+    <lastmod>2018-09-07T13:17:52.975Z</lastmod>
     
   </url>
   
@@ -149,7 +142,14 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/11/09/2016-11-09-component-vs-directive/</loc>
+    <loc>http:bochentheone.com/2017/08/10/2017-08-10-stop_and_continue/</loc>
+    
+    <lastmod>2018-09-07T13:17:52.974Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2017/01/20/2017-01-20-ci-deploy/</loc>
     
     <lastmod>2018-09-07T13:17:52.973Z</lastmod>
     
@@ -163,7 +163,7 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2017/01/20/2017-01-20-ci-deploy/</loc>
+    <loc>http:bochentheone.com/2016/11/09/2016-11-09-component-vs-directive/</loc>
     
     <lastmod>2018-09-07T13:17:52.973Z</lastmod>
     
@@ -177,6 +177,13 @@
   </url>
   
   <url>
+    <loc>http:bochentheone.com/2016/10/06/2016-10-06-javascript-unit-test/</loc>
+    
+    <lastmod>2018-09-07T13:17:52.972Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http:bochentheone.com/2016/10/13/2016-10-13-game-of-life/</loc>
     
     <lastmod>2018-09-07T13:17:52.972Z</lastmod>
@@ -185,13 +192,6 @@
   
   <url>
     <loc>http:bochentheone.com/2016/10/25/2016-10-25-sublimelinter-trick/</loc>
-    
-    <lastmod>2018-09-07T13:17:52.972Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http:bochentheone.com/2016/10/06/2016-10-06-javascript-unit-test/</loc>
     
     <lastmod>2018-09-07T13:17:52.972Z</lastmod>
     
