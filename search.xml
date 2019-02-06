@@ -3,8 +3,39 @@
   
     
     <entry>
+      <title><![CDATA[定好目录结构]]></title>
+      <url>/2019/02/06/2019-02-06-project-structure/</url>
+      <content type="html"><![CDATA[<p>偶尔需要自己从零开始搭建project，一个好的目录结构觉得了一个项目的可维护性和可拓展性</p>
+<p>一个好的目录结构对一个好的项目而言是非常必要的。</p>
+<p>一个好的目录结构应当具有以下的一些特点：</p>
+<p>1、解耦：代码尽量去耦合，这样代码逻辑清晰，也容易扩展</p>
+<p>2、分块：按照功能对代码进行分块、分组，并能快捷的添加分块、分组</p>
+<p>3、编辑器友好：需要更新功能时，可以很快的定位到相关文件，并且这些文件应该是很靠近的，而不至于到处找文件</p>
+<p>比较推荐的目录结构：</p>
+<p><strong>多页面应用</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">|-- src/ 源代码目录</div><div class="line">    |-- page1/ page1 页面的工作空间（与这个页面相关的文件都放在这个目录下）</div><div class="line">        |-- index.html html 入口文件</div><div class="line">        |-- index.js js 入口文件</div><div class="line">        |-- index.(css|less|scss) 样式入口文件</div><div class="line">        |-- html/ html 片段目录</div><div class="line">        |-- (css|less|scss)/ 样式文件目录</div><div class="line">        |-- mock/ 本地 json 数据模拟</div><div class="line">        |-- images/ 图片文件目录</div><div class="line">        |-- components/ 组件目录（如果基于 react, vue 等组件化框架）</div><div class="line">        |-- ...</div><div class="line">    |-- sub-dir/ 子目录</div><div class="line">        |-- page2/ page2 页面的工作空间（内部结构参考 page1）</div><div class="line">          |-- ...</div><div class="line">    |-- ...</div><div class="line">|-- html/ 公共 html 片段</div><div class="line">|-- less/ 公共 less 目录</div><div class="line">|-- components/ 公共组件目录</div><div class="line">|-- images/ 公共图片目录</div><div class="line">|-- mock/ 公共 api-mock 文件目录</div><div class="line">|-- ...</div></pre></td></tr></table></figure>
+<p><strong>单页面应用</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">|-- src/ 源代码目录</div><div class="line">    |-- page1/ page1 页面的工作空间</div><div class="line">        |-- index.js 入口文件</div><div class="line">        |-- services/ service 目录</div><div class="line">        |-- models/ model 目录</div><div class="line">        |-- mock/ 本地 json 数据模拟</div><div class="line">        |-- images/ 图片文件目录</div><div class="line">        |-- components/ 组件目录（如果基于 react, vue 等组件化框架）</div><div class="line">        |-- ...</div><div class="line">    |-- module1/ 子目录</div><div class="line">        |-- page2/ page2 页面的工作空间（内部结构参考 page1）</div><div class="line">    |-- ...</div><div class="line">|-- images/ 公共图片目录</div><div class="line">|-- mock/ 公共 api-mock 文件目录</div><div class="line">|-- components/ 公共组件目录   </div><div class="line">|-- ...</div></pre></td></tr></table></figure>
+<p>参考：</p>
+<ul>
+<li><a href="https://segmentfault.com/a/1190000015816534" target="_blank" rel="external">目录结构优化</a></li>
+</ul>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[什么是Shadow DOM]]></title>
+      <url>/2019/01/14/2019-01-14-whats-shadow-DOM/</url>
+      <content type="html"></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[到底什么是DOM]]></title>
-      <url>/2018/12/28/20180-12-28-what-exactly-is-the-DOM/</url>
+      <url>/2018/12/28/2018-12-28-what-exactly-is-the-DOM/</url>
       <content type="html"><![CDATA[<h1 id="到底什么是DOM"><a href="#到底什么是DOM" class="headerlink" title="到底什么是DOM"></a>到底什么是DOM</h1><p><strong>The Document Object Model</strong>（文档对象模型）, 或者叫<strong>DOM</strong>，是网页的接口。它本质上是网页的API，允许程序读取和操作页面内容，结构和样式。接下来让我们进一步解析。</p>
 <h1 id="一个网页是如何构建的"><a href="#一个网页是如何构建的" class="headerlink" title="一个网页是如何构建的"></a>一个网页是如何构建的</h1><p>一个浏览器如何从HTML源文档到视窗中展现样式和交互式页面的过程被称为“关键渲染路径（<strong>Critical Rendering Path</strong>）”,虽然这个过程可以被分解为多个步骤， 但是这些步骤大致可以分为两个阶段。第一个阶段涉及浏览器解析文档到最终确认渲染的内容，第二阶段则是浏览器执行渲染。</p>
 <p><img src="https://bitsofco.de/content/images/2018/11/HTML-to-Render-Tree-to-Final.png" alt="render tree"></p>
@@ -59,9 +90,9 @@
             
             <tag> JavaScript </tag>
             
-            <tag> DOM </tag>
-            
             <tag> 翻译 </tag>
+            
+            <tag> DOM </tag>
             
         </tags>
         
@@ -430,12 +461,12 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Variables]]></title>
-      <url>/2018/05/14/2018-05-14.clean-code/</url>
+      <title><![CDATA[Use the same vocabulary for the same type of variable]]></title>
+      <url>/2018/05/14/2018-05-21.clean-code/</url>
       <content type="html"><![CDATA[<blockquote>
-<h4 id="Monday-Clean-Code"><a href="#Monday-Clean-Code" class="headerlink" title="Monday Clean Code"></a>Monday Clean Code</h4><h4 id="Use-meaningful-and-pronounceable-variable-names"><a href="#Use-meaningful-and-pronounceable-variable-names" class="headerlink" title="Use meaningful and pronounceable variable names"></a>Use meaningful and pronounceable variable names</h4></blockquote>
-<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> yyyymmdstr = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
-<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> currentDate = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
+<h3 id="Use-the-same-vocabulary-for-the-same-type-of-variable"><a href="#Use-the-same-vocabulary-for-the-same-type-of-variable" class="headerlink" title="Use the same vocabulary for the same type of variable"></a>Use the same vocabulary for the same type of variable</h3></blockquote>
+<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">getUserInfo();</div><div class="line">getClientData();</div><div class="line">getCustomerRecord();</div></pre></td></tr></table></figure></p>
+<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getUser();</div></pre></td></tr></table></figure></p>
 ]]></content>
       
         
@@ -448,12 +479,12 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Use the same vocabulary for the same type of variable]]></title>
-      <url>/2018/05/14/2018-05-21.clean-code/</url>
+      <title><![CDATA[Variables]]></title>
+      <url>/2018/05/14/2018-05-14.clean-code/</url>
       <content type="html"><![CDATA[<blockquote>
-<h3 id="Use-the-same-vocabulary-for-the-same-type-of-variable"><a href="#Use-the-same-vocabulary-for-the-same-type-of-variable" class="headerlink" title="Use the same vocabulary for the same type of variable"></a>Use the same vocabulary for the same type of variable</h3></blockquote>
-<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">getUserInfo();</div><div class="line">getClientData();</div><div class="line">getCustomerRecord();</div></pre></td></tr></table></figure></p>
-<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">getUser();</div></pre></td></tr></table></figure></p>
+<h4 id="Monday-Clean-Code"><a href="#Monday-Clean-Code" class="headerlink" title="Monday Clean Code"></a>Monday Clean Code</h4><h4 id="Use-meaningful-and-pronounceable-variable-names"><a href="#Use-meaningful-and-pronounceable-variable-names" class="headerlink" title="Use meaningful and pronounceable variable names"></a>Use meaningful and pronounceable variable names</h4></blockquote>
+<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> yyyymmdstr = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
+<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> currentDate = moment().format(<span class="string">'YYYY/MM/DD'</span>);</div></pre></td></tr></table></figure></p>
 ]]></content>
       
         
@@ -647,11 +678,11 @@
             
             <tag> Angular 2 </tag>
             
+            <tag> how to </tag>
+            
             <tag> filtering </tag>
             
             <tag> pipe </tag>
-            
-            <tag> how to </tag>
             
         </tags>
         
@@ -754,9 +785,9 @@
             
             <tag> chart </tag>
             
-            <tag> directive </tag>
-            
             <tag> Angular 2 </tag>
+            
+            <tag> directive </tag>
             
             <tag> how to </tag>
             
@@ -883,9 +914,9 @@
         
         <tags>
             
-            <tag> component </tag>
-            
             <tag> directive </tag>
+            
+            <tag> component </tag>
             
             <tag> angular 2 </tag>
             

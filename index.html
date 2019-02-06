@@ -286,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2018/12/28/20180-12-28-what-exactly-is-the-DOM/">
+    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2019/02/06/2019-02-06-project-structure/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="nehcob">
@@ -305,7 +305,260 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/28/20180-12-28-what-exactly-is-the-DOM/" itemprop="url">到底什么是DOM</a></h1>
+                <a class="post-title-link" href="/2019/02/06/2019-02-06-project-structure/" itemprop="url">定好目录结构</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-06T00:00:00-05:00">
+                02-06-2019
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>偶尔需要自己从零开始搭建project，一个好的目录结构觉得了一个项目的可维护性和可拓展性</p>
+<p>一个好的目录结构对一个好的项目而言是非常必要的。</p>
+<p>一个好的目录结构应当具有以下的一些特点：</p>
+<p>1、解耦：代码尽量去耦合，这样代码逻辑清晰，也容易扩展</p>
+<p>2、分块：按照功能对代码进行分块、分组，并能快捷的添加分块、分组</p>
+<p>3、编辑器友好：需要更新功能时，可以很快的定位到相关文件，并且这些文件应该是很靠近的，而不至于到处找文件</p>
+<p>比较推荐的目录结构：</p>
+<p><strong>多页面应用</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">|-- src/ 源代码目录</div><div class="line">    |-- page1/ page1 页面的工作空间（与这个页面相关的文件都放在这个目录下）</div><div class="line">        |-- index.html html 入口文件</div><div class="line">        |-- index.js js 入口文件</div><div class="line">        |-- index.(css|less|scss) 样式入口文件</div><div class="line">        |-- html/ html 片段目录</div><div class="line">        |-- (css|less|scss)/ 样式文件目录</div><div class="line">        |-- mock/ 本地 json 数据模拟</div><div class="line">        |-- images/ 图片文件目录</div><div class="line">        |-- components/ 组件目录（如果基于 react, vue 等组件化框架）</div><div class="line">        |-- ...</div><div class="line">    |-- sub-dir/ 子目录</div><div class="line">        |-- page2/ page2 页面的工作空间（内部结构参考 page1）</div><div class="line">          |-- ...</div><div class="line">    |-- ...</div><div class="line">|-- html/ 公共 html 片段</div><div class="line">|-- less/ 公共 less 目录</div><div class="line">|-- components/ 公共组件目录</div><div class="line">|-- images/ 公共图片目录</div><div class="line">|-- mock/ 公共 api-mock 文件目录</div><div class="line">|-- ...</div></pre></td></tr></table></figure>
+<p><strong>单页面应用</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">|-- src/ 源代码目录</div><div class="line">    |-- page1/ page1 页面的工作空间</div><div class="line">        |-- index.js 入口文件</div><div class="line">        |-- services/ service 目录</div><div class="line">        |-- models/ model 目录</div><div class="line">        |-- mock/ 本地 json 数据模拟</div><div class="line">        |-- images/ 图片文件目录</div><div class="line">        |-- components/ 组件目录（如果基于 react, vue 等组件化框架）</div><div class="line">        |-- ...</div><div class="line">    |-- module1/ 子目录</div><div class="line">        |-- page2/ page2 页面的工作空间（内部结构参考 page1）</div><div class="line">    |-- ...</div><div class="line">|-- images/ 公共图片目录</div><div class="line">|-- mock/ 公共 api-mock 文件目录</div><div class="line">|-- components/ 公共组件目录   </div><div class="line">|-- ...</div></pre></td></tr></table></figure>
+<p>参考：</p>
+<ul>
+<li><a href="https://segmentfault.com/a/1190000015816534" target="_blank" rel="external">目录结构优化</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2019/01/14/2019-01-14-whats-shadow-DOM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nehcob">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LEVELING UP">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/14/2019-01-14-whats-shadow-DOM/" itemprop="url">什么是Shadow DOM</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-14T00:00:00-05:00">
+                01-14-2019
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2018/12/28/2018-12-28-what-exactly-is-the-DOM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nehcob">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LEVELING UP">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/28/2018-12-28-what-exactly-is-the-DOM/" itemprop="url">到底什么是DOM</a></h1>
         
 
         <div class="post-meta">
@@ -1365,284 +1618,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2018/09/21/2018-09-21-start-with-sequelize/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nehcob">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LEVELING UP">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/21/2018-09-21-start-with-sequelize/" itemprop="url">Start with Sequelize</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-21T00:00:00-04:00">
-                09-21-2018
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Ticket-create-a-new-model-and-associate-to-another-modal"><a href="#Ticket-create-a-new-model-and-associate-to-another-modal" class="headerlink" title="Ticket: create a new model, and associate to another modal"></a>Ticket: create a new model, and associate to another modal</h2><h3 id="Create-Model"><a href="#Create-Model" class="headerlink" title="Create Model"></a>Create Model</h3><p>For example, this ticket detail is creating a new model, contains information about some specific url.</p>
-<p>From Sequelize official documentation, Models are defined with <code>sequelize.define(&#39;name&#39;, {attributes}, {options})</code>.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> LinkDetail = sequelize.define(<span class="string">'link_detail'</span>, &#123;</div><div class="line">    url: &#123;</div><div class="line">        type: Sequelize.STRING</div><div class="line">    &#125;,</div><div class="line">    description: &#123;</div><div class="line">        type: Sequelize.STRING</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>and for future repeat use, wrap it with <code>module.exports</code>: </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">sequelize, DataTypes</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> LinkDetail = sequelize.define(<span class="string">'link_detail'</span>, &#123;</div><div class="line">        url: &#123;</div><div class="line">            type: Sequelize.STRING</div><div class="line">        &#125;,</div><div class="line">        description: &#123;</div><div class="line">            type: Sequelize.STRING</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> LinkDetail;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/21/2018-09-21-start-with-sequelize/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2018/09/14/2018-09-14-current-study-list/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nehcob">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LEVELING UP">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/14/2018-09-14-current-study-list/" itemprop="url">Current tech stack I'm using at work</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-14T00:00:00-04:00">
-                09-14-2018
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Keep updating this list.</p>
-<ul>
-<li style="list-style: none"><input type="checkbox"> React<ul>
-<li style="list-style: none"><input type="checkbox"> Props vs State</li>
-</ul>
-</li>
-<li style="list-style: none"><input type="checkbox"> Reflux<ul>
-<li><a href="https://www.cnblogs.com/lovesueee/p/4893218.html" target="_blank" rel="external">ReFlux细说</a> (必读文章)</li>
-<li style="list-style: none"><input type="checkbox" checked> 了解 Flux 和 Reflux 的基本概念和区别 </li>
-<li style="list-style: none"><input type="checkbox"> 了解 熟悉 Reflux 的 API， 让代码简洁优雅</li>
-<li>Reflux 在 Flux 的核心概念上取消掉了<code>dispatcher</code> 的角色，从而解决了存在于Flux中 <code>action</code> 和 <code>stores</code> 之间 <strong>多对多</strong> 的关系，把 <code>publisher</code> 的角色融合到 <code>action</code>中，<code>stores</code> 也有目的性的subscribe action，而不是监听所有 actions，不造成任何资源的浪费</li>
-</ul>
-</li>
-<li style="list-style: none"><input type="checkbox"> Storybook.js<ul>
-<li>a library to better manage and documentation your web components.</li>
-</ul>
-</li>
-<li style="list-style: none"><input type="checkbox"> Node.js<ul>
-<li style="list-style: none"><input type="checkbox"> Async/Await</li>
-<li style="list-style: none"><input type="checkbox"> Restify API framework</li>
-</ul>
-</li>
-<li style="list-style: none"><input type="checkbox"> <a href="http://docs.sequelizejs.com/" target="_blank" rel="external">Sequelize</a><ul>
-<li>Sequelize is a promise-based ORM for Node.js v4 and up. It supports the dialects PostgreSQL, MySQL, SQLite and MSSQL and features solid transaction support, relations, read replication and more.</li>
-</ul>
-</li>
-<li style="list-style: none"><input type="checkbox"> AWS<ul>
-<li style="list-style: none"><input type="checkbox"> S3 Bucket Storage</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1693,7 +1668,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http:bochentheone.com/2018/12/28/20180-12-28-what-exactly-is-the-DOM/</loc>
+    <loc>http:bochentheone.com/2019/02/06/2019-02-06-project-structure/</loc>
     
-    <lastmod>2019-01-03T03:50:44.063Z</lastmod>
+    <lastmod>2019-02-06T17:01:49.588Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2019/01/14/2019-01-14-whats-shadow-DOM/</loc>
+    
+    <lastmod>2019-01-14T19:52:50.406Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2018/12/28/2018-12-28-what-exactly-is-the-DOM/</loc>
+    
+    <lastmod>2019-01-14T19:45:22.669Z</lastmod>
     
   </url>
   
@@ -93,13 +107,6 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2018/05/29/2018-05-29.clean-code/</loc>
-    
-    <lastmod>2018-09-07T13:17:52.976Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http:bochentheone.com/2018/05/14/2018-05-21.clean-code/</loc>
     
     <lastmod>2018-09-07T13:17:52.976Z</lastmod>
@@ -107,14 +114,21 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2018/05/10/2018-05-10-puppeteer-first-touch/</loc>
+    <loc>http:bochentheone.com/2018/05/29/2018-05-29.clean-code/</loc>
+    
+    <lastmod>2018-09-07T13:17:52.976Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2018/05/14/2018-05-14.clean-code/</loc>
     
     <lastmod>2018-09-07T13:17:52.975Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2018/05/14/2018-05-14.clean-code/</loc>
+    <loc>http:bochentheone.com/2018/05/10/2018-05-10-puppeteer-first-touch/</loc>
     
     <lastmod>2018-09-07T13:17:52.975Z</lastmod>
     
@@ -149,6 +163,13 @@
   </url>
   
   <url>
+    <loc>http:bochentheone.com/2016/11/09/2016-11-09-component-vs-directive/</loc>
+    
+    <lastmod>2018-09-07T13:17:52.973Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http:bochentheone.com/2017/01/20/2017-01-20-ci-deploy/</loc>
     
     <lastmod>2018-09-07T13:17:52.973Z</lastmod>
@@ -157,13 +178,6 @@
   
   <url>
     <loc>http:bochentheone.com/2016/11/16/2016-11-16-directive-for-charting-library/</loc>
-    
-    <lastmod>2018-09-07T13:17:52.973Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http:bochentheone.com/2016/11/09/2016-11-09-component-vs-directive/</loc>
     
     <lastmod>2018-09-07T13:17:52.973Z</lastmod>
     
@@ -184,14 +198,14 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/10/13/2016-10-13-game-of-life/</loc>
+    <loc>http:bochentheone.com/2016/10/25/2016-10-25-sublimelinter-trick/</loc>
     
     <lastmod>2018-09-07T13:17:52.972Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/10/25/2016-10-25-sublimelinter-trick/</loc>
+    <loc>http:bochentheone.com/2016/10/13/2016-10-13-game-of-life/</loc>
     
     <lastmod>2018-09-07T13:17:52.972Z</lastmod>
     
