@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http:bochentheone.com/2019/02/22/2019-02-23-foreach-vs-map/</loc>
+    
+    <lastmod>2019-02-22T19:49:55.678Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http:bochentheone.com/2019/02/06/2019-02-06-project-structure/</loc>
     
     <lastmod>2019-02-06T17:01:49.588Z</lastmod>
@@ -142,7 +149,7 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2017/08/21/2017-08-21-eyi_reading/</loc>
+    <loc>http:bochentheone.com/2017/08/10/2017-08-10-stop_and_continue/</loc>
     
     <lastmod>2018-09-07T13:17:52.974Z</lastmod>
     
@@ -156,16 +163,9 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2017/08/10/2017-08-10-stop_and_continue/</loc>
+    <loc>http:bochentheone.com/2017/08/21/2017-08-21-eyi_reading/</loc>
     
     <lastmod>2018-09-07T13:17:52.974Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http:bochentheone.com/2016/11/09/2016-11-09-component-vs-directive/</loc>
-    
-    <lastmod>2018-09-07T13:17:52.973Z</lastmod>
     
   </url>
   
@@ -185,6 +185,13 @@
   
   <url>
     <loc>http:bochentheone.com/2016/11/10/2016-11-10-charting-library/</loc>
+    
+    <lastmod>2018-09-07T13:17:52.973Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2016/11/09/2016-11-09-component-vs-directive/</loc>
     
     <lastmod>2018-09-07T13:17:52.973Z</lastmod>
     

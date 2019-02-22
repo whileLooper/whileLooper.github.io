@@ -3,6 +3,28 @@
   
     
     <entry>
+      <title><![CDATA[JavaScript forEach vs. map]]></title>
+      <url>/2019/02/22/2019-02-23-foreach-vs-map/</url>
+      <content type="html"><![CDATA[<pre><code>Best way to remember thing is writing it down.
+</code></pre><p>Forget about those fancy description, write this down with my own words:<br><code>forEach()</code> perform callback for each element in array, <strong>THAT IS IT!</strong> nothing is return, doing callback inplace.</p>
+<p><code>map()</code> <strong>create a new array</strong>, then do the callback for each element in the array, so it <strong>does return a new array</strong>.</p>
+<p>that’s it, now you can read official documentation from MDN.</p>
+<h2 id="Array-prototype-forEach"><a href="#Array-prototype-forEach" class="headerlink" title="Array.prototype.forEach()"></a>Array.prototype.forEach()</h2><p>According to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank" rel="external">JavaScript | MDN</a></p>
+<pre><code>forEach() executes the provided callback once for each element present in the array in ascending order. It is not invoked for index properties that have been deleted or are uninitialized (i.e. on sparse arrays).
+</code></pre><h2 id="Array-prototype-map"><a href="#Array-prototype-map" class="headerlink" title="Array.prototype.map()"></a>Array.prototype.map()</h2><p>According to <a href="[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">JavaScript | MDN</a>)</p>
+<pre><code>map calls a provided callback function once for each element in an array, in order, and constructs a new array from the results. callback is invoked only for indexes of the array which have assigned values, including undefined. It is not called for missing elements of the array (that is, indexes that have never been set, which have been deleted or which have never been assigned a value).
+</code></pre>]]></content>
+      
+        
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[定好目录结构]]></title>
       <url>/2019/02/06/2019-02-06-project-structure/</url>
       <content type="html"><![CDATA[<p>偶尔需要自己从零开始搭建project，一个好的目录结构觉得了一个项目的可维护性和可拓展性</p>
@@ -783,11 +805,11 @@
         
         <tags>
             
+            <tag> directive </tag>
+            
             <tag> chart </tag>
             
             <tag> Angular 2 </tag>
-            
-            <tag> directive </tag>
             
             <tag> how to </tag>
             
@@ -914,9 +936,9 @@
         
         <tags>
             
-            <tag> directive </tag>
-            
             <tag> component </tag>
+            
+            <tag> directive </tag>
             
             <tag> angular 2 </tag>
             

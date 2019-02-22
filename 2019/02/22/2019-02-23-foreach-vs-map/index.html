@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -94,16 +94,18 @@
 
 
 
-<meta name="description" content="a tiny player of massively multiplayer online role-playing game named EARTH ONLINE">
-<meta property="og:type" content="website">
-<meta property="og:title" content="LEVELING UP">
-<meta property="og:url" content="http:bochentheone.com/tags/component/index.html">
+<meta name="description" content="Best way to remember thing is writing it down. Forget about those fancy description, write this down with my own words:forEach() perform callback for each element in array, THAT IS IT! nothing is retu">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript forEach vs. map">
+<meta property="og:url" content="http:bochentheone.com/2019/02/22/2019-02-23-foreach-vs-map/index.html">
 <meta property="og:site_name" content="LEVELING UP">
-<meta property="og:description" content="a tiny player of massively multiplayer online role-playing game named EARTH ONLINE">
+<meta property="og:description" content="Best way to remember thing is writing it down. Forget about those fancy description, write this down with my own words:forEach() perform callback for each element in array, THAT IS IT! nothing is retu">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-02-22T19:49:55.678Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LEVELING UP">
-<meta name="twitter:description" content="a tiny player of massively multiplayer online role-playing game named EARTH ONLINE">
+<meta name="twitter:title" content="JavaScript forEach vs. map">
+<meta name="twitter:description" content="Best way to remember thing is writing it down. Forget about those fancy description, write this down with my own words:forEach() perform callback for each element in array, THAT IS IT! nothing is retu">
 
 
 
@@ -132,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http:bochentheone.com/tags/component/"/>
+  <link rel="canonical" href="http:bochentheone.com/2019/02/22/2019-02-23-foreach-vs-map/"/>
 
 
 
 
 
-  <title>Tag: component | LEVELING UP</title>
+  <title>JavaScript forEach vs. map | LEVELING UP</title>
   
 
 
@@ -166,7 +168,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -270,54 +272,154 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>component<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2019/02/22/2019-02-23-foreach-vs-map/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nehcob">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LEVELING UP">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2016/11/09/2016-11-09-component-vs-directive/" itemprop="url">
-              
-                <span itemprop="name">Component vs Directive in Angular 2</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">JavaScript forEach vs. map</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-11-09T16:00:00-05:00"
-              content="11-09-2016" >
-          11-09
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-22T00:00:00-05:00">
+                02-22-2019
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    </div>
+      
 
+      
+        <pre><code>Best way to remember thing is writing it down.
+</code></pre><p>Forget about those fancy description, write this down with my own words:<br><code>forEach()</code> perform callback for each element in array, <strong>THAT IS IT!</strong> nothing is return, doing callback inplace.</p>
+<p><code>map()</code> <strong>create a new array</strong>, then do the callback for each element in the array, so it <strong>does return a new array</strong>.</p>
+<p>that’s it, now you can read official documentation from MDN.</p>
+<h2 id="Array-prototype-forEach"><a href="#Array-prototype-forEach" class="headerlink" title="Array.prototype.forEach()"></a>Array.prototype.forEach()</h2><p>According to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank" rel="external">JavaScript | MDN</a></p>
+<pre><code>forEach() executes the provided callback once for each element present in the array in ascending order. It is not invoked for index properties that have been deleted or are uninitialized (i.e. on sparse arrays).
+</code></pre><h2 id="Array-prototype-map"><a href="#Array-prototype-map" class="headerlink" title="Array.prototype.map()"></a>Array.prototype.map()</h2><p>According to <a href="[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">JavaScript | MDN</a>)</p>
+<pre><code>map calls a provided callback function once for each element in an array, in order, and constructs a new array from the results. callback is invoked only for indexes of the array which have assigned values, including undefined. It is not called for missing elements of the array (that is, indexes that have never been set, which have been deleted or which have never been assigned a value).
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/06/2019-02-06-project-structure/" rel="next" title="定好目录结构">
+                <i class="fa fa-chevron-left"></i> 定好目录结构
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -325,6 +427,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -345,8 +451,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -428,6 +543,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Array-prototype-forEach"><span class="nav-number">1.</span> <span class="nav-text">Array.prototype.forEach()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Array-prototype-map"><span class="nav-number">2.</span> <span class="nav-text">Array.prototype.map()</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -547,10 +678,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
