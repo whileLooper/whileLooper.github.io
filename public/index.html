@@ -286,6 +286,704 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2019/02/22/2019-02-23-foreach-vs-map/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nehcob">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LEVELING UP">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/22/2019-02-23-foreach-vs-map/" itemprop="url">JavaScript forEach vs. map</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-22T00:00:00-05:00">
+                02-22-2019
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <pre><code>Best way to remember thing is writing it down.
+</code></pre><p>Forget about those fancy description, write this down with my own words:<br><code>forEach()</code> perform callback for each element in array, <strong>THAT IS IT!</strong> nothing is return, doing callback inplace.</p>
+<p><code>map()</code> <strong>create a new array</strong>, then do the callback for each element in the array, so it <strong>does return a new array</strong>.</p>
+<p>that’s it, now you can read official documentation from MDN.</p>
+<h2 id="Array-prototype-forEach"><a href="#Array-prototype-forEach" class="headerlink" title="Array.prototype.forEach()"></a>Array.prototype.forEach()</h2><p>According to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank" rel="external">JavaScript | MDN</a></p>
+<pre><code>forEach() executes the provided callback once for each element present in the array in ascending order. It is not invoked for index properties that have been deleted or are uninitialized (i.e. on sparse arrays).
+</code></pre><h2 id="Array-prototype-map"><a href="#Array-prototype-map" class="headerlink" title="Array.prototype.map()"></a>Array.prototype.map()</h2><p>According to <a href="[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">JavaScript | MDN</a>)</p>
+<pre><code>map calls a provided callback function once for each element in an array, in order, and constructs a new array from the results. callback is invoked only for indexes of the array which have assigned values, including undefined. It is not called for missing elements of the array (that is, indexes that have never been set, which have been deleted or which have never been assigned a value).
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2019/02/06/2019-02-06-project-structure/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nehcob">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LEVELING UP">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/06/2019-02-06-project-structure/" itemprop="url">定好目录结构</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-06T00:00:00-05:00">
+                02-06-2019
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>偶尔需要自己从零开始搭建project，一个好的目录结构觉得了一个项目的可维护性和可拓展性</p>
+<p>一个好的目录结构对一个好的项目而言是非常必要的。</p>
+<p>一个好的目录结构应当具有以下的一些特点：</p>
+<p>1、解耦：代码尽量去耦合，这样代码逻辑清晰，也容易扩展</p>
+<p>2、分块：按照功能对代码进行分块、分组，并能快捷的添加分块、分组</p>
+<p>3、编辑器友好：需要更新功能时，可以很快的定位到相关文件，并且这些文件应该是很靠近的，而不至于到处找文件</p>
+<p>比较推荐的目录结构：</p>
+<p><strong>多页面应用</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">|-- src/ 源代码目录</div><div class="line">    |-- page1/ page1 页面的工作空间（与这个页面相关的文件都放在这个目录下）</div><div class="line">        |-- index.html html 入口文件</div><div class="line">        |-- index.js js 入口文件</div><div class="line">        |-- index.(css|less|scss) 样式入口文件</div><div class="line">        |-- html/ html 片段目录</div><div class="line">        |-- (css|less|scss)/ 样式文件目录</div><div class="line">        |-- mock/ 本地 json 数据模拟</div><div class="line">        |-- images/ 图片文件目录</div><div class="line">        |-- components/ 组件目录（如果基于 react, vue 等组件化框架）</div><div class="line">        |-- ...</div><div class="line">    |-- sub-dir/ 子目录</div><div class="line">        |-- page2/ page2 页面的工作空间（内部结构参考 page1）</div><div class="line">          |-- ...</div><div class="line">    |-- ...</div><div class="line">|-- html/ 公共 html 片段</div><div class="line">|-- less/ 公共 less 目录</div><div class="line">|-- components/ 公共组件目录</div><div class="line">|-- images/ 公共图片目录</div><div class="line">|-- mock/ 公共 api-mock 文件目录</div><div class="line">|-- ...</div></pre></td></tr></table></figure>
+<p><strong>单页面应用</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">|-- src/ 源代码目录</div><div class="line">    |-- page1/ page1 页面的工作空间</div><div class="line">        |-- index.js 入口文件</div><div class="line">        |-- services/ service 目录</div><div class="line">        |-- models/ model 目录</div><div class="line">        |-- mock/ 本地 json 数据模拟</div><div class="line">        |-- images/ 图片文件目录</div><div class="line">        |-- components/ 组件目录（如果基于 react, vue 等组件化框架）</div><div class="line">        |-- ...</div><div class="line">    |-- module1/ 子目录</div><div class="line">        |-- page2/ page2 页面的工作空间（内部结构参考 page1）</div><div class="line">    |-- ...</div><div class="line">|-- images/ 公共图片目录</div><div class="line">|-- mock/ 公共 api-mock 文件目录</div><div class="line">|-- components/ 公共组件目录   </div><div class="line">|-- ...</div></pre></td></tr></table></figure>
+<p>参考：</p>
+<ul>
+<li><a href="https://segmentfault.com/a/1190000015816534" target="_blank" rel="external">目录结构优化</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2019/01/14/2019-01-14-whats-shadow-DOM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nehcob">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LEVELING UP">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/14/2019-01-14-whats-shadow-DOM/" itemprop="url">什么是Shadow DOM</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-14T00:00:00-05:00">
+                01-14-2019
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2018/12/28/2018-12-28-what-exactly-is-the-DOM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nehcob">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LEVELING UP">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/28/2018-12-28-what-exactly-is-the-DOM/" itemprop="url">到底什么是DOM</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-28T00:00:00-05:00">
+                12-28-2018
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="到底什么是DOM"><a href="#到底什么是DOM" class="headerlink" title="到底什么是DOM"></a>到底什么是DOM</h1><p><strong>The Document Object Model</strong>（文档对象模型）, 或者叫<strong>DOM</strong>，是网页的接口。它本质上是网页的API，允许程序读取和操作页面内容，结构和样式。接下来让我们进一步解析。</p>
+<h1 id="一个网页是如何构建的"><a href="#一个网页是如何构建的" class="headerlink" title="一个网页是如何构建的"></a>一个网页是如何构建的</h1><p>一个浏览器如何从HTML源文档到视窗中展现样式和交互式页面的过程被称为“关键渲染路径（<strong>Critical Rendering Path</strong>）”,虽然这个过程可以被分解为多个步骤， 但是这些步骤大致可以分为两个阶段。第一个阶段涉及浏览器解析文档到最终确认渲染的内容，第二阶段则是浏览器执行渲染。</p>
+<p><img src="https://bitsofco.de/content/images/2018/11/HTML-to-Render-Tree-to-Final.png" alt="render tree"></p>
+<p>第一阶段的结果被称之为“渲染树（render tree）”。HTML元素及其相关样式在页面上呈现出来的表达形式被称之为渲染树。为了构建树结构，浏览器需要两个东西：</p>
+<ol>
+<li><strong>The CSSOM</strong>, 与元素相关的样式表达（译者： 就是css文档）</li>
+<li><strong>DOM</strong>， 元素表达 （译者： 就是HTML文档）</li>
+</ol>
+<h1 id="DOM如何被创造出来（看起来什么样）"><a href="#DOM如何被创造出来（看起来什么样）" class="headerlink" title="DOM如何被创造出来（看起来什么样）"></a>DOM如何被创造出来（看起来什么样）</h1><p>DOM是源HTML文档基于对象的表现形式。它有些差异，但是它本质上是将HTML文档的结构和内容转化为可以被各种程序使用的一种对象模型。</p>
+<p>DOM的对象结构表现为所谓的“节点树（node tree）”，它之所以被这么叫是因为它可以被看作一个单个父茎的树，其有着若干个分支，每个都可能有枝叶。在这种情况下，父“干”是根<html>元素，孩子“分支”是嵌套元素，而“叶”是元素中的内容。</html></p>
+<p>来看看一下这个例子：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">title</span>&gt;</span>My first web page<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>How are you?<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>以上文档的节点树表达形式：</p>
+<p><img src="/images/example1_node_tree.png" alt="example 1 node tree"></p>
+<h1 id="DOM-不是什么"><a href="#DOM-不是什么" class="headerlink" title="DOM 不是什么"></a>DOM 不是什么</h1><p>根据上述例子，DOM是源HTML文档的一对一映射。 但是，正如我所提到的，还是有差异的。 为了完全理解DOM是什么，我们需要看看它不是什么。</p>
+<h2 id="DOM不是你的源代码"><a href="#DOM不是你的源代码" class="headerlink" title="DOM不是你的源代码"></a>DOM<em>不是</em>你的源代码</h2><p>尽管DOM是从源HTML文档创建的，但它并不总是完全相同。 这里有两个实例展示了：DOM可以与源HTML不同。</p>
+<h3 id="1-当HTML无效时"><a href="#1-当HTML无效时" class="headerlink" title="1. 当HTML无效时"></a>1. 当HTML无效时</h3><p>DOM是有效HTML文档的接口。在创建DOM的过程中，浏览器可能会矫正HTML中的无效代码。</p>
+<p>例子：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">Hello, world!</div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>上述文档中缺失<code>&lt;head&gt;</code>和<code>&lt;body&gt;</code>元素，对于有效HTML来说这是必需的。如果我们查看生成的DOM树，我们会发现这里被自动矫正了：</p>
+<p><img src="/images/example2_node_tree.png" alt="example 2 node tree"></p>
+<h3 id="2-当JavaScript修改DOM时"><a href="#2-当JavaScript修改DOM时" class="headerlink" title="2. 当JavaScript修改DOM时"></a>2. 当JavaScript修改DOM时</h3><p>DOM除了作为查看HTML文档内容的接口之外，还可以被修改，使其成为一个实时资源。</p>
+<p>例如，我们可以使用JavaScript为DOM创建其他节点。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> newParagraph = <span class="built_in">document</span>.createElement(<span class="string">"p"</span>);</div><div class="line"><span class="keyword">var</span> paragraphContent = <span class="built_in">document</span>.createTextNode(<span class="string">"I'm new!"</span>);</div><div class="line">newParagraph.appendChild(paragraphContent);</div><div class="line"><span class="built_in">document</span>.body.appendChild(newParagraph);</div></pre></td></tr></table></figure>
+<p>这样就可以更新DOM， 但是当然并不是直接改变HTML文档</p>
+<h2 id="DOM并不是你在浏览器里看到的那样（例如：-渲染树）"><a href="#DOM并不是你在浏览器里看到的那样（例如：-渲染树）" class="headerlink" title="DOM并不是你在浏览器里看到的那样（例如： 渲染树）"></a>DOM并不是你在浏览器里看到的那样（例如： 渲染树）</h2><p>你在浏览器视窗中看到的渲染树，正如我所提到，它是DOM和CSSOM的结合，真正把DOM和渲染树区分开的是后者只包含最终将在屏幕上绘制的内容。</p>
+<p>因为渲染树仅仅关注与渲染的内容本身，所以它会排除视觉上隐藏的元素。比如：具有<code>display: none</code>的元素。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, world!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"display: none;"</span>&gt;</span>How are you?<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>在DOM里将包含<code>&lt;p&gt;</code>元素：</p>
+<p><img src="/images/example3_node_tree.png" alt="example 3 node tree"></p>
+<p>但是，渲染树以及因此在视窗中看到的内容却不包含该元素。</p>
+<p><img src="/images/example4_node_tree.png" alt="example 4 node tree"></p>
+<h2 id="浏览器中的DOM并不是DOM"><a href="#浏览器中的DOM并不是DOM" class="headerlink" title="浏览器中的DOM并不是DOM"></a>浏览器中的DOM<em>并不是</em>DOM</h2><p>一点点小差异，因为DevTools元素检查器提供了最接近的DOM。但是，DevTools检查器包含里不在DOM中的其他信息。</p>
+<p>最好的例子是CSS伪元素。Pseudo-elements created using the <code>::before</code> and <code>::after</code> selectors form part of the CSSOM and render tree, but are not technically part of the DOM.。因为DOM仅仅由源HTML文档构建，不包含应用于元素的样式。</p>
+<p>尽管伪元素不是DOM的一部分，但他们仍然在我们的DevTools元素检查器中。</p>
+<p><img src="https://bitsofco.de/content/images/2018/11/Pseudo-element-in-devtools-inspector.png" alt="element inspector"></p>
+<p>这就是为什么伪元素不能被JavaScript作为目标的原因，因为它们不是DOM的一部分。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>DOM是一个HTML文档的接口。它被浏览器用作确认在视窗中呈现内容的第一步，并通过Javascript程序来修改页面的内容，结构，样式。</p>
+<p>虽然与其他形式的源HTML文档类似，但是DOM在许多方面还是有所不同：</p>
+<ul>
+<li>有效HTML（It is always valid HTML）</li>
+<li>可通过Javascript修改的实时模型（It is a living model that can be modified by JavaScript）</li>
+<li>不包含伪元素（It doesn’t include pseudo-elements）</li>
+<li>包含隐藏元素（It does include hidden elements）</li>
+</ul>
+<h1 id="关于原文作者"><a href="#关于原文作者" class="headerlink" title="关于原文作者"></a>关于原文作者</h1><p>原文是来自<strong>Ire Aderinokun</strong>发表在<a href="https://bitsofco.de/what-exactly-is-the-dom/" target="_blank" rel="external">bitsofco.de</a>上面的。</p>
+<h1 id="译者语"><a href="#译者语" class="headerlink" title="译者语"></a>译者语</h1><p>工作学习前端两年多，往往这些浅显，基础的知识最容易被忽略。<strong>Ire Aderinokun</strong>写里一系列DOM相关的文章，包括shadow DOM， Virtual DOM等等，我会争取总翻译出来。有时候我不会翻译，或者感觉原文效果更好的，我就直接把原文po出来。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2018/12/20/2018-12-19-static-vs-server/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="nehcob">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LEVELING UP">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/20/2018-12-19-static-vs-server/" itemprop="url">静态化与服务器渲染 （Static vs. Server Rendering)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-20T00:00:00-05:00">
+                12-20-2018
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>  静态化渲染和服务器渲染二者都为你的APP页面进行HTML渲染， 然而他们之间有个巨大的差异。。。<br>  Static rendering and server rendering both involve rendering HTML for each of your app’s pages- but there’s one major difference between them…</p>
+<p>也许你曾听过静态化渲染与服务器渲染，你也知道他们二者都可以提高SEO，让你的网站或者APP进行生成HTML页面。当然你也可以使用 <a href="https://reactjs.org/docs/react-dom-server.html#rendertostring" target="_blank" rel="external">ReactDOMServer.renderToString()</a>实现上述两种目的。</p>
+<p>这么说，他们两者看上去是一种东西？对吧？他们几乎几乎差不多一样，接下来让我解释下。</p>
+<h1 id="热切的静态化渲染，-慵懒的服务器渲染"><a href="#热切的静态化渲染，-慵懒的服务器渲染" class="headerlink" title="热切的静态化渲染， 慵懒的服务器渲染"></a>热切的静态化渲染， 慵懒的服务器渲染</h1><p>静态和服务器渲染都参与到了对HTML的生成， 不同点在于<strong>静态化渲染只在编译的时候发生一次</strong>，然而<strong>服务器渲染则是按需发生</strong>根据用户的每一次请求。</p>
+<h2 id="静态化渲染"><a href="#静态化渲染" class="headerlink" title="静态化渲染"></a>静态化渲染</h2><p>当静态化渲染的时候，你需要在每次用户访问前就生成好一个单一的HTML文件。 接着你把这些生成好的文件都存放在云端服务中，比如亚马逊的S3，或者运行中的Nginx服务器。</p>
+<p><img src="https://frontarm.com/static/media/static-rendering.ac5d510c.png" alt="static rendering image"></p>
+<p>静态化渲染的优势在于能够对服务器请求做到无脑的快速，因为在处理过程中不需要再去生成什么文件。 实际上, 由于你的网站的响应都是提前生成好的，那么你就可以存放文件在全世界任何角落的CDN。这样可以让你的网站打到一个不可思议的响应速度。但是这也是有代价的。</p>
+<p>使用静态化渲染时，你需要给<em>每一个可能的请求</em>提前生成响应。 对于那些对高质量内容的网站来说，这样是没问题的——静态化渲染工具比如<a href="https://frontarm.com/navi/" target="_blank" rel="external">Navi</a>可以在仅仅几秒内生成上百个网页。但是如果你需要搭建一些无法预测所以用户请求的项目，比如一个搜索引擎？或者你有一堆用户生成内容，根据每一个请求来改变响应？这种情况的话，你需要的是服务器渲染。</p>
+<h2 id="服务器渲染"><a href="#服务器渲染" class="headerlink" title="服务器渲染"></a>服务器渲染</h2><p>按React的说法，<strong>服务器渲染</strong>指的是按照每一个请求生成HTML的过程。通常，你在服务器上架设一些后端框架比如<a href="https://expressjs.com/" target="_blank" rel="external">express</a>或者<a href="https://nextjs.org/" target="_blank" rel="external">Next.js</a>，根据每个请求渲染你的React app， 就像更传统的PHP和Rails框架网站一样。</p>
+<p><img src="https://frontarm.com/static/media/server-rendering.c64da2e3.png" alt="server rendering image"></p>
+<p>服务器渲染<em>总是</em>慢于静态内容的。然而，你还得为了让速度更快些捣鼓一堆东西，当然这样的延迟是否重要取决于你的商业需求。</p>
+<p>当然， 服务器渲染的速度短板，成就了他的灵活性，它允许你：</p>
+<ul>
+<li>响应<em>任何</em>用户发出的请求 —— 即使是你可能没预想过的</li>
+<li>从数据库中抓取最新的内容，而不是过时的静态文件</li>
+<li>对没授权的用户选择性的隐藏内容</li>
+</ul>
+<h1 id="那么我该选哪一个？"><a href="#那么我该选哪一个？" class="headerlink" title="那么我该选哪一个？"></a>那么我该选哪一个？</h1><p>这个问题的 ~ 答案 ~ 当然是 ~~~ <em>看情况</em></p>
+<p>如果<strong>静态</strong>渲染可行的话（作者指对于你当前的需求），它是一个快速，低廉，简单的解决方案。但是，如果你的网站需要达到以下这些需求，你则需要<strong>服务器</strong>渲染：</p>
+<ul>
+<li>如果你不能预测所有可能性的用户请求</li>
+<li>如果响应内容需要根据不同用户进行改变</li>
+<li>如果响应内容很快过时</li>
+</ul>
+<p>请记住，<strong>如果需要为每个页面提供特定的HTML用于SEO</strong>，这些需求将仅使服务器渲染呈现成为必要的选择。举个例子，一个社交网络或者在线电商最好还是用服务器渲染来搭建。</p>
+<p>另一方面来说，如果SEO无关紧要的话，例如，一个存在于登录屏幕后面的应用程序 - 然后您的应用程序只需要一个HTML文件。 在曾经，静态渲染可能是最好的选择。但是，最近静态和服务器渲染工具的改进大多缩小了简单性差距。</p>
+<h1 id="渲染工具"><a href="#渲染工具" class="headerlink" title="渲染工具"></a>渲染工具</h1><p>几年前当我开始用React来构建网站的时候，不管是静态还是动态，都很难。我甚至写了篇文章告诉你<a href="http://jamesknelson.com/universal-react-youre-doing-it-wrong/" target="_blank" rel="external">别这么做</a>,但是近年来，改变了很多。</p>
+<p>有越来越多基于React的工具来静态化渲染网站和APP，<a href="https://www.gatsbyjs.org/" target="_blank" rel="external">Gatsby</a>就是个很受欢迎，高强度的选择。对于一些更简单的东西，你可以选择<a href="https://frontarm.com/navi/" target="_blank" rel="external">Navi</a>,一个跟Create-react-app一起使用的框架。</p>
+<p>对于服务器渲染，有两种选择（作者只提到这两个），<a href="https://nextjs.org/learn/" target="_blank" rel="external">Next.js</a>和<a href="https://expressjs.com/" target="_blank" rel="external">Express</a>,使用Next.js，您可以获得一个开箱即用的完整框架和托管解决方案——同时你的整个项目也绑定到Next.js。如果Next.js对你来说不是好的选择，你也可以试试比较传统化的Express。</p>
+<h1 id="鸡毛蒜皮的小事"><a href="#鸡毛蒜皮的小事" class="headerlink" title="鸡毛蒜皮的小事"></a>鸡毛蒜皮的小事</h1><p>最后，让我解释您正在阅读的网站（这里的网站指原文post的网站<a href="https://frontarm.com/articles/static-vs-server-rendering/" target="_blank" rel="external">frontarm.com</a>）如何运作。 Frontend Armory 是静态渲染的,每次内容更改时，都会使用Navi重新构建站点，然后将其推送到S3。 然后，当您发送请求时，它首先会检查与CloudFront在地理位置上接近您的缓存版本，然后再从S3请求它（如果失败）。</p>
+<h1 id="关于原文作者"><a href="#关于原文作者" class="headerlink" title="关于原文作者"></a>关于原文作者</h1><p>原文是由 Frontend Armory的编辑<strong>James K Nelson</strong>发表在<a href="https://frontarm.com/" target="_blank" rel="external">Frontend Armory</a>上面的。</p>
+<h1 id="译者语"><a href="#译者语" class="headerlink" title="译者语"></a>译者语</h1><p>本篇文章，只是很基本的讲解了一下静态渲染和服务器渲染的一些基本特点和区别，适合入门新人，对两种渲染没有基本概念的读者。</p>
+<p>由于近期对<strong>Frontend Armory</strong>这个网站的兴趣，发现上面有些不错的前端基本概念文章，所以想以此为长期学习的地方，通过翻译来提升自己，也帮助他人。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2018/12/19/2018-12-19-thoughs-about-blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -631,8 +1329,7 @@
         
           
             <h2 id="Remove-dead-code"><a href="#Remove-dead-code" class="headerlink" title="Remove dead code"></a>Remove dead code</h2><p>Dead code is just as bad as duplicate code. There’s no reason to keep it in your codebase. If it’s not being called, get rid of it! It will still be safe in your version history if you still need it.</p>
-<p><strong>Bad:</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">oldRequestModule</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">newRequestModule</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>const req = newRequestModule;<br>inventoryTracker(‘apples’, req, ‘www.inventory-awesome.io’);</p>
+<p><strong>Bad:</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">oldRequestModule</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">newRequestModule</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> req = newRequestModule;</div><div class="line">inventoryTracker(<span class="string">'apples'</span>, req, <span class="string">'www.inventory-awesome.io'</span>);</div></pre></td></tr></table></figure></p>
 <p><strong>Good:</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">newRequestModule</span>(<span class="params">url</span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> req = newRequestModule;</div><div class="line">inventoryTracker(<span class="string">'apples'</span>, req, <span class="string">'www.inventory-awesome.io'</span>);</div></pre></td></tr></table></figure>
           
@@ -926,682 +1623,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2018/09/24/2018-09-24-monday-clean-code/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nehcob">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LEVELING UP">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/24/2018-09-24-monday-clean-code/" itemprop="url">Use default arguments instead of short circuiting or conditionals</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-24T00:00:00-04:00">
-                09-24-2018
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Use-default-arguments-instead-of-short-circuiting-or-conditionals"><a href="#Use-default-arguments-instead-of-short-circuiting-or-conditionals" class="headerlink" title="Use default arguments instead of short circuiting or conditionals"></a>Use default arguments instead of short circuiting or conditionals</h3><p>Default arguments are often cleaner than short circuiting. Be aware that if you<br>use them, your function will only provide default values for <code>undefined</code><br>arguments. Other “falsy” values such as <code>&#39;&#39;</code>, <code>&quot;&quot;</code>, <code>false</code>, <code>null</code>, <code>0</code>, and<br><code>NaN</code>, will not be replaced by a default value.</p>
-<p><strong>Bad:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMicrobrewery</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> breweryName = name || <span class="string">'Hipster Brew Co.'</span>;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><strong>Good:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMicrobrewery</span>(<span class="params">name = <span class="string">'Hipster Brew Co.'</span></span>) </span>&#123;</div><div class="line">  <span class="comment">// ...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2018/09/21/2018-09-21-start-with-sequelize/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nehcob">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LEVELING UP">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/21/2018-09-21-start-with-sequelize/" itemprop="url">Start with Sequelize</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-21T00:00:00-04:00">
-                09-21-2018
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Ticket-create-a-new-model-and-associate-to-another-modal"><a href="#Ticket-create-a-new-model-and-associate-to-another-modal" class="headerlink" title="Ticket: create a new model, and associate to another modal"></a>Ticket: create a new model, and associate to another modal</h2><h3 id="Create-Model"><a href="#Create-Model" class="headerlink" title="Create Model"></a>Create Model</h3><p>For example, this ticket detail is creating a new model, contains information about some specific url.</p>
-<p>From Sequelize official documentation, Models are defined with <code>sequelize.define(&#39;name&#39;, {attributes}, {options})</code>.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> LinkDetail = sequelize.define(<span class="string">'link_detail'</span>, &#123;</div><div class="line">    url: &#123;</div><div class="line">        type: Sequelize.STRING</div><div class="line">    &#125;,</div><div class="line">    description: &#123;</div><div class="line">        type: Sequelize.STRING</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p>and for future repeat use, wrap it with <code>module.exports</code>: </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">sequelize, DataTypes</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> LinkDetail = sequelize.define(<span class="string">'link_detail'</span>, &#123;</div><div class="line">        url: &#123;</div><div class="line">            type: Sequelize.STRING</div><div class="line">        &#125;,</div><div class="line">        description: &#123;</div><div class="line">            type: Sequelize.STRING</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> LinkDetail;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/21/2018-09-21-start-with-sequelize/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2018/09/14/2018-09-14-current-study-list/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nehcob">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LEVELING UP">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/14/2018-09-14-current-study-list/" itemprop="url">Current tech stack I'm using at work</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-14T00:00:00-04:00">
-                09-14-2018
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Keep updating this list.</p>
-<ul>
-<li style="list-style: none"><input type="checkbox"> React<ul>
-<li style="list-style: none"><input type="checkbox"> Props vs State</li>
-</ul>
-</li>
-<li style="list-style: none"><input type="checkbox"> Reflux<ul>
-<li><a href="https://www.cnblogs.com/lovesueee/p/4893218.html" target="_blank" rel="external">ReFlux细说</a> (必读文章)</li>
-<li style="list-style: none"><input type="checkbox" checked> 了解 Flux 和 Reflux 的基本概念和区别 </li>
-<li style="list-style: none"><input type="checkbox"> 了解 熟悉 Reflux 的 API， 让代码简洁优雅</li>
-<li>Reflux 在 Flux 的核心概念上取消掉了<code>dispatcher</code> 的角色，从而解决了存在于Flux中 <code>action</code> 和 <code>stores</code> 之间 <strong>多对多</strong> 的关系，把 <code>publisher</code> 的角色融合到 <code>action</code>中，<code>stores</code> 也有目的性的subscribe action，而不是监听所有 actions，不造成任何资源的浪费</li>
-</ul>
-</li>
-<li style="list-style: none"><input type="checkbox"> Storybook.js<ul>
-<li>a library to better manage and documentation your web components.</li>
-</ul>
-</li>
-<li style="list-style: none"><input type="checkbox"> Node.js<ul>
-<li style="list-style: none"><input type="checkbox"> Async/Await</li>
-<li style="list-style: none"><input type="checkbox"> Restify API framework</li>
-</ul>
-</li>
-<li style="list-style: none"><input type="checkbox"> <a href="http://docs.sequelizejs.com/" target="_blank" rel="external">Sequelize</a><ul>
-<li>Sequelize is a promise-based ORM for Node.js v4 and up. It supports the dialects PostgreSQL, MySQL, SQLite and MSSQL and features solid transaction support, relations, read replication and more.</li>
-</ul>
-</li>
-<li style="list-style: none"><input type="checkbox"> AWS<ul>
-<li style="list-style: none"><input type="checkbox"> S3 Bucket Storage</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2018/09/12/2018-09-12-javascript-async/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nehcob">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LEVELING UP">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/12/2018-09-12-javascript-async/" itemprop="url">JavaScript's async 初步认识 (unfinished)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-12T00:00:00-04:00">
-                09-12-2018
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="JavsScript-is-Single-Thread-CAN’T-multitask"><a href="#JavsScript-is-Single-Thread-CAN’T-multitask" class="headerlink" title="JavsScript is Single Thread, CAN’T multitask"></a>JavsScript is Single Thread, CAN’T multitask</h2><blockquote>
-<p>我们常说的JavaScript是单线程，所指的是JS引擎中负责解释和执行JavaScript代码的线程只有一个。不妨叫它<strong>主线程</strong>。</p>
-</blockquote>
-<p>The basic and plain way to handle event in JavaScript:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">event.doFirstThing();</div><div class="line"></div><div class="line">wait(<span class="number">1000</span>); <span class="comment">// wait 1 sec to let event complete</span></div><div class="line"></div><div class="line">event.doSecondThing(); <span class="comment">// do other things after 1 sec</span></div><div class="line"></div><div class="line">wait(<span class="number">1000</span>); <span class="comment">// wait 1 sec to let event complete</span></div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line">output:</div><div class="line"><span class="comment">// first thing output</span></div><div class="line"><span class="comment">// second thing output</span></div></pre></td></tr></table></figure>
-<h2 id="Callback-When-it-becomes-a-HELL"><a href="#Callback-When-it-becomes-a-HELL" class="headerlink" title="Callback - When it becomes a HELL"></a>Callback - When it becomes a HELL</h2><p>为了解决日常中的问题，JavaScript 引入<strong>callback</strong></p>
-<blockquote>
-<p> A <strong>callback</strong> is just a plain old JavaScript function that can be called in response to an event.</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  event.doFirstThing();</div><div class="line">&#125;, <span class="number">2000</span>);</div><div class="line"></div><div class="line">wait(<span class="number">1000</span>);</div><div class="line"></div><div class="line">event.doSecondThing();</div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line">output: </div><div class="line"><span class="comment">// second thing output</span></div><div class="line"><span class="comment">// first thing output</span></div></pre></td></tr></table></figure>
-<p>When we call function <code>setTimeout()</code>, we usually pass a callback function in <code>setTimeout()</code>, in this case <code>event.doFirstThing()</code> is that callback function.</p>
-<p>But in the real world, the shit will turn nasty as hell, that’s why we call it <strong>Callback Hell</strong>, a callback in the another callback, and in the another callback, and in the another callback, and in the another…(something it goes forever)</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">aCallbackHell</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// ready for something nasty ?</span></div><div class="line"></div><div class="line">  setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    <span class="comment">// third thing is waiting first and second thing to be done.</span></div><div class="line">    doThirdThing();</div><div class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="comment">// second thing waiting for first thing to be done.</span></div><div class="line">      doSecondThing();</div><div class="line">      setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">        <span class="comment">// first thing need to be done.</span></div><div class="line">        doFirstThing();</div><div class="line">      &#125;, <span class="number">1000</span>);</div><div class="line">    &#125;, <span class="number">2000</span>);</div><div class="line">  &#125;, <span class="number">3000</span>);</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">aCallbackHell();</div></pre></td></tr></table></figure>
-<p>  The nested setTimeout() statements would result in so much whitespace that you could build a pyramid.</p>
-<h2 id="Promises-way-to-get-out-of-HELL"><a href="#Promises-way-to-get-out-of-HELL" class="headerlink" title="Promises - way to get out of HELL"></a>Promises - way to get out of HELL</h2><blockquote>
-<p> The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.</p>
-</blockquote>
-<p>From MDN’s JavaScript official <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises" target="_blank" rel="external"><strong>documentation</strong></a></p>
-<p>base on my personal understand, consider <strong>Promise</strong> as a wrapper object around a callback function, and return an object called <strong>promise</strong>, this <strong>promise</strong> object gives your two callback function as result, success and fail.</p>
-<blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; <span class="keyword">const</span> promise = createEvent(eventDetail); </div><div class="line">&gt; promise.then(successCallback, failureCallback);</div><div class="line">&gt;</div></pre></td></tr></table></figure>
-</blockquote>
-<h3 id="Benefit-of-Promises"><a href="#Benefit-of-Promises" class="headerlink" title="Benefit of Promises"></a>Benefit of Promises</h3><ul>
-<li><strong>Guarantees</strong></li>
-<li><strong>Chaining</strong></li>
-<li><strong>Error Propagation</strong></li>
-<li><strong>Composition</strong></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http:bochentheone.com/2018/09/07/2018-09-07-recent-update/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="nehcob">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LEVELING UP">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/07/2018-09-07-recent-update/" itemprop="url">Recent Update</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-07T00:00:00-04:00">
-                09-07-2018
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li>Little Bowie (that’s right, his name is Bowie Chen) is growing so fast 😱, 10 weeks, 14lbs now!!!</li>
-<li>Start a new job, two weeks ago! Like it, surrounding by bunch nerds!</li>
-<li>Reading a book called 《真实的四大家族》</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1647,7 +1673,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">31</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -1660,7 +1686,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">39</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -1731,7 +1757,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
