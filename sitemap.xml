@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http:bochentheone.com/2019/05/06/2019-05-06-thoughs/</loc>
+    
+    <lastmod>2019-05-06T19:48:45.414Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http:bochentheone.com/2019/02/22/2019-02-23-foreach-vs-map/</loc>
     
     <lastmod>2019-02-22T19:49:55.678Z</lastmod>
@@ -128,14 +135,14 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2018/05/10/2018-05-10-puppeteer-first-touch/</loc>
+    <loc>http:bochentheone.com/2018/05/14/2018-05-14.clean-code/</loc>
     
     <lastmod>2018-09-07T13:17:52.975Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2018/05/14/2018-05-14.clean-code/</loc>
+    <loc>http:bochentheone.com/2018/05/10/2018-05-10-puppeteer-first-touch/</loc>
     
     <lastmod>2018-09-07T13:17:52.975Z</lastmod>
     
@@ -149,14 +156,14 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2017/08/10/2017-08-10-stop_and_continue/</loc>
+    <loc>http:bochentheone.com/2017/08/21/2017-08-21-eyi_reading/</loc>
     
     <lastmod>2018-09-07T13:17:52.974Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2017/08/21/2017-08-21-eyi_reading/</loc>
+    <loc>http:bochentheone.com/2017/08/10/2017-08-10-stop_and_continue/</loc>
     
     <lastmod>2018-09-07T13:17:52.974Z</lastmod>
     
@@ -170,13 +177,6 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2017/01/20/2017-01-20-ci-deploy/</loc>
-    
-    <lastmod>2018-09-07T13:17:52.973Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http:bochentheone.com/2016/11/16/2016-11-16-directive-for-charting-library/</loc>
     
     <lastmod>2018-09-07T13:17:52.973Z</lastmod>
@@ -184,7 +184,7 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/11/10/2016-11-10-charting-library/</loc>
+    <loc>http:bochentheone.com/2017/01/20/2017-01-20-ci-deploy/</loc>
     
     <lastmod>2018-09-07T13:17:52.973Z</lastmod>
     
@@ -198,7 +198,14 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/10/06/2016-10-06-javascript-unit-test/</loc>
+    <loc>http:bochentheone.com/2016/11/10/2016-11-10-charting-library/</loc>
+    
+    <lastmod>2018-09-07T13:17:52.973Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http:bochentheone.com/2016/10/25/2016-10-25-sublimelinter-trick/</loc>
     
     <lastmod>2018-09-07T13:17:52.972Z</lastmod>
     
@@ -212,7 +219,7 @@
   </url>
   
   <url>
-    <loc>http:bochentheone.com/2016/10/25/2016-10-25-sublimelinter-trick/</loc>
+    <loc>http:bochentheone.com/2016/10/06/2016-10-06-javascript-unit-test/</loc>
     
     <lastmod>2018-09-07T13:17:52.972Z</lastmod>
     
